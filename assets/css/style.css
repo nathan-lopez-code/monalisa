@@ -144,6 +144,9 @@ a {
 
 @media (max-width: 767px) {
 
+    main{
+        overflow: hidden;
+    };
 
 }
 
