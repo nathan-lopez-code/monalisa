@@ -1,0 +1,247 @@
+/* MONALISA THEME ADJUSTMENTS - STYLE CLAIR */
+
+:root {
+    /* Couleurs principales (définies précédemment) */
+    --monalisa-primary: #5A43F8;        /* Bleu-violet vif (Accent/Hover) */
+    --monalisa-dark-background: #0D0038; /* Bleu Nuit (Fond Navbar) */
+    --monalisa-light-text: #FFFFFF;      /* Blanc (Texte par défaut) */
+
+    /* Couleurs spécifiques pour le Header Sombre */
+    --monalisa-nav-background: var(--monalisa-dark-background);
+    --monalisa-nav-text: var(--monalisa-light-text);
+    --monalisa-nav-hover: var(--monalisa-primary);
+    --monalisa-nav-search-bg: #1A0A4A; /* Gris foncé pour le champ de recherche */
+    --monalisa-nav-search-placeholder: #B0A5D6; /* Couleur du placeholder */
+}
+
+
+
+a {
+    text-decoration: none;
+    color: var(mona);
+}
+
+
+
+/* Style de la bannière promotionnelle V3 (Clair) */
+#monalisa-promo-banner-v3 {
+    background-color: var(--monalisa-banner-bg) !important;
+    color: var(--monalisa-text-dark) !important;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05); /* Ligne subtile */
+    position: relative;
+}
+
+/* Le bouton CTA sera la seule chose qui éclate */
+.btn-monalisa-accent {
+    color: var(--monalisa-light-text);
+    background-color: var(--monalisa-primary);
+    border: none;
+    font-weight: 600;
+    padding: .3rem 1rem;
+    font-size: 0.9rem;
+    border-radius: .4rem;
+}
+
+.btn-monalisa-accent:hover {
+    background-color: #3519eb; /* Un peu plus sombre au survol */
+    color: var(--monalisa-light-text);
+}
+
+/* Rendre le prix et le compte à rebours clairs */
+#monalisa-promo-banner-v3 .promo-text strong,
+#countdown-timer-v3 .time-value {
+    color: var(--monalisa-primary); /* Prix et chiffres en couleur d'accent */
+    font-weight: 700;
+}
+
+#countdown-timer-v3 .time-unit {
+    /* Rendre les unités de temps discrètes */
+    padding: 0;
+    background: none;
+    color: var(--monalisa-text-dark);
+}
+
+
+
+#monalisa-header {
+    background-color: var(--monalisa-nav-background) !important;
+    color: var(--monalisa-nav-text) !important;
+}
+
+/* Règle pour les liens et boutons au survol (hover) */
+#monalisa-header .nav-link-monalisa:hover,
+#monalisa-header .nav-link-monalisa:focus {
+    color: var(--monalisa-nav-hover) !important;
+}
+
+/* Style spécifique pour le champ de recherche */
+#monalisa-header .monalisa-search-input {
+    background-color: var(--monalisa-nav-search-bg) !important;
+    border-color: transparent !important;
+    color: var(--monalisa-nav-text) !important;
+}
+#monalisa-header .monalisa-search-input::placeholder {
+    color: var(--monalisa-nav-search-placeholder) !important;
+}
+
+/* Style pour le bouton d'inscription (Join for Free) */
+#monalisa-header .btn-monalisa-cta {
+    background-color: var(--monalisa-primary) !important;
+    color: var(--monalisa-light-text) !important;
+    transition: background-color 0.2s;
+}
+#monalisa-header .btn-monalisa-cta:hover {
+    background-color: #4c36e0 !important; /* Lighter shade of primary */
+}
+
+
+/* Conteneur principal du sous-menu */
+.monalisa-submenu-container {
+    position: absolute;
+    top: 100%; /* Positionne juste sous la navbar */
+    left: 0;
+    width: 100%; /* S'étend sur toute la largeur (optionnel, peut être ajusté) */
+    background-color: var(--monalisa-nav-background); /* Fond sombre */
+    border-top: 2px solid var(--monalisa-primary); /* Ligne d'accentuation */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 20; /* Au-dessus du contenu, sous la navbar sticky */
+    display: none; /* Caché par défaut */
+    padding: 1.5rem 0;
+}
+
+/* Éléments de la liste du sous-menu */
+.monalisa-submenu-container a {
+    color: var(--monalisa-light-text);
+    padding: 0.4rem 1.5rem;
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.monalisa-submenu-container a:hover {
+    background-color: var(--monalisa-nav-search-bg); /* Gris sombre au survol */
+    color: var(--monalisa-primary); /* Couleur d'accentuation */
+}
+
+/* Les titres de catégorie */
+.monalisa-submenu-container .submenu-title {
+    color: var(--monalisa-primary); /* Titre en couleur d'accentuation */
+    font-weight: 700;
+    padding: 0.4rem 1.5rem 0.8rem;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+/* Le conteneur du lien principal 'Cours' pour activer le survol */
+.nav-item-has-submenu:hover .monalisa-submenu-container {
+    display: block; /* Affiche le sous-menu au survol */
+}
+
+#mobile-menu-sidebar {
+  backdrop-filter: blur(3px);
+}
+
+
+@media (max-width: 767px) {
+
+
+}
+
+.fade {
+    transition: opacity 1s ease, transform 3s ease;
+}
+.active {
+    opacity: 1 !important;
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+/* Animation personnalisée pour le contenu texte */
+.swiper-slide-active .slide-content {
+    transform: translateX(0);
+    opacity: 1;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+}
+.swiper-slide-next .slide-content,
+.swiper-slide-prev .slide-content {
+    transform: translateX(50px);
+    opacity: 0;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+
+/* Boutons de navigation style Domestika */
+.custom-btn-next,
+.custom-btn-prev {
+    width: 50px;
+    height: 50px;
+    background: var(--monalisa-primary);
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s, background 0.3s;
+    color: white;
+  }
+
+.custom-btn-next:hover,
+.custom-btn-prev:hover {
+    background: var(--monalisa-dark-background);
+    color: var(--monalisa-primary);
+    transform: scale(1.1);
+  }
+
+.custom-btn-next::after {
+    content: '›';
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+.custom-btn-prev::after {
+    content: '‹';
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+.custom-btn-next,
+.custom-btn-prev {
+  z-index: 10;
+}
+
+
+@media (max-width: 767px) {
+  .custom-btn-next, .custom-btn-prev {
+    display: none;
+  }
+  
+}
+
+
+
+.swiper-pagination-bullet {
+  background-color: var(--monalisa-dark-background)
+}
+
+/* couleur du bullet actif */
+.swiper-pagination-bullet-active {
+  background-color: var(--monalisa-primary); /* orange par exemple */
+}
+
+
+footer{
+    background-color: #0D0038;
+}
+
+
+.bg-monalisa-primary{
+    background-color: var(--monalisa-primary);
+}
+
+a .bg-monalisa-primary:hover{
+    background-color: #624cf5;
+}
+
+text-monalisa-primary{
+    color: var(--monalisa-primary);
+}
