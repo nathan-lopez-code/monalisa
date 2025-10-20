@@ -64,33 +64,35 @@
   </div>
   <header id="monalisa-header" class="sticky inset-x-0 top-0 z-30 h-app-header text-white transition-transform duration-300 translate-y-0 bg-gray-900 px-4 md:px-14 py-2 overflow-x-hidden w-full ">
     <div class="flex h-full items-center justify-between">
-      <div class="flex h-full w-full flex-1 items-center gap-x-6 group/nav-search">
-        <button id="mobile-menu-button" class="relative inline-flex items-center justify-center whitespace-nowrap transition-colors disabled:pointer-events-none bg-transparent nav-link-monalisa font-medium h-8 rounded-full mr-1 p-1 md:hidden" aria-label="Menu" type="button" aria-haspopup="dialog" aria-expanded="false">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5.5 h-5.5 inline self-center text-white">
-            <path clip-rule="evenodd" d="m2 5.75c0-.41421.33861-.75.7563-.75h18.4874c.4177 0 .7563.33579.7563.75s-.3386.75-.7563.75h-18.4874c-.41769 0-.7563-.33579-.7563-.75zm0 6c0-.4142.33861-.75.7563-.75h18.4874c.4177 0 .7563.3358.7563.75s-.3386.75-.7563.75h-18.4874c-.41769 0-.7563-.3358-.7563-.75zm.7563 5.25c-.41769 0-.7563.3358-.7563.75s.33861.75.7563.75h18.4874c.4177 0 .7563.3358.7563-.75s-.3386-.75-.7563-.75z" fill="currentColor" fill-rule="evenodd">
-            </path>
-          </svg>
-        </button>
-        <a href="/" class="mb-1 h-full flex items-center logo-container-monalisa shrink-0" aria-label="Monalisa - Accueil">
-        <img src="assets/images/monalisa_logo_name.png" 
-            alt="Logo Monalisa" 
-            class="h-6 sm:h-8 w-auto mx-auto d-block" 
-            style="max-height: 100%; object-fit: contain;">
-        </a>
-        <div class="flex justify-start hidden md:block w-full max-w-[300px] transition-all duration-300 md:group-focus-within/nav-search:max-w-lg">
-          <div class="relative w-full">
-            <div class="absolute top-1/2 flex -translate-y-1/2 transform items-center left-3 text-gray-400">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 inline self-center">
-                <path clip-rule="evenodd" d="m16.5265 10.0146c0 3.5965-2.9154 6.5119-6.5119 6.5119-3.59638 0-6.51185-2.9154-6.51185-6.5119 0-3.59638 2.91547-6.51185 6.51185-6.51185 3.5965 0 6.5119 2.91547 6.5119 6.51185zm-1.4008 6.1737c-1.3872 1.1498-3.1684 1.841-5.1111 1.841-4.42632 0-8.0146-3.5883-8.0146-8.0147 0-4.42632 3.58828-8.0146 8.0146-8.0146 4.4264 0 8.0147 3.58828 8.0147 8.0146 0 1.9427-.6912 3.7239-1.841 5.1111l5.5916 5.5916c.2935.2935.2935.7692 0 1.0626-.2934.2935-.7691.2935-1.0626 0z" fill="currentColor" fill-rule="evenodd">
-                </path>
-              </svg>
+        <div class="flex h-full w-full items-center">
+            <button id="mobile-menu-button" 
+                    class="relative inline-flex items-center justify-center transition-colors bg-transparent nav-link-monalisa font-medium h-8 rounded-full p-1 md:hidden" 
+                    aria-label="Menu" type="button" aria-haspopup="dialog" aria-expanded="false">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5.5 h-5.5 text-white">
+                <path clip-rule="evenodd" d="m2 5.75c0-.41421.33861-.75.7563-.75h18.4874c.4177 0 .7563.33579.7563.75s-.3386.75-.7563.75h-18.4874c-.41769 0-.7563-.33579-.7563-.75zm0 6c0-.4142.33861-.75.7563-.75h18.4874c.4177 0 .7563.3358.7563.75s-.3386.75-.7563.75h-18.4874c-.41769 0-.7563-.3358-.7563-.75zm.7563 5.25c-.41769 0-.7563.3358-.7563.75s.33861.75.7563.75h18.4874c.4177 0 .7563.3358.7563-.75s-.3386-.75-.7563-.75z" fill="currentColor" fill-rule="evenodd"></path>
+                </svg>
+            </button>
+
+            <a href="/" class="flex items-center logo-container-monalisa shrink-0" aria-label="Monalisa - Accueil">
+                <img src="assets/images/monalisa_logo_name.png" 
+                    alt="Logo Monalisa" 
+                    class="h-6 sm:h-8 w-auto" 
+                    style="max-height: 100%; object-fit: contain;">
+            </a>
+            <div class="flex justify-start hidden md:block w-full max-w-[300px] transition-all duration-300 md:group-focus-within/nav-search:max-w-lg">
+            <div class="relative w-full">
+                <div class="absolute top-1/2 flex -translate-y-1/2 transform items-center left-3 text-gray-400">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 inline self-center">
+                    <path clip-rule="evenodd" d="m16.5265 10.0146c0 3.5965-2.9154 6.5119-6.5119 6.5119-3.59638 0-6.51185-2.9154-6.51185-6.5119 0-3.59638 2.91547-6.51185 6.51185-6.51185 3.5965 0 6.5119 2.91547 6.5119 6.51185zm-1.4008 6.1737c-1.3872 1.1498-3.1684 1.841-5.1111 1.841-4.42632 0-8.0146-3.5883-8.0146-8.0147 0-4.42632 3.58828-8.0146 8.0146-8.0146 4.4264 0 8.0147 3.58828 8.0147 8.0146 0 1.9427-.6912 3.7239-1.841 5.1111l5.5916 5.5916c.2935.2935.2935.7692 0 1.0626-.2934.2935-.7691.2935-1.0626 0z" fill="currentColor" fill-rule="evenodd">
+                    </path>
+                </svg>
+                </div>
+                <form action="/search.html" method="GET">
+                <label for="search-input-desktop" class="sr-only">Rechercher des cours</label>
+                <input type="search" id="search-input-desktop" placeholder="Rechercher des cours" class="w-full h-8 py-1 pl-9 pr-4 text-sm text-white bg-gray-800 rounded placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all" name="q" aria-label="Rechercher des cours">
+                </form>
             </div>
-            <form action="/search.html" method="GET">
-              <label for="search-input-desktop" class="sr-only">Rechercher des cours</label>
-              <input type="search" id="search-input-desktop" placeholder="Rechercher des cours" class="w-full h-8 py-1 pl-9 pr-4 text-sm text-white bg-gray-800 rounded placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all" name="q" aria-label="Rechercher des cours">
-            </form>
-          </div>
-        </div>
+            </div>
       </div>
       <nav aria-label="Main" class="relative z-10 h-full hidden md:block">
         <div class="nav-container w-full">
