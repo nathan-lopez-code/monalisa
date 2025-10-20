@@ -1,0 +1,2684 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Monalisa - Plateforme de Cours Vidéo pour la Créativité et la Technologie</title>
+  <meta name="description" content="Monalisa est votre communauté créative en ligne. Accédez à des milliers de cours vidéo animés par des experts en design, illustration, code et bien plus." />
+  <meta property="og:title" content="Monalisa - Libérez votre potentiel créatif" />
+  <meta property="og:description" content="Accédez à des milliers de cours vidéo pour apprendre des compétences numériques créatives." />
+  <meta property="og:image" content="assets/images/icon.png" />
+  <meta property="og:type" content="website" />
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <!-- Favicon Monalisa -->
+  <link rel="icon" type="image/png" href="assets/images/icon.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/images/icon.png">
+  <!-- Tailwind CDN -->
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="h-full bg-background text-foreground ">
+    <div id="monalisa-promo-banner-v3" role="region" aria-label="Offre Flash">
+        <a href="#" class="block text-decoration-none text-gray-900 hover:text-gray-800">
+        <div class="container mx-auto px-8 py-2 sm:py-3">
+            <div class="flex items-center justify-center sm:justify-between">
+            <div class="flex items-center gap-3">
+                <div class="flex items-center promo-text">
+                <span class="hidden sm:inline-block mr-2 text-blue-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="h-5 w-5" viewBox="0 0 16 16">
+                    <path d="M2 1a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l4.586-4.586a1 1 0 0 0 0-1.414l-7-7A1 1 0 0 0 6.586 1zm4 3.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+                    </svg>
+                </span>
+                <span class="text-base md:text-lg font-normal text-gray-900">
+                    <span class="font-semibold">Vente Flash :</span>Cours à partir de
+                    <strong class="ml-1 text-blue-500">1,99 $</strong>!</span>
+                </div>
+            </div>
+            <div class="hidden sm:flex items-center gap-4">
+                <div id="countdown-timer-v3" class="flex gap-2 font-normal text-center">
+                <div class="flex flex-col time-unit">
+                    <span class="time-value text-xl" data-unit="hours">00</span>
+                    <small class="uppercase text-xs opacity-70">H</small>
+                </div>
+                <div class="flex flex-col time-unit">
+                    <span class="time-value text-xl" data-unit="minutes">00</span>
+                    <small class="uppercase text-xs opacity-70">M</small>
+                </div>
+                <div class="flex-col time-unit hidden md:flex">
+                    <span class="time-value text-xl" data-unit="seconds">00</span>
+                    <small class="uppercase text-xs opacity-70">S</small>
+                </div>
+                </div>
+                <button class="px-3 py-1 text-sm rounded font-semibold bg-blue-600 text-white hover:bg-blue-700 hidden sm:block mr-0 md:mr-5">J'en profite →</button>
+            </div>
+            </div>
+        </div>
+        </a>
+        <button class="absolute right-0 top-1/2 transform -translate-y-1/2 mr-4 text-gray-900 opacity-75 hidden md:block hover:opacity-100" aria-label="Fermer" onclick="document.getElementById('monalisa-promo-banner-v3').style.display='none'">
+        <span class="text-2xl leading-none block">&times;</span>
+        </button>
+    </div>
+    <header 
+        id="monalisa-header" 
+        class="sticky inset-x-0 top-0 z-30 h-app-header w-full text-white 
+                transition-transform duration-300 translate-y-0 
+                bg-gray-900 px-4 md:px-14 py-2 
+                overflow-hidden md:overflow-visible">
+        <div class="flex h-full items-center justify-between">
+            <div class="flex h-full w-full  items-center">
+                <button id="mobile-menu-button" 
+                        class="relative inline-flex items-center justify-center transition-colors bg-transparent nav-link-monalisa font-medium h-8 rounded-full p-1 md:hidden" 
+                        aria-label="Menu" type="button" aria-haspopup="dialog" aria-expanded="false">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5.5 h-5.5 text-white">
+                    <path clip-rule="evenodd" d="m2 5.75c0-.41421.33861-.75.7563-.75h18.4874c.4177 0 .7563.33579.7563.75s-.3386.75-.7563.75h-18.4874c-.41769 0-.7563-.33579-.7563-.75zm0 6c0-.4142.33861-.75.7563-.75h18.4874c.4177 0 .7563.3358.7563.75s-.3386.75-.7563.75h-18.4874c-.41769 0-.7563-.3358-.7563-.75zm.7563 5.25c-.41769 0-.7563.3358-.7563.75s.33861.75.7563.75h18.4874c.4177 0 .7563.3358.7563-.75s-.3386-.75-.7563-.75z" fill="currentColor" fill-rule="evenodd"></path>
+                    </svg>
+                </button>
+
+                <a href="/" class="flex items-center logo-container-monalisa shrink-0" aria-label="Monalisa - Accueil">
+                    <img src="assets/images/monalisa_logo_name.png" 
+                        alt="Logo Monalisa" 
+                        class="h-6 sm:h-8 w-auto" 
+                        style="max-height: 100%; object-fit: contain;">
+                </a>
+                <div class="flex justify-start hidden md:block w-full max-w-[300px] transition-all duration-300 md:group-focus-within/nav-search:max-w-lg">
+                    <div class="relative w-full">
+                        <div class="absolute top-1/2 flex -translate-y-1/2 transform items-center left-3 text-gray-400">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 inline self-center">
+                                <path clip-rule="evenodd" d="m16.5265 10.0146c0 3.5965-2.9154 6.5119-6.5119 6.5119-3.59638 0-6.51185-2.9154-6.51185-6.5119 0-3.59638 2.91547-6.51185 6.51185-6.51185 3.5965 0 6.5119 2.91547 6.5119 6.51185zm-1.4008 6.1737c-1.3872 1.1498-3.1684 1.841-5.1111 1.841-4.42632 0-8.0146-3.5883-8.0146-8.0147 0-4.42632 3.58828-8.0146 8.0146-8.0146 4.4264 0 8.0147 3.58828 8.0147 8.0146 0 1.9427-.6912 3.7239-1.841 5.1111l5.5916 5.5916c.2935.2935.2935.7692 0 1.0626-.2934.2935-.7691.2935-1.0626 0z" fill="currentColor" fill-rule="evenodd">
+                                </path>
+                            </svg>
+                        </div>
+                        <form action="/search.html" method="GET">
+                            <label for="search-input-desktop" class="sr-only">Rechercher des cours</label>
+                            <input type="search" id="search-input-desktop" placeholder="Rechercher des cours" class="w-full h-8 py-1 pl-9 pr-4 text-sm text-white bg-gray-800 rounded placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all" name="q" aria-label="Rechercher des cours">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <nav aria-label="Main" class="relative z-10 h-full hidden md:block">
+                <div class="nav-container w-full">
+                    <ul class="flex flex-1 list-none items-center justify-center gap-x-6 h-full">
+                        <li class="relative group">
+                            <a href="/courses.html" class="inline-flex items-center font-semibold text-white">Cours
+                                <svg class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180" viewBox="0 0 24 24" fill="none">
+                                    <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                            <div class="fixed top-[40px] z-30 left-0 w-screen hidden group-hover:block bg-white text-gray-800 shadow-xl z-50">
+                                <div class="flex flex-wrap max-w-screen-xl mx-auto px-6 py-6">
+                                    <div class="flex-1 min-w-[200px] px-4">
+                                    <h3 class="font-bold mb-2">Création et Design</h3>
+                                    <a href="#" class="block text-gray-700 hover:text-blue-600 py-1">Design Graphique</a>
+                                    <a href="#" class="block text-gray-700 hover:text-blue-600 py-1">Illustration</a>
+                                    <a href="#" class="block text-gray-700 hover:text-blue-600 py-1">Photo & Vidéo</a>
+                                    <a href="#" class="block text-gray-700 hover:text-blue-600 py-1">3D & Animation</a>
+                                    </div>
+                                    <div class="flex-1 min-w-[200px] px-4">
+                                    <h3 class="font-bold mb-2">Marketing & Business</h3>
+                                    <a href="#" class="block text-gray-700 hover:text-blue-600 py-1">Marketing Digital</a>
+                                    <a href="#" class="block text-gray-700 hover:text-blue-600 py-1">Stratégie Commerciale</a>
+                                    </div>
+                                    <div class="flex-1 min-w-[200px] px-4">
+                                    <h3 class="font-bold mb-2">Technologie</h3>
+                                    <a href="#" class="block text-gray-700 hover:text-blue-600 py-1">Développement Web</a>
+                                    <a href="#" class="block text-gray-700 hover:text-blue-600 py-1">UX/UI Design</a>
+                                    </div>
+                                    <div class="flex-1 min-w-[200px] px-4">
+                                    <h3 class="font-bold mb-2">Explorer</h3>
+                                    <a href="#" class="block text-gray-700 hover:text-blue-600 py-1">Nouveaux Cours</a>
+                                    <a href="#" class="block text-gray-700 hover:text-blue-600 py-1">Meilleurs Ventes</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Autres items du nav -->
+                        <li class="h-full list-none">
+                            <a href="/projects.html" class="inline-flex h-full items-center font-semibold text-white">Projets</a>
+                        </li>
+                        <li class="list-none shrink-0 relative">
+                            <button type="button" class="inline-flex h-10 w-max items-center justify-center font-semibold text-white js-dropdown-btn">Plus</button>
+                            <div class="absolute top-full right-0 w-48 bg-white text-gray-800 shadow-xl py-2 z-20 hidden js-dropdown-menu">
+                            <a href="/about.html" class="block text-sm text-gray-700 hover:text-blue-600 py-1 pl-2">À propos de nous</a>
+                            <a href="/blog.html" class="block text-sm text-gray-700 hover:text-blue-600 py-1 pl-2">Blog</a>
+                            <a href="/faq.html" class="block text-sm text-gray-700 hover:text-blue-600 py-1 pl-2">FAQ & Aide</a>
+                            <a href="/contact.html" class="block text-sm text-gray-700 hover:text-blue-600 py-1 pl-2">Contact</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="ml-10 gap-x-2 md:ml-2 md:gap-x-4 shrink-0 md:flex hidden">
+            <div class="ml-1 flex items-center gap-x-2 md:ml-0">
+                <div class="relative">
+                <a href="/cart.html" class="relative inline-flex items-center justify-center whitespace-nowrap transition-colors disabled:pointer-events-none bg-transparent nav-link-monalisa font-medium h-8 px-3 py-1 rounded !px-1 py-1" aria-label="Panier">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 inline self-center">
+                    <path clip-rule="evenodd" d="m2.74143 2c-.40948 0-.74143.33568-.74143.74977s.33195.74977.74143.74977h1.3546c.11419 0 .21351.07911.24027.19137l2.75696 11.56849c.18727.7858.88252 1.3396 1.68185 1.3396h9.88939c.7993 0 1.4946-.5538 1.6818-1.3396l1.6047-6.73358c.2623-1.10052-.5624-2.15934-1.6818-2.15934h-13.76996l-.72136-3.0269c-.18727-.78581-.88252-1.33958-1.68185-1.33958zm5.79341 12.9081-1.67823-7.04209h13.41259c.1599 0 .2777.15126.2403.30848l-1.6048 6.73361c-.0267.1122-.126.1913-.2402.1913h-9.88939c-.11419 0-.21351-.0791-.24027-.1913zm1.38675 5.5928c0 .8284-.6639 1.5-1.48286 1.5s-1.48286-.6716-1.48286-1.5.6639-1.5 1.48286-1.5 1.48286.6716 1.48286 1.5zm10.40601 0c0 .8284-.6639 1.5-1.4829 1.5-.8189 0-1.4828-.6716-1.4828-1.5s.6639-1.5 1.4828-1.5c.819 0 1.4829.6716 1.4829 1.5z" fill="currentColor" fill-rule="evenodd">
+                    </path>
+                    </svg>
+                </a>
+                </div>
+                <a href="/auth/login.html" class="relative inline-flex items-center justify-center whitespace-nowrap transition-colors disabled:pointer-events-none bg-transparent nav-link-monalisa font-medium h-8 px-3 py-1 rounded hidden md:flex">Se connecter</a>
+                <a href="/join-for-free.html" class="relative inline-flex items-center justify-center whitespace-nowrap text-white disabled:pointer-events-none font-semibold h-8 px-3 py-1 rounded-full btn-monalisa-cta hidden md:flex">S'inscrire gratuitement</a>
+            </div>
+            </div>
+            <div class="ml-1 flex items-center gap-x-2 md:ml-2 md:gap-x-4 md:hidden">
+            <div class="ml-1 flex items-center gap-x-2 md:ml-0">
+                <div class="relative">
+                <a href="en/cart.html" class="relative inline-flex items-center justify-center whitespace-nowrap text-body transition-colors disabled:pointer-events-none bg-transparent hover:text-primary-400 ring-neutral-50 disabled:text-neutral-400 font-medium h-8 px-3 py-1 rounded !px-1 py-1" aria-label="Cart">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 inline self-center">
+                    <path clip-rule="evenodd" d="m2.74143 2c-.40948 0-.74143.33568-.74143.74977s.33195.74977.74143.74977h1.3546c.11419 0 .21351.07911.24027.19137l2.75696 11.56849c.18727.7858.88252 1.3396 1.68185 1.3396h9.88939c.7993 0 1.4946-.5538 1.6818-1.3396l1.6047-6.73358c.2623-1.10052-.5624-2.15934-1.6818-2.15934h-13.76996l-.72136-3.0269c-.18727-.78581-.88252-1.33958-1.68185-1.33958zm5.79341 12.9081-1.67823-7.04209h13.41259c.1599 0 .2777.15126.2403.30848l-1.6048 6.73361c-.0267.1122-.126.1913-.2402.1913h-9.88939c-.11419 0-.21351-.0791-.24027-.1913zm1.38675 5.5928c0 .8284-.6639 1.5-1.48286 1.5s-1.48286-.6716-1.48286-1.5.6639-1.5 1.48286-1.5 1.48286.6716 1.48286 1.5zm10.40601 0c0 .8284-.6639 1.5-1.4829 1.5-.8189 0-1.4828-.6716-1.4828-1.5s.6639-1.5 1.4828-1.5c.819 0 1.4829.6716 1.4829 1.5z" fill="currentColor" fill-rule="evenodd">
+                    </path>
+                    </svg>
+                </a>
+                </div>
+                <a href="#" class="relative inline-flex items-center justify-end whitespace-nowrap text-body transition-colors disabled:pointer-events-none text-background hover:text-primary disabled:text-neutral-900 h-max rounded">Se Connecter</a>
+            </div>
+            <!-- MENU MOBILE -->
+            <div id="mobile-menu-sidebar" class="fixed inset-0 w-screen h-screen bg-black/50 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300 md:hidden">
+                <!-- PANEL PRINCIPAL -->
+                <div id="mobile-menu-panel" class="px-4 py-4 bg-white text-gray-800 w-[280px] h-screen transform -translate-x-full transition-transform duration-300 flex flex-col shadow-2xl z-50">
+                <h4 class="text-xl font-bold mb-6 text-gray-900">Monalisa Menu</h4>
+                <form action="/search.html" method="GET" class="relative mb-6">
+                    <input type="search" placeholder="Rechercher des cours..." class="h-10 pl-10 pr-4 rounded-lg bg-gray-100 text-sm text-gray-900 focus:ring-2 focus:ring-blue-600 focus:outline-none w-full" name="q" aria-label="Rechercher des cours">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500">
+                    <path clip-rule="evenodd" d="M16.5265 10.0146c0 3.5965-2.9154 6.5119-6.5119 6.5119-3.59638 0-6.51185-2.9154-6.51185-6.5119 0-3.59638 2.91547-6.51185 6.51185-6.51185 3.5965 0 6.5119 2.91547 6.5119 6.51185zm-1.4008 6.1737c-1.3872 1.1498-3.1684 1.841-5.1111 1.841-4.42632 0-8.0146-3.5883-8.0146-8.0147 0-4.42632 3.58828-8.0146 8.0146-8.0146 4.4264 0 8.0147 3.58828 8.0147 8.0146 0 1.9427-.6912 3.7239-1.841 5.1111l5.5916 5.5916c.2935.2935.2935.7692 0 1.0626-.2934.2935-.7691.2935-1.0626 0z" fill="currentColor" fill-rule="evenodd">
+                    </path>
+                    </svg>
+                </form>
+                <!-- Menu principal -->
+                <ul id="mobile-menu-main" class="flex flex-col gap-4 flex-1 overflow-y-auto">
+                    <li>
+                    <button class="text-lg font-semibold w-full text-left py-2 text-gray-900 hover:text-monalisa-primary flex justify-between items-center" onclick="openSubMenu('courses-submenu')">Cours
+                        <span>›</span>
+                    </button>
+                    </li>
+                    <li>
+                    <a href="/projects.html" class="text-lg font-semibold block py-2 text-gray-900 hover:text-monalisa-primary">Projets</a>
+                    </li>
+                    <li>
+                    <a href="/plus.html" class="text-lg font-semibold block py-2 text-gray-900 hover:text-monalisa-primary">Plus</a>
+                    </li>
+                    <li class="mt-4 pt-4 border-t border-gray-200">
+                    <a href="/auth/login.html" class="block w-full text-center bg-gray-200 text-gray-900 py-2 rounded-lg font-semibold mb-2">Se connecter</a>
+                    <a href="/join-for-free.html" class="block w-full text-center bg-monalisa-primary text-white py-2 rounded-lg font-semibold">S'inscrire gratuitement</a>
+                    </li>
+                </ul>
+                </div>
+                <!-- Sous-menu Cours -->
+                <div id="courses-submenu" class="submenu fixed top-0 left-0 w-screen h-screen bg-white p-4 flex flex-col transform translate-x-full transition-transform duration-300 z-50">
+                <button class="mb-4 text-gray-400 font-semibold flex items-center" onclick="closeSubMenu(this)">‹ Retour</button>
+                <h4 class="text-lg text-gray-900 font-bold mb-4">Cours</h4>
+                <ul class="flex flex-col gap-2 flex-1 overflow-y-auto">
+                    <li>
+                    <a href="#" class="block py-2 text-gray-900 hover:text-monalisa-primary">Design Graphique</a>
+                    </li>
+                    <li>
+                    <a href="#" class="block py-2 text-gray-900 hover:text-monalisa-primary">Illustration</a>
+                    </li>
+                    <li>
+                    <a href="#" class="block py-2 text-gray-900 hover:text-monalisa-primary">Photo & Vidéo</a>
+                    </li>
+                    <li>
+                    <a href="#" class="block py-2 text-gray-900 hover:text-monalisa-primary">3D & Animation</a>
+                    </li>
+                    <li>
+                    <a href="#" class="block py-2 text-gray-900 hover:text-monalisa-primary">Marketing Digital</a>
+                    </li>
+                    <li>
+                    <a href="#" class="block py-2 text-gray-900 hover:text-monalisa-primary">Développement Web</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+            <div id="appendHeaderSectionEl">
+            </div>
+        </div>
+    </header>
+
+    <nav class="flex items-center h-[49px] px-4 md:px-14 py-2 bg-white shadow-sm">
+        <ol class="flex items-center list-none gap-x-3 text-sm text-neutral-700">
+            <li>
+            <a href="index.html" 
+                aria-label="Monalisa - 1196-3d-architectural-design-and-modeling-with-revit"
+                class="flex items-center hover:opacity-90 transition">
+                <img 
+                src="assets/images/icon.png" 
+                alt="Monalisa Home" 
+                class="h-5 w-5 sm:h-6 sm:w-6 object-contain"
+                >
+            </a>
+            </li>
+            <li class="flex items-center gap-x-2">
+            <svg viewBox="0 0 24 24" fill="none" class="w-3.5 h-3.5 text-neutral-500">
+                <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"
+                d="m7.68403 20.2536c-.26351-.3069-.24141-.7812.04936-1.0594l6.99801-6.6942-6.99801-6.69428c-.29077-.27815-.31287-.75245-.04936-1.05938.26352-.30693.71285-.33025 1.00363-.0521l7.57894 7.24996c.1486.1422.2334.3441.2334.5558s-.0848.4135-.2334.5557l-7.57894 7.25c-.29078.2782-.74011.2548-1.00363-.0521z" />
+            </svg>
+            <a href="/en/courses" 
+                class="hover:text-primary transition-colors leading-normal font-medium">
+                Courses
+            </a>
+            </li>
+            <li class="flex items-center gap-x-2">
+            <svg viewBox="0 0 24 24" fill="none" class="w-3.5 h-3.5 text-neutral-500">
+                <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"
+                d="m7.68403 20.2536c-.26351-.3069-.24141-.7812.04936-1.0594l6.99801-6.6942-6.99801-6.69428c-.29077-.27815-.31287-.75245-.04936-1.05938.26352-.30693.71285-.33025 1.00363-.0521l7.57894 7.24996c.1486.1422.2334.3441.2334.5558s-.0848.4135-.2334.5557l-7.57894 7.25c-.29078.2782-.74011.2548-1.00363-.0521z" />
+            </svg>
+            <span class="leading-normal font-semibold text-neutral-900" aria-current="page">
+                Tous les cours
+            </span>
+            </li>
+        </ol>
+    </nav>
+
+    <main class="px-4 md:px-14 py-2">
+        <div class="md:grid md:grid-cols-5 md:gap-x-6">
+            <div class="col-span-1">
+                <div class="hidden md:flex md:shrink-0 md:flex-col">
+                    <nav class="mb-5 flex flex-col gap-y-1.5 border-b pb-5" aria-labelledby="course-navigation">
+                        <h4 class="mb-2 text-sm font-semibold" id="course-navigation">Cours</h4>
+                        <ul class="flex flex-col gap-y-0.5">
+                            <li>
+                                <a aria-label="Cours - Tous les cours" aria-current="page" class="transition-colors hover:text-primary text-sm text-neutral-800 shadow-[-6px_0_0_white,-8px_0_0_blue]" href="#" data-discover="true">Tous les cours</a>
+                            </li>
+                            <li>
+                                <a aria-label="Cours - Parcours guidés" class="transition-colors hover:text-primary text-sm text-neutral-800" href="#" data-discover="true">Parcours guidés</a>
+                            </li>
+                            <li>
+                                <a aria-label="Cours - Formations Approfondies - Nouveau" class="transition-colors hover:text-primary text-sm text-neutral-800" href="#" data-discover="true">Formations Approfondies
+                                    <div class="inline-flex items-center font-semibold !leading-none transition-colors focus:outline-none whitespace-pre border rounded-xl h-5 px-1.5 text-2xs bg-secondary-400 border-secondary-400 text-neutral-100 ml-2">Nouveau</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a aria-label="Cours - Spécialisations" class="transition-colors hover:text-primary text-sm text-neutral-800" href="#" data-discover="true">Spécialisations</a>
+                            </li>
+                            <li>
+                                <a aria-label="Cours - Fondamentaux Monalisa" class="transition-colors hover:text-primary text-sm text-neutral-800" href="#" data-discover="true">Fondamentaux Monalisa</a>
+                            </li>
+                            <li>
+                                <a aria-label="Cours - Recommandés" class="transition-colors hover:text-primary text-sm text-neutral-800" href="#" data-discover="true">Recommandés</a>
+                            </li>
+                            <li>
+                                <a aria-label="Cours - Nouveautés" class="transition-colors hover:text-primary text-sm text-neutral-800" href="#" data-discover="true">Nouveautés</a>
+                            </li>
+                            <li>
+                                <a aria-label="Cours - Les mieux notés" class="transition-colors hover:text-primary text-sm text-neutral-800" href="#" data-discover="true">Les mieux notés</a>
+                            </li>
+                            <li>
+                                <a aria-label="Cours - Populaires" class="transition-colors hover:text-primary text-sm text-neutral-800" href="#" data-discover="true">Populaires</a>
+                            </li>
+                            <li>
+                                <a aria-label="Cours - Cours inclus avec l'abonnement Premium" class="transition-colors hover:text-primary text-sm text-neutral-800" href="#" data-discover="true">Cours inclus avec Premium
+                                    <svg fill="none" viewBox="0 0 43 16" xmlns="http://www.w3.org/2000/svg" class="w-[1em] inline self-center ml-2 h-auto text-[38px]">
+                                        <path d="m40.146 7.1722c-1.1332-0.27595-1.343-0.59434-1.343-1.0189 0-0.57311 0.4197-0.95519 1.0702-0.95519 0.8183 0 1.322 0.48821 1.4479 1.1038l1.5738-0.65801c-0.3567-1.316-1.5319-2.1439-3.0217-2.1439-1.5948 0-2.8329 1.1038-2.8329 2.5259 0 1.5071 0.9443 2.1863 2.623 2.6745 1.2591 0.36085 1.5738 0.55189 1.5738 1.1887 0 0.53065-0.5036 0.93395-1.1961 0.93395-0.9023 0-1.3849-0.5094-1.5108-1.0189l-1.6578 0.70046c0.3778 1.1887 1.6158 1.9953 3.1477 1.9953 1.8046 0 2.9797-1.1038 2.9797-2.5047 0-1.5708-1.0492-2.3561-2.8538-2.8231zm-20.502-3.4812h-3.0007v3.9269h-2.644v1.6769h5.6447c1.385 0 3.0007-0.67924 3.0007-2.8019 0.021-2.1226-1.9095-2.8019-3.0007-2.8019zm-0.021 3.9481h-1.259v-2.25h1.2381c0.7973 0 1.301 0.4033 1.301 1.125s-0.4827 1.125-1.2801 1.125zm-2.9587 4.7123h1.6997v-2.6321l-1.6997 0.2972v2.3349zm16.032-1.5283c1.0072 0 1.6787-0.5519 1.6787-1.9953h0.042v-5.1156h1.6997v5.3066c0 2.25-1.322 3.4811-3.3994 3.4811-2.0984 0-3.4205-1.4222-3.4205-3.6722v-5.1156h1.6998v5.1156c0 1.2312 0.6295 1.9953 1.6997 1.9953zm-9.212-7.1321h1.6997v6.9623h3.6093v1.6981h-5.309v-8.6604zm-12.992 0.36917c0.0954 0.03974 0.182 0.09796 0.2547 0.17132 0.0795 0.07329 0.1429 0.16224 0.1862 0.26124 0.0434 0.09901 0.0658 0.20592 0.0658 0.31401s-0.0224 0.215-0.0658 0.31401c-0.0433 0.099-0.1067 0.18795-0.1862 0.26124l-6.3868 6.3865c-0.07276 0.0733-0.15933 0.1316-0.25471 0.1713s-0.19768 0.0602-0.30101 0.0602c-0.10332 0-0.20563-0.0205-0.30101-0.0602s-0.18194-0.098-0.25471-0.1713l-3.0056-3.0054c-0.075548-0.07297-0.13598-0.16011-0.17785-0.25644-0.04187-0.09633-0.064355-0.19996-0.066172-0.30498-0.001817-0.10501 0.01707-0.20936 0.055582-0.30708s0.095895-0.18689 0.16887-0.26244c0.072978-0.07554 0.16012-0.13597 0.25646-0.17784s0.19997-0.06435 0.305-0.06617c0.10502-0.00181 0.20938 0.01707 0.3071 0.05558 0.09772 0.03851 0.1869 0.09589 0.26245 0.16887l2.4499 2.4575 5.8311-5.8386c0.07277-0.07336 0.15933-0.13158 0.25471-0.17132 0.09538-0.03973 0.19771-0.06019 0.30101-0.06019s0.2056 0.02046 0.301 0.06019z" clip-rule="evenodd" fill="url(#domestika-plus-check-sidebar)" fill-rule="evenodd">
+                                    </path>
+                                        <defs>
+                                            <linearGradient id="domestika-plus-check-sidebar" x2="43" y1="8" y2="8" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#FF4E10" offset="0">
+                                                </stop>
+                                                <stop stop-color="#FF1B17" offset=".28104">
+                                                </stop>
+                                                <stop stop-color="#FF0F47" offset=".53287">
+                                                </stop>
+                                                <stop stop-color="#FF0571" offset=".67538">
+                                                </stop>
+                                                <stop stop-color="#F101E5" offset="1">
+                                                </stop>
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    
+                    <nav class="mb-5 flex flex-col gap-y-1.5 border-b pb-5">
+                        <h4 class="mb-2 text-sm font-semibold">Mon Espace</h4>
+                        <ul class="flex flex-col gap-y-0.5">
+                            <li>
+                                <a href="#" aria-label="Mon Espace - Mes cours" class="transition-colors hover:text-primary text-sm text-neutral-800">Mes cours</a>
+                            </li>
+                            <li>
+                                <a href="#" aria-label="Mon Espace - Mes listes" class="transition-colors hover:text-primary text-sm text-neutral-800">Mes listes</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    
+                    <nav class="mb-5 flex flex-col gap-y-1.5 border-b pb-5" aria-labelledby="category-navigation">
+                        <h4 class="mb-2 text-sm font-semibold" id="category-navigation">Catégories</h4>
+                        <ul class="flex flex-col gap-y-0.5">
+                            <li>
+                                <a aria-label="Catégories - Développement Web" class="transition-colors hover:text-primary text-sm text-neutral-800" href="#" data-discover="true">Développement Web</a>
+                            </li>
+                            <li>
+                                <a aria-label="Catégories - Marketing Digital" class="transition-colors hover:text-primary text-sm text-neutral-800" href="#" data-discover="true">Marketing Digital</a>
+                            </li>
+                            <li>
+                                <a aria-label="Catégories - Data Science &amp; IA" class="transition-colors hover:text-primary text-sm text-neutral-800" href="#" data-discover="true">Data Science &amp; IA</a>
+                            </li>
+                            <li>
+                                <a aria-label="Catégories - Design Graphique" class="transition-colors hover:text-primary text-sm text-neutral-800" href="#" data-discover="true">Design Graphique</a>
+                            </li>
+                            <li>
+                                <a aria-label="Catégories - Gestion de Projet" class="transition-colors hover:text-primary text-sm text-neutral-800" href="#" data-discover="true">Gestion de Projet</a>
+                            </li>
+                            <li>
+                                <a aria-label="Catégories - Cybersécurité" class="transition-colors hover:text-primary text-sm text-neutral-800" href="#" data-discover="true">Cybersécurité</a>
+                            </li>
+                            <li>
+                                <a aria-label="Catégories - Comptabilité &amp; Finance" class="transition-colors hover:text-primary text-sm text-neutral-800" href="#" data-discover="true">Comptabilité &amp; Finance</a>
+                            </li>
+                            <li>
+                                <a aria-label="Catégories - Langues" class="transition-colors hover:text-primary text-sm text-neutral-800" href="#" data-discover="true">Langues</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    
+                    <nav class="mb-5 flex flex-col gap-y-1.5 border-b pb-5" aria-labelledby="area-navigation">
+                        <h4 class="mb-2 text-sm font-semibold" id="area-navigation">Domaines</h4>
+                        <ul class="flex flex-col gap-y-0.5">
+                            <li>
+                                <a aria-label="Domaines - Frontend" class="transition-colors hover:text-primary text-sm text-neutral-800" href="#" data-discover="true">Frontend (HTML/CSS/JS)</a>
+                            </li>
+                            <li>
+                                <a aria-label="Domaines - Backend" class="transition-colors hover:text-primary text-sm text-neutral-800" href="#" data-discover="true">Backend (Python/Node.js)</a>
+                            </li>
+                            <li>
+                                <a aria-label="Domaines - Cloud Computing" class="transition-colors hover:text-primary text-sm text-neutral-800" href="#" data-discover="true">Cloud Computing (AWS/Azure)</a>
+                            </li>
+                            <li>
+                                <a aria-label="Domaines - UX/UI Design" class="transition-colors hover:text-primary text-sm text-neutral-800" href="#" data-discover="true">UX/UI Design</a>
+                            </li>
+                            <li>
+                                <a aria-label="Domaines - Analyse de Données" class="transition-colors hover:text-primary text-sm text-neutral-800" href="#" data-discover="true">Analyse de Données</a>
+                            </li>
+                        </ul>
+                        <button class="inline-flex gap-x-2 text-sm text-neutral-800 hover:text-red-500" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="" data-state="closed">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Voir plus" class="w-4 h-4 inline self-center">
+                                <path clip-rule="evenodd" d="m11.25 19.25c0 .4142.3358.75.75.75s.75-.3358.75-.75v-6.5333h6.5c.4142 0 .75-.3358.75-.75 0-.4143-.3358-.75-.75-.75h-6.5v-6.4667c0-.41421-.3358-.75-.75-.75s-.75.33579-.75.75v6.4667h-6.5c-.41421 0-.75.3357-.75.75 0 .4142.33579.75.75.75h6.5z" fill="currentColor" fill-rule="evenodd">
+                                </path>
+                            </svg>Voir plus</button>
+                    </nav>
+                    
+                    <nav class="mb-5 flex flex-col gap-y-1.5 border-b pb-5" aria-labelledby="software-navigation">
+                        <h4 class="mb-2 text-sm font-semibold" id="software-navigation">Logiciels & Outils</h4>
+                        <ul class="flex flex-col gap-y-0.5">
+                            <li>
+                                <a aria-label="Logiciels - Python" class="transition-colors hover:text-primary text-sm text-neutral-800" href="#" data-discover="true">Python</a>
+                            </li>
+                            <li>
+                                <a aria-label="Logiciels - JavaScript" class="transition-colors hover:text-primary text-sm text-neutral-800" href="#" data-discover="true">JavaScript</a>
+                            </li>
+                            <li>
+                                <a aria-label="Logiciels - Figma" class="transition-colors hover:text-primary text-sm text-neutral-800" href="#" data-discover="true">Figma</a>
+                            </li>
+                            <li>
+                                <a aria-label="Logiciels - Tableau" class="transition-colors hover:text-primary text-sm text-neutral-800" href="#" data-discover="true">Tableau</a>
+                            </li>
+                            <li>
+                                <a aria-label="Logiciels - AWS" class="transition-colors hover:text-primary text-sm text-neutral-800" href="#" data-discover="true">AWS</a>
+                            </li>
+                            <li>
+                                <a aria-label="Logiciels - Suite Adobe" class="transition-colors hover:text-primary text-sm text-neutral-800" href="#" data-discover="true">Suite Adobe</a>
+                            </li>
+                        </ul>
+                        <button class="inline-flex gap-x-2 text-sm text-neutral-800 hover:text-red-500" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="" data-state="closed">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Voir plus" class="w-4 h-4 inline self-center">
+                                <path clip-rule="evenodd" d="m11.25 19.25c0 .4142.3358.75.75.75s.75-.3358.75-.75v-6.5333h6.5c.4142 0 .75-.3358.75-.75 0-.4143-.3358-.75-.75-.75h-6.5v-6.4667c0-.41421-.3358-.75-.75-.75s-.75.33579-.75.75v6.4667h-6.5c-.41421 0-.75.3357-.75.75 0 .4142.33579.75.75.75h6.5z" fill="currentColor" fill-rule="evenodd">
+                                </path>
+                            </svg>Voir plus</button>
+                    </nav>
+                </div>
+                <!-- Boutons de navigation mobile -->
+                <div class="mb-8 grid grid-cols-4 md:hidden text-center">
+                    <button onclick="openModal('coursesModal')"
+                        class="rounded-l-md border bg-neutral-200 p-2 text-sm font-semibold hover:border-slate-900 hover:bg-neutral-900 hover:text-white transition">
+                        Cours
+                    </button>
+
+                    <button onclick="openModal('categoriesModal')"
+                        class="border-b border-r border-t bg-neutral-200 p-2 text-sm font-semibold hover:border-slate-900 hover:bg-neutral-900 hover:text-white transition">
+                        Catégories
+                    </button>
+
+                    <button onclick="openModal('areasModal')"
+                        class="border-b border-r border-t bg-neutral-200 p-2 text-sm font-semibold hover:border-slate-900 hover:bg-neutral-900 hover:text-white transition">
+                        Domaines
+                    </button>
+
+                    <button onclick="openModal('softwareModal')"
+                        class="rounded-r-md border-b border-r border-t bg-neutral-200 p-2 text-sm font-semibold hover:border-slate-900 hover:bg-neutral-900 hover:text-white transition">
+                        Logiciels
+                    </button>
+                </div>
+
+                <!-- Modales -->
+                <!-- 1. Courses -->
+                <div id="coursesModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/40 backdrop-blur-sm px-4 transition-opacity">
+                    <div onclick="closeModal('coursesModal')" class="absolute inset-0"></div> <!-- zone clic pour fermer -->
+                    <div class="relative bg-white w-full max-w-sm sm:max-w-md rounded-2xl shadow-xl p-6 animate-slideUp mx-auto">
+                        <button onclick="closeModal('coursesModal')" class="absolute top-3 right-3 text-gray-500 hover:text-black text-2xl font-bold leading-none">
+                        &times;
+                        </button>
+
+                        <h3 class="text-lg font-semibold mb-4 text-gray-900 text-center">Cours disponibles</h3>
+                        <ul class="space-y-3 text-gray-700">
+                        <li><a href="#" class="block p-2 rounded-md hover:bg-gray-100">Design Graphique</a></li>
+                        <li><a href="#" class="block p-2 rounded-md hover:bg-gray-100">Développement Web</a></li>
+                        <li><a href="#" class="block p-2 rounded-md hover:bg-gray-100">Photographie</a></li>
+                        <li><a href="#" class="block p-2 rounded-md hover:bg-gray-100">Animation 3D</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2. Categories -->
+
+                <div id="categoriesModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/40 backdrop-blur-sm px-4 transition-opacity">
+                    <div onclick="closeModal('categoriesModal')" class="absolute inset-0"></div> <!-- zone clic pour fermer -->
+                    <div class="relative bg-white w-full max-w-sm sm:max-w-md rounded-2xl shadow-xl p-6 animate-slideUp mx-auto">
+                        <button onclick="closeModal('categoriesModal')" class="absolute top-3 right-3 text-gray-500 hover:text-black text-2xl font-bold leading-none">
+                        &times;
+                        </button>
+
+                        <h3 class="text-lg font-semibold mb-4 text-gray-900 text-center">Cours disponibles</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li><a href="#" class="hover:text-blue-600">Arts visuels</a></li>
+                            <li><a href="#" class="hover:text-blue-600">Programmation</a></li>
+                            <li><a href="#" class="hover:text-blue-600">Marketing digital</a></li>
+                            <li><a href="#" class="hover:text-blue-600">Audiovisuel</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 3. Areas -->
+                <div id="areasModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/40 backdrop-blur-sm px-4 transition-opacity">
+                    <div onclick="closeModal('areasModal')" class="absolute inset-0"></div> <!-- zone clic pour fermer -->
+                    <div class="relative bg-white w-full max-w-sm sm:max-w-md rounded-2xl shadow-xl p-6 animate-slideUp mx-auto">
+                        <button onclick="closeModal('areasModal')" class="absolute top-3 right-3 text-gray-500 hover:text-black text-2xl font-bold leading-none">
+                        &times;
+                        </button>
+
+                        <h3 class="text-lg font-semibold mb-4 text-gray-900 text-center">Cours disponibles</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li><a href="#" class="hover:text-blue-600">Design</a></li>
+                            <li><a href="#" class="hover:text-blue-600">Développement</a></li>
+                            <li><a href="#" class="hover:text-blue-600">Communication</a></li>
+                            <li><a href="#" class="hover:text-blue-600">Business</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 4. Software -->
+                <div id="softwareModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/40 backdrop-blur-sm px-4 transition-opacity">
+                    <div onclick="closeModal('softwareModal')" class="absolute inset-0"></div> <!-- zone clic pour fermer -->
+                    <div class="relative bg-white w-full max-w-sm sm:max-w-md rounded-2xl shadow-xl p-6 animate-slideUp mx-auto">
+                        <button onclick="closeModal('softwareModal')" class="absolute top-3 right-3 text-gray-500 hover:text-black text-2xl font-bold leading-none">
+                        &times;
+                        </button>
+
+                        <h3 class="text-lg font-semibold mb-4 text-gray-900 text-center">Cours disponibles</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li><a href="#" class="hover:text-blue-600">Photoshop</a></li>
+                            <li><a href="#" class="hover:text-blue-600">Illustrator</a></li>
+                            <li><a href="#" class="hover:text-blue-600">Blender</a></li>
+                            <li><a href="#" class="hover:text-blue-600">Figma</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="md:col-span-4">
+                <h1 class="mb-7 border-b pb-3 text-[22px] font-medium sm:text-[30px]">Cours En ligne pour enrichir votre carrière</h1>
+                <ul class="mb-8 gap-x-6 gap-y-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+                    <li class="group relative pb-8 ">
+                        <div
+                            class="flex h-full flex-col rounded-2xl bg-white shadow-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl "
+                        >
+                            <!-- Image -->
+                            <div class="relative overflow-hidden ">
+                                <!-- Badge -->
+                                <div class="absolute left-3 top-3 z-10 ">
+                                    <span
+                                    class="inline-flex items-center rounded-full bg-yellow-400 text-neutral text-[10px] font-semibold px-2 py-0.5 uppercase shadow-sm "
+                                    >
+                                    Best Seller
+                                    </span>
+                                </div>
+
+                                <!-- Bouton Ajouter à la liste -->
+                                <button
+                                    class="absolute top-3 right-3 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/80 backdrop-blur-md hover:bg-white text-gray-800 p-2 rounded-full shadow-md "
+                                    aria-label="Ajouter à la liste "
+                                >
+                                    <svg
+                                    xmlns="http://www.w3.org/2000/svg "
+                                    class="w-4 h-4 "
+                                    fill="none "
+                                    viewBox="0 0 24 24 "
+                                    stroke="currentColor "
+                                    stroke-width="2 "
+                                    >
+                                    <path
+                                        stroke-linecap="round "
+                                        stroke-linejoin="round "
+                                        d="M12 4v16m8-8H4 "
+                                    />
+                                    </svg>
+                                </button>
+
+                                <!-- Image -->
+                                <a href="# " class="block relative ">
+                                    <img
+                                    src="assets/images/cours_image/les-cours-particuliers.jpg "
+                                    alt="Google Ads and Facebook Ads from Scratch "
+                                    class="w-full aspect-video object-cover transform transition-transform duration-500 group-hover:scale-110 "
+                                    />
+                                    <div
+                                    class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 "
+                                    ></div>
+                                </a>
+                            </div>
+
+                            <!-- Contenu -->
+                            <div class="flex flex-col flex-grow p-4 space-y-2 ">
+                            <!-- Titre -->
+                            <a
+                                href="# "
+                                class="hover:text-monalisa-primary transition-colors duration-200 "
+                            >
+                                <h2 class="font-semibold text-base leading-snug line-clamp-2 ">
+                                Google Ads and Facebook Ads from Scratch
+                                </h2>
+                            </a>
+
+                            <!-- Auteur -->
+                            <p class="text-sm text-gray-600 ">
+                                Un cours par <span class="font-medium ">Arantxa &amp; Guille</span>
+                            </p>
+
+                            <!-- Description -->
+                            <p class="text-sm text-gray-700 line-clamp-2 ">
+                                Apprenez à créer des campagnes sur Google et Facebook pour booster votre
+                                marque ou entreprise.
+                            </p>
+
+                            <!-- Infos -->
+                            <ul class="flex items-center gap-3 pt-2 text-sm text-gray-700 ">
+                                <li class="flex items-center ">
+                                    <svg
+                                        class="w-4 h-4 mr-1 "
+                                        viewBox="0 0 24 24 "
+                                        fill="currentColor "
+                                        aria-hidden="true "
+                                        >
+                                        <path
+                                        fill-rule="evenodd "
+                                        clip-rule="evenodd "
+                                        d="M15.5 7C15.5 8.93241 13.9324 10.5 12 10.5C10.0676 10.5 8.5 8.93241 8.5 7C8.5 5.06759 10.0676 3.5 12 3.5C13.9324 3.5 15.5 5.06759 15.5 7ZM17 7C17 9.76083 14.7608 12 12 12C9.23917 12 7 9.76083 7 7C7 4.23917 9.23917 2 12 2C14.7608 2 17 4.23917 17 7ZM4.5 20C4.5 16.9624 6.96243 14.5 10 14.5H14C17.0376 14.5 19.5 16.9624 19.5 20C19.5 20.2761 19.2761 20.5 19 20.5H5C4.72386 20.5 4.5 20.2761 4.5 20ZM3 20C3 16.134 6.13401 13 10 13H14C17.866 13 21 16.134 21 20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20Z "
+                                        />
+                                    </svg>
+                                    <span>214 837 élèves</span>
+                                </li>
+                                <li class="flex items-center ">
+                                    <svg
+                                        class="w-4 h-4 mr-1 text-yellow-400 "
+                                        viewBox="0 0 24 24 "
+                                        fill="currentColor "
+                                        >
+                                        <path
+                                        d="M12 .587l3.668 7.431L24 9.748l-6 5.847L19.335 24 12 20.202 4.665 24 6 15.595 0 9.748l8.332-1.73z "
+                                        />
+                                    </svg>
+                                <span>92% (4.8K avis)</span>
+                                </li>
+                            </ul>
+
+                            <!-- Bas de carte -->
+                            <div class="mt-auto pt-3 border-t border-gray-100 ">
+                                <div class="flex items-center justify-between mb-3 ">
+                                    <span class="text-xs text-gray-500 line-through ">$49.99</span>
+                                    <span class="text-sm font-semibold text-red-600 ">98% de réduction</span>
+                                </div>
+
+                                <!-- Bouton Acheter -->
+                                <a
+                                    href="# "
+                                    class="relative inline-flex items-center justify-center w-full h-10 px-4 rounded-lg font-semibold text-white bg-monalisa-primary hover:bg-monalisa-primary/90 transition-all duration-300 "
+                                    >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg "
+                                        class="w-5 h-5 mr-2 "
+                                        fill="none "
+                                        viewBox="0 0 24 24 "
+                                        stroke="currentColor "
+                                        stroke-width="2 "
+                                        >
+                                        <path
+                                        stroke-linecap="round "
+                                        stroke-linejoin="round "
+                                        d="M2.75 2.75h1.354l2.757 11.569c.187.785.883 1.339 1.682 1.339h9.889a1.75 1.75 0 001.682-1.34l1.604-6.733a1.25 1.25 0 00-1.682-1.158H6.857l-.721-3.027A1.25 1.25 0 004.454 2.75H2.75z "
+                                        />
+                                    </svg>
+                                    Acheter – <span class="ml-1 ">$0.99</span>
+                                </a>
+                            </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="group relative pb-8 ">
+                        <div
+                            class="flex h-full flex-col rounded-2xl bg-white shadow-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl "
+                        >
+                            <!-- Image -->
+                            <div class="relative overflow-hidden ">
+                                <!-- Badge -->
+                                <div class="absolute left-3 top-3 z-10 ">
+                                    <span
+                                    class="inline-flex items-center rounded-full bg-yellow-400 text-neutral text-[10px] font-semibold px-2 py-0.5 uppercase shadow-sm "
+                                    >
+                                    Best Seller
+                                    </span>
+                                </div>
+
+                                <!-- Bouton Ajouter à la liste -->
+                                <button
+                                    class="absolute top-3 right-3 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/80 backdrop-blur-md hover:bg-white text-gray-800 p-2 rounded-full shadow-md "
+                                    aria-label="Ajouter à la liste "
+                                >
+                                    <svg
+                                    xmlns="http://www.w3.org/2000/svg "
+                                    class="w-4 h-4 "
+                                    fill="none "
+                                    viewBox="0 0 24 24 "
+                                    stroke="currentColor "
+                                    stroke-width="2 "
+                                    >
+                                    <path
+                                        stroke-linecap="round "
+                                        stroke-linejoin="round "
+                                        d="M12 4v16m8-8H4 "
+                                    />
+                                    </svg>
+                                </button>
+
+                                <!-- Image -->
+                                <a href="# " class="block relative ">
+                                    <img
+                                    src="assets/images/cours_image/les-cours-particuliers.jpg "
+                                    alt="Google Ads and Facebook Ads from Scratch "
+                                    class="w-full aspect-video object-cover transform transition-transform duration-500 group-hover:scale-110 "
+                                    />
+                                    <div
+                                    class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 "
+                                    ></div>
+                                </a>
+                            </div>
+
+                            <!-- Contenu -->
+                            <div class="flex flex-col flex-grow p-4 space-y-2 ">
+                            <!-- Titre -->
+                            <a
+                                href="# "
+                                class="hover:text-monalisa-primary transition-colors duration-200 "
+                            >
+                                <h2 class="font-semibold text-base leading-snug line-clamp-2 ">
+                                Google Ads and Facebook Ads from Scratch
+                                </h2>
+                            </a>
+
+                            <!-- Auteur -->
+                            <p class="text-sm text-gray-600 ">
+                                Un cours par <span class="font-medium ">Arantxa &amp; Guille</span>
+                            </p>
+
+                            <!-- Description -->
+                            <p class="text-sm text-gray-700 line-clamp-2 ">
+                                Apprenez à créer des campagnes sur Google et Facebook pour booster votre
+                                marque ou entreprise.
+                            </p>
+
+                            <!-- Infos -->
+                            <ul class="flex items-center gap-3 pt-2 text-sm text-gray-700 ">
+                                <li class="flex items-center ">
+                                    <svg
+                                        class="w-4 h-4 mr-1 "
+                                        viewBox="0 0 24 24 "
+                                        fill="currentColor "
+                                        aria-hidden="true "
+                                        >
+                                        <path
+                                        fill-rule="evenodd "
+                                        clip-rule="evenodd "
+                                        d="M15.5 7C15.5 8.93241 13.9324 10.5 12 10.5C10.0676 10.5 8.5 8.93241 8.5 7C8.5 5.06759 10.0676 3.5 12 3.5C13.9324 3.5 15.5 5.06759 15.5 7ZM17 7C17 9.76083 14.7608 12 12 12C9.23917 12 7 9.76083 7 7C7 4.23917 9.23917 2 12 2C14.7608 2 17 4.23917 17 7ZM4.5 20C4.5 16.9624 6.96243 14.5 10 14.5H14C17.0376 14.5 19.5 16.9624 19.5 20C19.5 20.2761 19.2761 20.5 19 20.5H5C4.72386 20.5 4.5 20.2761 4.5 20ZM3 20C3 16.134 6.13401 13 10 13H14C17.866 13 21 16.134 21 20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20Z "
+                                        />
+                                    </svg>
+                                    <span>214 837 élèves</span>
+                                </li>
+                                <li class="flex items-center ">
+                                    <svg
+                                        class="w-4 h-4 mr-1 text-yellow-400 "
+                                        viewBox="0 0 24 24 "
+                                        fill="currentColor "
+                                        >
+                                        <path
+                                        d="M12 .587l3.668 7.431L24 9.748l-6 5.847L19.335 24 12 20.202 4.665 24 6 15.595 0 9.748l8.332-1.73z "
+                                        />
+                                    </svg>
+                                <span>92% (4.8K avis)</span>
+                                </li>
+                            </ul>
+
+                            <!-- Bas de carte -->
+                            <div class="mt-auto pt-3 border-t border-gray-100 ">
+                                <div class="flex items-center justify-between mb-3 ">
+                                    <span class="text-xs text-gray-500 line-through ">$49.99</span>
+                                    <span class="text-sm font-semibold text-red-600 ">98% de réduction</span>
+                                </div>
+
+                                <!-- Bouton Acheter -->
+                                <a
+                                    href="# "
+                                    class="relative inline-flex items-center justify-center w-full h-10 px-4 rounded-lg font-semibold text-white bg-monalisa-primary hover:bg-monalisa-primary/90 transition-all duration-300 "
+                                    >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg "
+                                        class="w-5 h-5 mr-2 "
+                                        fill="none "
+                                        viewBox="0 0 24 24 "
+                                        stroke="currentColor "
+                                        stroke-width="2 "
+                                        >
+                                        <path
+                                        stroke-linecap="round "
+                                        stroke-linejoin="round "
+                                        d="M2.75 2.75h1.354l2.757 11.569c.187.785.883 1.339 1.682 1.339h9.889a1.75 1.75 0 001.682-1.34l1.604-6.733a1.25 1.25 0 00-1.682-1.158H6.857l-.721-3.027A1.25 1.25 0 004.454 2.75H2.75z "
+                                        />
+                                    </svg>
+                                    Acheter – <span class="ml-1 ">$0.99</span>
+                                </a>
+                            </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="group relative pb-8 ">
+                        <div
+                            class="flex h-full flex-col rounded-2xl bg-white shadow-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl "
+                        >
+                            <!-- Image -->
+                            <div class="relative overflow-hidden ">
+                                <!-- Badge -->
+                                <div class="absolute left-3 top-3 z-10 ">
+                                    <span
+                                    class="inline-flex items-center rounded-full bg-yellow-400 text-neutral text-[10px] font-semibold px-2 py-0.5 uppercase shadow-sm "
+                                    >
+                                    Best Seller
+                                    </span>
+                                </div>
+
+                                <!-- Bouton Ajouter à la liste -->
+                                <button
+                                    class="absolute top-3 right-3 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/80 backdrop-blur-md hover:bg-white text-gray-800 p-2 rounded-full shadow-md "
+                                    aria-label="Ajouter à la liste "
+                                >
+                                    <svg
+                                    xmlns="http://www.w3.org/2000/svg "
+                                    class="w-4 h-4 "
+                                    fill="none "
+                                    viewBox="0 0 24 24 "
+                                    stroke="currentColor "
+                                    stroke-width="2 "
+                                    >
+                                    <path
+                                        stroke-linecap="round "
+                                        stroke-linejoin="round "
+                                        d="M12 4v16m8-8H4 "
+                                    />
+                                    </svg>
+                                </button>
+
+                                <!-- Image -->
+                                <a href="# " class="block relative ">
+                                    <img
+                                    src="assets/images/cours_image/les-cours-particuliers.jpg "
+                                    alt="Google Ads and Facebook Ads from Scratch "
+                                    class="w-full aspect-video object-cover transform transition-transform duration-500 group-hover:scale-110 "
+                                    />
+                                    <div
+                                    class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 "
+                                    ></div>
+                                </a>
+                            </div>
+
+                            <!-- Contenu -->
+                            <div class="flex flex-col flex-grow p-4 space-y-2 ">
+                            <!-- Titre -->
+                            <a
+                                href="# "
+                                class="hover:text-monalisa-primary transition-colors duration-200 "
+                            >
+                                <h2 class="font-semibold text-base leading-snug line-clamp-2 ">
+                                Google Ads and Facebook Ads from Scratch
+                                </h2>
+                            </a>
+
+                            <!-- Auteur -->
+                            <p class="text-sm text-gray-600 ">
+                                Un cours par <span class="font-medium ">Arantxa &amp; Guille</span>
+                            </p>
+
+                            <!-- Description -->
+                            <p class="text-sm text-gray-700 line-clamp-2 ">
+                                Apprenez à créer des campagnes sur Google et Facebook pour booster votre
+                                marque ou entreprise.
+                            </p>
+
+                            <!-- Infos -->
+                            <ul class="flex items-center gap-3 pt-2 text-sm text-gray-700 ">
+                                <li class="flex items-center ">
+                                    <svg
+                                        class="w-4 h-4 mr-1 "
+                                        viewBox="0 0 24 24 "
+                                        fill="currentColor "
+                                        aria-hidden="true "
+                                        >
+                                        <path
+                                        fill-rule="evenodd "
+                                        clip-rule="evenodd "
+                                        d="M15.5 7C15.5 8.93241 13.9324 10.5 12 10.5C10.0676 10.5 8.5 8.93241 8.5 7C8.5 5.06759 10.0676 3.5 12 3.5C13.9324 3.5 15.5 5.06759 15.5 7ZM17 7C17 9.76083 14.7608 12 12 12C9.23917 12 7 9.76083 7 7C7 4.23917 9.23917 2 12 2C14.7608 2 17 4.23917 17 7ZM4.5 20C4.5 16.9624 6.96243 14.5 10 14.5H14C17.0376 14.5 19.5 16.9624 19.5 20C19.5 20.2761 19.2761 20.5 19 20.5H5C4.72386 20.5 4.5 20.2761 4.5 20ZM3 20C3 16.134 6.13401 13 10 13H14C17.866 13 21 16.134 21 20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20Z "
+                                        />
+                                    </svg>
+                                    <span>214 837 élèves</span>
+                                </li>
+                                <li class="flex items-center ">
+                                    <svg
+                                        class="w-4 h-4 mr-1 text-yellow-400 "
+                                        viewBox="0 0 24 24 "
+                                        fill="currentColor "
+                                        >
+                                        <path
+                                        d="M12 .587l3.668 7.431L24 9.748l-6 5.847L19.335 24 12 20.202 4.665 24 6 15.595 0 9.748l8.332-1.73z "
+                                        />
+                                    </svg>
+                                <span>92% (4.8K avis)</span>
+                                </li>
+                            </ul>
+
+                            <!-- Bas de carte -->
+                            <div class="mt-auto pt-3 border-t border-gray-100 ">
+                                <div class="flex items-center justify-between mb-3 ">
+                                    <span class="text-xs text-gray-500 line-through ">$49.99</span>
+                                    <span class="text-sm font-semibold text-red-600 ">98% de réduction</span>
+                                </div>
+
+                                <!-- Bouton Acheter -->
+                                <a
+                                    href="# "
+                                    class="relative inline-flex items-center justify-center w-full h-10 px-4 rounded-lg font-semibold text-white bg-monalisa-primary hover:bg-monalisa-primary/90 transition-all duration-300 "
+                                    >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg "
+                                        class="w-5 h-5 mr-2 "
+                                        fill="none "
+                                        viewBox="0 0 24 24 "
+                                        stroke="currentColor "
+                                        stroke-width="2 "
+                                        >
+                                        <path
+                                        stroke-linecap="round "
+                                        stroke-linejoin="round "
+                                        d="M2.75 2.75h1.354l2.757 11.569c.187.785.883 1.339 1.682 1.339h9.889a1.75 1.75 0 001.682-1.34l1.604-6.733a1.25 1.25 0 00-1.682-1.158H6.857l-.721-3.027A1.25 1.25 0 004.454 2.75H2.75z "
+                                        />
+                                    </svg>
+                                    Acheter – <span class="ml-1 ">$0.99</span>
+                                </a>
+                            </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            <div class="mb-4 flex items-center justify-between sm:mb-6">
+                <h2 class="text-lg font-medium sm:text-xl">Ajouter recemment</h2>
+            </div>
+            <ul class="mb-8 gap-x-6 gap-y-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+                
+                <li class="group relative pb-8 ">
+                    <div
+                        class="flex h-full flex-col rounded-2xl bg-white shadow-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl "
+                    >
+                        <!-- Image -->
+                        <div class="relative overflow-hidden ">
+                            <!-- Badge -->
+                                <div class="absolute left-3 top-3 z-10 ">
+                                    <span
+                                    class="inline-flex items-center rounded-full bg-monalisa-primary text-white text-[10px] font-semibold px-2 py-0.5 uppercase shadow-sm "
+                                    >
+                                    New
+                                    </span>
+                                </div>
+
+                                <!-- Bouton Ajouter à la liste -->
+                                <button
+                                    class="absolute top-3 right-3 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/80 backdrop-blur-md hover:bg-white text-gray-800 p-2 rounded-full shadow-md "
+                                    aria-label="Ajouter à la liste "
+                                    >
+                                    <svg
+                                    xmlns="http://www.w3.org/2000/svg "
+                                    class="w-4 h-4 "
+                                    fill="none "
+                                    viewBox="0 0 24 24 "
+                                    stroke="currentColor "
+                                    stroke-width="2 "
+                                    >
+                                    <path
+                                        stroke-linecap="round "
+                                        stroke-linejoin="round "
+                                        d="M12 4v16m8-8H4 "
+                                    />
+                                    </svg>
+                                </button>
+
+                                <!-- Image -->
+                                <a href="# " class="block relative ">
+                                    <img
+                                    src="assets/images/cours_image/cours2.jpg "
+                                    alt="Cours Design 3D "
+                                    class="w-full aspect-video object-cover transform transition-transform duration-500 group-hover:scale-110 "
+                                    />
+                                    <div
+                                    class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 "
+                                    ></div>
+                                </a>
+                            </div>
+
+                            <!-- Contenu -->
+                            <div class="flex flex-col flex-grow p-4 space-y-2 ">
+                            <!-- Tags -->
+                                <div class="flex flex-wrap gap-1 ">
+                                    <span
+                                    class="inline-flex items-center font-semibold text-[10px] uppercase px-2 py-0.5 rounded-full border border-gray-300 text-gray-800 bg-white "
+                                    >
+                                    Deep Dive
+                                    </span>
+                                    <span
+                                    class="inline-flex items-center font-semibold text-[10px] uppercase px-2 py-0.5 rounded-full border border-monalisa-primary text-monalisa-primary bg-white "
+                                    >
+                                    Learn AI
+                                    </span>
+                                </div>
+
+                                <!-- Titre -->
+                                <a
+                                    href="# "
+                                    class="hover:text-monalisa-primary transition-colors duration-200 "
+                                >
+                                    <h2 class="font-semibold text-base leading-snug line-clamp-2 ">
+                                    Générer des images 3D avec l’IA et ComfyUI
+                                    </h2>
+                                </a>
+
+                                <!-- Auteur -->
+                                <p class="text-sm text-gray-600 ">
+                                    Un cours par <span class="font-medium ">Carlos Dordelly</span>
+                                </p>
+
+                                <!-- Description -->
+                                <p class="text-sm text-gray-700 line-clamp-2 ">
+                                    Apprenez à créer des rendus 3D détaillés avec ComfyUI, ControlNet et les
+                                    techniques IA.
+                                </p>
+
+                                <!-- Infos -->
+                                <ul class="flex items-center gap-3 pt-2 text-sm text-gray-700 ">
+                                    <li class="flex items-center ">
+                                    <svg class="w-4 h-4 mr-1 " viewBox="0 0 24 24 " fill="currentColor ">
+                                        <path
+                                        fill-rule="evenodd "
+                                        clip-rule="evenodd "
+                                        d="M15.5 7C15.5 8.93241 13.9324 10.5 12 10.5C10.0676 10.5 8.5 8.93241 8.5 7C8.5 5.06759 10.0676 3.5 12 3.5C13.9324 3.5 15.5 5.06759 15.5 7ZM17 7C17 9.76083 14.7608 12 12 12C9.23917 12 7 9.76083 7 7C7 4.23917 9.23917 2 12 2C14.7608 2 17 4.23917 17 7ZM4.5 20C4.5 16.9624 6.96243 14.5 10 14.5H14C17.0376 14.5 19.5 16.9624 19.5 20C19.5 20.2761 19.2761 20.5 19 20.5H5C4.72386 20.5 4.5 20.2761 4.5 20ZM3 20C3 16.134 6.13401 13 10 13H14C17.866 13 21 16.134 21 20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20Z "
+                                        />
+                                    </svg>
+                                    <span>22 élèves</span>
+                                    </li>
+                                </ul>
+
+                                <!-- Bas de carte -->
+                                <div class="mt-auto pt-3 border-t border-gray-100 ">
+                                    <div class="flex items-center justify-between mb-3 ">
+                                    <span class="text-xs text-gray-500 line-through ">$39.99</span>
+                                    <span class="text-sm font-semibold text-monalisa-primary "
+                                        >98% de réduction</span
+                                    >
+                                    </div>
+
+                            <!-- Bouton Acheter -->
+                                <a
+                                    href="# "
+                                    class="relative inline-flex items-center justify-center w-full h-10 px-4 rounded-lg font-semibold text-white bg-monalisa-primary hover:bg-monalisa-primary/90 transition-all duration-300 "
+                                    >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg "
+                                        class="w-5 h-5 mr-2 "
+                                        fill="none "
+                                        viewBox="0 0 24 24 "
+                                        stroke="currentColor "
+                                        stroke-width="2 "
+                                        >
+                                        <path
+                                        stroke-linecap="round "
+                                        stroke-linejoin="round "
+                                        d="M2.75 2.75h1.354l2.757 11.569c.187.785.883 1.339 1.682 1.339h9.889a1.75 1.75 0 001.682-1.34l1.604-6.733a1.25 1.25 0 00-1.682-1.158H6.857l-.721-3.027A1.25 1.25 0 004.454 2.75H2.75z "
+                                        />
+                                    </svg>
+                                    Acheter – <span class="ml-1 ">$0.99</span>
+                                </a>
+                                </div>
+                            </div>
+                    </div>
+                </li>
+                
+                <li class="group relative pb-8 ">
+                    <div
+                        class="flex h-full flex-col rounded-2xl bg-white shadow-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl "
+                    >
+                        <!-- Image -->
+                        <div class="relative overflow-hidden ">
+                            <!-- Badge -->
+                                <div class="absolute left-3 top-3 z-10 ">
+                                    <span
+                                    class="inline-flex items-center rounded-full bg-monalisa-primary text-white text-[10px] font-semibold px-2 py-0.5 uppercase shadow-sm "
+                                    >
+                                    New
+                                    </span>
+                                </div>
+
+                                <!-- Bouton Ajouter à la liste -->
+                                <button
+                                    class="absolute top-3 right-3 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/80 backdrop-blur-md hover:bg-white text-gray-800 p-2 rounded-full shadow-md "
+                                    aria-label="Ajouter à la liste "
+                                    >
+                                    <svg
+                                    xmlns="http://www.w3.org/2000/svg "
+                                    class="w-4 h-4 "
+                                    fill="none "
+                                    viewBox="0 0 24 24 "
+                                    stroke="currentColor "
+                                    stroke-width="2 "
+                                    >
+                                    <path
+                                        stroke-linecap="round "
+                                        stroke-linejoin="round "
+                                        d="M12 4v16m8-8H4 "
+                                    />
+                                    </svg>
+                                </button>
+
+                                <!-- Image -->
+                                <a href="# " class="block relative ">
+                                    <img
+                                    src="assets/images/cours_image/cours2.jpg "
+                                    alt="Cours Design 3D "
+                                    class="w-full aspect-video object-cover transform transition-transform duration-500 group-hover:scale-110 "
+                                    />
+                                    <div
+                                    class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 "
+                                    ></div>
+                                </a>
+                            </div>
+
+                            <!-- Contenu -->
+                            <div class="flex flex-col flex-grow p-4 space-y-2 ">
+                            <!-- Tags -->
+                                <div class="flex flex-wrap gap-1 ">
+                                    <span
+                                    class="inline-flex items-center font-semibold text-[10px] uppercase px-2 py-0.5 rounded-full border border-gray-300 text-gray-800 bg-white "
+                                    >
+                                    Deep Dive
+                                    </span>
+                                    <span
+                                    class="inline-flex items-center font-semibold text-[10px] uppercase px-2 py-0.5 rounded-full border border-monalisa-primary text-monalisa-primary bg-white "
+                                    >
+                                    Learn AI
+                                    </span>
+                                </div>
+
+                                <!-- Titre -->
+                                <a
+                                    href="# "
+                                    class="hover:text-monalisa-primary transition-colors duration-200 "
+                                >
+                                    <h2 class="font-semibold text-base leading-snug line-clamp-2 ">
+                                    Générer des images 3D avec l’IA et ComfyUI
+                                    </h2>
+                                </a>
+
+                                <!-- Auteur -->
+                                <p class="text-sm text-gray-600 ">
+                                    Un cours par <span class="font-medium ">Carlos Dordelly</span>
+                                </p>
+
+                                <!-- Description -->
+                                <p class="text-sm text-gray-700 line-clamp-2 ">
+                                    Apprenez à créer des rendus 3D détaillés avec ComfyUI, ControlNet et les
+                                    techniques IA.
+                                </p>
+
+                                <!-- Infos -->
+                                <ul class="flex items-center gap-3 pt-2 text-sm text-gray-700 ">
+                                    <li class="flex items-center ">
+                                    <svg class="w-4 h-4 mr-1 " viewBox="0 0 24 24 " fill="currentColor ">
+                                        <path
+                                        fill-rule="evenodd "
+                                        clip-rule="evenodd "
+                                        d="M15.5 7C15.5 8.93241 13.9324 10.5 12 10.5C10.0676 10.5 8.5 8.93241 8.5 7C8.5 5.06759 10.0676 3.5 12 3.5C13.9324 3.5 15.5 5.06759 15.5 7ZM17 7C17 9.76083 14.7608 12 12 12C9.23917 12 7 9.76083 7 7C7 4.23917 9.23917 2 12 2C14.7608 2 17 4.23917 17 7ZM4.5 20C4.5 16.9624 6.96243 14.5 10 14.5H14C17.0376 14.5 19.5 16.9624 19.5 20C19.5 20.2761 19.2761 20.5 19 20.5H5C4.72386 20.5 4.5 20.2761 4.5 20ZM3 20C3 16.134 6.13401 13 10 13H14C17.866 13 21 16.134 21 20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20Z "
+                                        />
+                                    </svg>
+                                    <span>22 élèves</span>
+                                    </li>
+                                </ul>
+
+                                <!-- Bas de carte -->
+                                <div class="mt-auto pt-3 border-t border-gray-100 ">
+                                    <div class="flex items-center justify-between mb-3 ">
+                                    <span class="text-xs text-gray-500 line-through ">$39.99</span>
+                                    <span class="text-sm font-semibold text-monalisa-primary "
+                                        >98% de réduction</span
+                                    >
+                                    </div>
+
+                            <!-- Bouton Acheter -->
+                                <a
+                                    href="# "
+                                    class="relative inline-flex items-center justify-center w-full h-10 px-4 rounded-lg font-semibold text-white bg-monalisa-primary hover:bg-monalisa-primary/90 transition-all duration-300 "
+                                    >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg "
+                                        class="w-5 h-5 mr-2 "
+                                        fill="none "
+                                        viewBox="0 0 24 24 "
+                                        stroke="currentColor "
+                                        stroke-width="2 "
+                                        >
+                                        <path
+                                        stroke-linecap="round "
+                                        stroke-linejoin="round "
+                                        d="M2.75 2.75h1.354l2.757 11.569c.187.785.883 1.339 1.682 1.339h9.889a1.75 1.75 0 001.682-1.34l1.604-6.733a1.25 1.25 0 00-1.682-1.158H6.857l-.721-3.027A1.25 1.25 0 004.454 2.75H2.75z "
+                                        />
+                                    </svg>
+                                    Acheter – <span class="ml-1 ">$0.99</span>
+                                </a>
+                                </div>
+                            </div>
+                    </div>
+                </li>
+                                <li class="group relative pb-8 ">
+                    <div
+                        class="flex h-full flex-col rounded-2xl bg-white shadow-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl "
+                    >
+                        <!-- Image -->
+                        <div class="relative overflow-hidden ">
+                            <!-- Badge -->
+                                <div class="absolute left-3 top-3 z-10 ">
+                                    <span
+                                    class="inline-flex items-center rounded-full bg-monalisa-primary text-white text-[10px] font-semibold px-2 py-0.5 uppercase shadow-sm "
+                                    >
+                                    New
+                                    </span>
+                                </div>
+
+                                <!-- Bouton Ajouter à la liste -->
+                                <button
+                                    class="absolute top-3 right-3 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/80 backdrop-blur-md hover:bg-white text-gray-800 p-2 rounded-full shadow-md "
+                                    aria-label="Ajouter à la liste "
+                                    >
+                                    <svg
+                                    xmlns="http://www.w3.org/2000/svg "
+                                    class="w-4 h-4 "
+                                    fill="none "
+                                    viewBox="0 0 24 24 "
+                                    stroke="currentColor "
+                                    stroke-width="2 "
+                                    >
+                                    <path
+                                        stroke-linecap="round "
+                                        stroke-linejoin="round "
+                                        d="M12 4v16m8-8H4 "
+                                    />
+                                    </svg>
+                                </button>
+
+                                <!-- Image -->
+                                <a href="# " class="block relative ">
+                                    <img
+                                    src="assets/images/cours_image/cours2.jpg "
+                                    alt="Cours Design 3D "
+                                    class="w-full aspect-video object-cover transform transition-transform duration-500 group-hover:scale-110 "
+                                    />
+                                    <div
+                                    class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 "
+                                    ></div>
+                                </a>
+                            </div>
+
+                            <!-- Contenu -->
+                            <div class="flex flex-col flex-grow p-4 space-y-2 ">
+                            <!-- Tags -->
+                                <div class="flex flex-wrap gap-1 ">
+                                    <span
+                                    class="inline-flex items-center font-semibold text-[10px] uppercase px-2 py-0.5 rounded-full border border-gray-300 text-gray-800 bg-white "
+                                    >
+                                    Deep Dive
+                                    </span>
+                                    <span
+                                    class="inline-flex items-center font-semibold text-[10px] uppercase px-2 py-0.5 rounded-full border border-monalisa-primary text-monalisa-primary bg-white "
+                                    >
+                                    Learn AI
+                                    </span>
+                                </div>
+
+                                <!-- Titre -->
+                                <a
+                                    href="# "
+                                    class="hover:text-monalisa-primary transition-colors duration-200 "
+                                >
+                                    <h2 class="font-semibold text-base leading-snug line-clamp-2 ">
+                                    Générer des images 3D avec l’IA et ComfyUI
+                                    </h2>
+                                </a>
+
+                                <!-- Auteur -->
+                                <p class="text-sm text-gray-600 ">
+                                    Un cours par <span class="font-medium ">Carlos Dordelly</span>
+                                </p>
+
+                                <!-- Description -->
+                                <p class="text-sm text-gray-700 line-clamp-2 ">
+                                    Apprenez à créer des rendus 3D détaillés avec ComfyUI, ControlNet et les
+                                    techniques IA.
+                                </p>
+
+                                <!-- Infos -->
+                                <ul class="flex items-center gap-3 pt-2 text-sm text-gray-700 ">
+                                    <li class="flex items-center ">
+                                    <svg class="w-4 h-4 mr-1 " viewBox="0 0 24 24 " fill="currentColor ">
+                                        <path
+                                        fill-rule="evenodd "
+                                        clip-rule="evenodd "
+                                        d="M15.5 7C15.5 8.93241 13.9324 10.5 12 10.5C10.0676 10.5 8.5 8.93241 8.5 7C8.5 5.06759 10.0676 3.5 12 3.5C13.9324 3.5 15.5 5.06759 15.5 7ZM17 7C17 9.76083 14.7608 12 12 12C9.23917 12 7 9.76083 7 7C7 4.23917 9.23917 2 12 2C14.7608 2 17 4.23917 17 7ZM4.5 20C4.5 16.9624 6.96243 14.5 10 14.5H14C17.0376 14.5 19.5 16.9624 19.5 20C19.5 20.2761 19.2761 20.5 19 20.5H5C4.72386 20.5 4.5 20.2761 4.5 20ZM3 20C3 16.134 6.13401 13 10 13H14C17.866 13 21 16.134 21 20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20Z "
+                                        />
+                                    </svg>
+                                    <span>22 élèves</span>
+                                    </li>
+                                </ul>
+
+                                <!-- Bas de carte -->
+                                <div class="mt-auto pt-3 border-t border-gray-100 ">
+                                    <div class="flex items-center justify-between mb-3 ">
+                                    <span class="text-xs text-gray-500 line-through ">$39.99</span>
+                                    <span class="text-sm font-semibold text-monalisa-primary "
+                                        >98% de réduction</span
+                                    >
+                                    </div>
+
+                            <!-- Bouton Acheter -->
+                                <a
+                                    href="# "
+                                    class="relative inline-flex items-center justify-center w-full h-10 px-4 rounded-lg font-semibold text-white bg-monalisa-primary hover:bg-monalisa-primary/90 transition-all duration-300 "
+                                    >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg "
+                                        class="w-5 h-5 mr-2 "
+                                        fill="none "
+                                        viewBox="0 0 24 24 "
+                                        stroke="currentColor "
+                                        stroke-width="2 "
+                                        >
+                                        <path
+                                        stroke-linecap="round "
+                                        stroke-linejoin="round "
+                                        d="M2.75 2.75h1.354l2.757 11.569c.187.785.883 1.339 1.682 1.339h9.889a1.75 1.75 0 001.682-1.34l1.604-6.733a1.25 1.25 0 00-1.682-1.158H6.857l-.721-3.027A1.25 1.25 0 004.454 2.75H2.75z "
+                                        />
+                                    </svg>
+                                    Acheter – <span class="ml-1 ">$0.99</span>
+                                </a>
+                                </div>
+                            </div>
+                    </div>
+                </li>
+                                <li class="group relative pb-8 ">
+                    <div
+                        class="flex h-full flex-col rounded-2xl bg-white shadow-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl "
+                    >
+                        <!-- Image -->
+                        <div class="relative overflow-hidden ">
+                            <!-- Badge -->
+                                <div class="absolute left-3 top-3 z-10 ">
+                                    <span
+                                    class="inline-flex items-center rounded-full bg-monalisa-primary text-white text-[10px] font-semibold px-2 py-0.5 uppercase shadow-sm "
+                                    >
+                                    New
+                                    </span>
+                                </div>
+
+                                <!-- Bouton Ajouter à la liste -->
+                                <button
+                                    class="absolute top-3 right-3 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/80 backdrop-blur-md hover:bg-white text-gray-800 p-2 rounded-full shadow-md "
+                                    aria-label="Ajouter à la liste "
+                                    >
+                                    <svg
+                                    xmlns="http://www.w3.org/2000/svg "
+                                    class="w-4 h-4 "
+                                    fill="none "
+                                    viewBox="0 0 24 24 "
+                                    stroke="currentColor "
+                                    stroke-width="2 "
+                                    >
+                                    <path
+                                        stroke-linecap="round "
+                                        stroke-linejoin="round "
+                                        d="M12 4v16m8-8H4 "
+                                    />
+                                    </svg>
+                                </button>
+
+                                <!-- Image -->
+                                <a href="# " class="block relative ">
+                                    <img
+                                    src="assets/images/cours_image/cours2.jpg "
+                                    alt="Cours Design 3D "
+                                    class="w-full aspect-video object-cover transform transition-transform duration-500 group-hover:scale-110 "
+                                    />
+                                    <div
+                                    class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 "
+                                    ></div>
+                                </a>
+                            </div>
+
+                            <!-- Contenu -->
+                            <div class="flex flex-col flex-grow p-4 space-y-2 ">
+                            <!-- Tags -->
+                                <div class="flex flex-wrap gap-1 ">
+                                    <span
+                                    class="inline-flex items-center font-semibold text-[10px] uppercase px-2 py-0.5 rounded-full border border-gray-300 text-gray-800 bg-white "
+                                    >
+                                    Deep Dive
+                                    </span>
+                                    <span
+                                    class="inline-flex items-center font-semibold text-[10px] uppercase px-2 py-0.5 rounded-full border border-monalisa-primary text-monalisa-primary bg-white "
+                                    >
+                                    Learn AI
+                                    </span>
+                                </div>
+
+                                <!-- Titre -->
+                                <a
+                                    href="# "
+                                    class="hover:text-monalisa-primary transition-colors duration-200 "
+                                >
+                                    <h2 class="font-semibold text-base leading-snug line-clamp-2 ">
+                                    Générer des images 3D avec l’IA et ComfyUI
+                                    </h2>
+                                </a>
+
+                                <!-- Auteur -->
+                                <p class="text-sm text-gray-600 ">
+                                    Un cours par <span class="font-medium ">Carlos Dordelly</span>
+                                </p>
+
+                                <!-- Description -->
+                                <p class="text-sm text-gray-700 line-clamp-2 ">
+                                    Apprenez à créer des rendus 3D détaillés avec ComfyUI, ControlNet et les
+                                    techniques IA.
+                                </p>
+
+                                <!-- Infos -->
+                                <ul class="flex items-center gap-3 pt-2 text-sm text-gray-700 ">
+                                    <li class="flex items-center ">
+                                    <svg class="w-4 h-4 mr-1 " viewBox="0 0 24 24 " fill="currentColor ">
+                                        <path
+                                        fill-rule="evenodd "
+                                        clip-rule="evenodd "
+                                        d="M15.5 7C15.5 8.93241 13.9324 10.5 12 10.5C10.0676 10.5 8.5 8.93241 8.5 7C8.5 5.06759 10.0676 3.5 12 3.5C13.9324 3.5 15.5 5.06759 15.5 7ZM17 7C17 9.76083 14.7608 12 12 12C9.23917 12 7 9.76083 7 7C7 4.23917 9.23917 2 12 2C14.7608 2 17 4.23917 17 7ZM4.5 20C4.5 16.9624 6.96243 14.5 10 14.5H14C17.0376 14.5 19.5 16.9624 19.5 20C19.5 20.2761 19.2761 20.5 19 20.5H5C4.72386 20.5 4.5 20.2761 4.5 20ZM3 20C3 16.134 6.13401 13 10 13H14C17.866 13 21 16.134 21 20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20Z "
+                                        />
+                                    </svg>
+                                    <span>22 élèves</span>
+                                    </li>
+                                </ul>
+
+                                <!-- Bas de carte -->
+                                <div class="mt-auto pt-3 border-t border-gray-100 ">
+                                    <div class="flex items-center justify-between mb-3 ">
+                                    <span class="text-xs text-gray-500 line-through ">$39.99</span>
+                                    <span class="text-sm font-semibold text-monalisa-primary "
+                                        >98% de réduction</span
+                                    >
+                                    </div>
+
+                            <!-- Bouton Acheter -->
+                                <a
+                                    href="# "
+                                    class="relative inline-flex items-center justify-center w-full h-10 px-4 rounded-lg font-semibold text-white bg-monalisa-primary hover:bg-monalisa-primary/90 transition-all duration-300 "
+                                    >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg "
+                                        class="w-5 h-5 mr-2 "
+                                        fill="none "
+                                        viewBox="0 0 24 24 "
+                                        stroke="currentColor "
+                                        stroke-width="2 "
+                                        >
+                                        <path
+                                        stroke-linecap="round "
+                                        stroke-linejoin="round "
+                                        d="M2.75 2.75h1.354l2.757 11.569c.187.785.883 1.339 1.682 1.339h9.889a1.75 1.75 0 001.682-1.34l1.604-6.733a1.25 1.25 0 00-1.682-1.158H6.857l-.721-3.027A1.25 1.25 0 004.454 2.75H2.75z "
+                                        />
+                                    </svg>
+                                    Acheter – <span class="ml-1 ">$0.99</span>
+                                </a>
+                                </div>
+                            </div>
+                    </div>
+                </li>
+                                <li class="group relative pb-8 ">
+                    <div
+                        class="flex h-full flex-col rounded-2xl bg-white shadow-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl "
+                    >
+                        <!-- Image -->
+                        <div class="relative overflow-hidden ">
+                            <!-- Badge -->
+                                <div class="absolute left-3 top-3 z-10 ">
+                                    <span
+                                    class="inline-flex items-center rounded-full bg-monalisa-primary text-white text-[10px] font-semibold px-2 py-0.5 uppercase shadow-sm "
+                                    >
+                                    New
+                                    </span>
+                                </div>
+
+                                <!-- Bouton Ajouter à la liste -->
+                                <button
+                                    class="absolute top-3 right-3 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/80 backdrop-blur-md hover:bg-white text-gray-800 p-2 rounded-full shadow-md "
+                                    aria-label="Ajouter à la liste "
+                                    >
+                                    <svg
+                                    xmlns="http://www.w3.org/2000/svg "
+                                    class="w-4 h-4 "
+                                    fill="none "
+                                    viewBox="0 0 24 24 "
+                                    stroke="currentColor "
+                                    stroke-width="2 "
+                                    >
+                                    <path
+                                        stroke-linecap="round "
+                                        stroke-linejoin="round "
+                                        d="M12 4v16m8-8H4 "
+                                    />
+                                    </svg>
+                                </button>
+
+                                <!-- Image -->
+                                <a href="# " class="block relative ">
+                                    <img
+                                    src="assets/images/cours_image/cours2.jpg "
+                                    alt="Cours Design 3D "
+                                    class="w-full aspect-video object-cover transform transition-transform duration-500 group-hover:scale-110 "
+                                    />
+                                    <div
+                                    class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 "
+                                    ></div>
+                                </a>
+                            </div>
+
+                            <!-- Contenu -->
+                            <div class="flex flex-col flex-grow p-4 space-y-2 ">
+                            <!-- Tags -->
+                                <div class="flex flex-wrap gap-1 ">
+                                    <span
+                                    class="inline-flex items-center font-semibold text-[10px] uppercase px-2 py-0.5 rounded-full border border-gray-300 text-gray-800 bg-white "
+                                    >
+                                    Deep Dive
+                                    </span>
+                                    <span
+                                    class="inline-flex items-center font-semibold text-[10px] uppercase px-2 py-0.5 rounded-full border border-monalisa-primary text-monalisa-primary bg-white "
+                                    >
+                                    Learn AI
+                                    </span>
+                                </div>
+
+                                <!-- Titre -->
+                                <a
+                                    href="# "
+                                    class="hover:text-monalisa-primary transition-colors duration-200 "
+                                >
+                                    <h2 class="font-semibold text-base leading-snug line-clamp-2 ">
+                                    Générer des images 3D avec l’IA et ComfyUI
+                                    </h2>
+                                </a>
+
+                                <!-- Auteur -->
+                                <p class="text-sm text-gray-600 ">
+                                    Un cours par <span class="font-medium ">Carlos Dordelly</span>
+                                </p>
+
+                                <!-- Description -->
+                                <p class="text-sm text-gray-700 line-clamp-2 ">
+                                    Apprenez à créer des rendus 3D détaillés avec ComfyUI, ControlNet et les
+                                    techniques IA.
+                                </p>
+
+                                <!-- Infos -->
+                                <ul class="flex items-center gap-3 pt-2 text-sm text-gray-700 ">
+                                    <li class="flex items-center ">
+                                    <svg class="w-4 h-4 mr-1 " viewBox="0 0 24 24 " fill="currentColor ">
+                                        <path
+                                        fill-rule="evenodd "
+                                        clip-rule="evenodd "
+                                        d="M15.5 7C15.5 8.93241 13.9324 10.5 12 10.5C10.0676 10.5 8.5 8.93241 8.5 7C8.5 5.06759 10.0676 3.5 12 3.5C13.9324 3.5 15.5 5.06759 15.5 7ZM17 7C17 9.76083 14.7608 12 12 12C9.23917 12 7 9.76083 7 7C7 4.23917 9.23917 2 12 2C14.7608 2 17 4.23917 17 7ZM4.5 20C4.5 16.9624 6.96243 14.5 10 14.5H14C17.0376 14.5 19.5 16.9624 19.5 20C19.5 20.2761 19.2761 20.5 19 20.5H5C4.72386 20.5 4.5 20.2761 4.5 20ZM3 20C3 16.134 6.13401 13 10 13H14C17.866 13 21 16.134 21 20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20Z "
+                                        />
+                                    </svg>
+                                    <span>22 élèves</span>
+                                    </li>
+                                </ul>
+
+                                <!-- Bas de carte -->
+                                <div class="mt-auto pt-3 border-t border-gray-100 ">
+                                    <div class="flex items-center justify-between mb-3 ">
+                                    <span class="text-xs text-gray-500 line-through ">$39.99</span>
+                                    <span class="text-sm font-semibold text-monalisa-primary "
+                                        >98% de réduction</span
+                                    >
+                                    </div>
+
+                            <!-- Bouton Acheter -->
+                                <a
+                                    href="# "
+                                    class="relative inline-flex items-center justify-center w-full h-10 px-4 rounded-lg font-semibold text-white bg-monalisa-primary hover:bg-monalisa-primary/90 transition-all duration-300 "
+                                    >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg "
+                                        class="w-5 h-5 mr-2 "
+                                        fill="none "
+                                        viewBox="0 0 24 24 "
+                                        stroke="currentColor "
+                                        stroke-width="2 "
+                                        >
+                                        <path
+                                        stroke-linecap="round "
+                                        stroke-linejoin="round "
+                                        d="M2.75 2.75h1.354l2.757 11.569c.187.785.883 1.339 1.682 1.339h9.889a1.75 1.75 0 001.682-1.34l1.604-6.733a1.25 1.25 0 00-1.682-1.158H6.857l-.721-3.027A1.25 1.25 0 004.454 2.75H2.75z "
+                                        />
+                                    </svg>
+                                    Acheter – <span class="ml-1 ">$0.99</span>
+                                </a>
+                                </div>
+                            </div>
+                    </div>
+                </li>
+                                <li class="group relative pb-8 ">
+                    <div
+                        class="flex h-full flex-col rounded-2xl bg-white shadow-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl "
+                    >
+                        <!-- Image -->
+                        <div class="relative overflow-hidden ">
+                            <!-- Badge -->
+                                <div class="absolute left-3 top-3 z-10 ">
+                                    <span
+                                    class="inline-flex items-center rounded-full bg-monalisa-primary text-white text-[10px] font-semibold px-2 py-0.5 uppercase shadow-sm "
+                                    >
+                                    New
+                                    </span>
+                                </div>
+
+                                <!-- Bouton Ajouter à la liste -->
+                                <button
+                                    class="absolute top-3 right-3 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/80 backdrop-blur-md hover:bg-white text-gray-800 p-2 rounded-full shadow-md "
+                                    aria-label="Ajouter à la liste "
+                                    >
+                                    <svg
+                                    xmlns="http://www.w3.org/2000/svg "
+                                    class="w-4 h-4 "
+                                    fill="none "
+                                    viewBox="0 0 24 24 "
+                                    stroke="currentColor "
+                                    stroke-width="2 "
+                                    >
+                                    <path
+                                        stroke-linecap="round "
+                                        stroke-linejoin="round "
+                                        d="M12 4v16m8-8H4 "
+                                    />
+                                    </svg>
+                                </button>
+
+                                <!-- Image -->
+                                <a href="# " class="block relative ">
+                                    <img
+                                    src="assets/images/cours_image/cours2.jpg "
+                                    alt="Cours Design 3D "
+                                    class="w-full aspect-video object-cover transform transition-transform duration-500 group-hover:scale-110 "
+                                    />
+                                    <div
+                                    class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 "
+                                    ></div>
+                                </a>
+                            </div>
+
+                            <!-- Contenu -->
+                            <div class="flex flex-col flex-grow p-4 space-y-2 ">
+                            <!-- Tags -->
+                                <div class="flex flex-wrap gap-1 ">
+                                    <span
+                                    class="inline-flex items-center font-semibold text-[10px] uppercase px-2 py-0.5 rounded-full border border-gray-300 text-gray-800 bg-white "
+                                    >
+                                    Deep Dive
+                                    </span>
+                                    <span
+                                    class="inline-flex items-center font-semibold text-[10px] uppercase px-2 py-0.5 rounded-full border border-monalisa-primary text-monalisa-primary bg-white "
+                                    >
+                                    Learn AI
+                                    </span>
+                                </div>
+
+                                <!-- Titre -->
+                                <a
+                                    href="# "
+                                    class="hover:text-monalisa-primary transition-colors duration-200 "
+                                >
+                                    <h2 class="font-semibold text-base leading-snug line-clamp-2 ">
+                                    Générer des images 3D avec l’IA et ComfyUI
+                                    </h2>
+                                </a>
+
+                                <!-- Auteur -->
+                                <p class="text-sm text-gray-600 ">
+                                    Un cours par <span class="font-medium ">Carlos Dordelly</span>
+                                </p>
+
+                                <!-- Description -->
+                                <p class="text-sm text-gray-700 line-clamp-2 ">
+                                    Apprenez à créer des rendus 3D détaillés avec ComfyUI, ControlNet et les
+                                    techniques IA.
+                                </p>
+
+                                <!-- Infos -->
+                                <ul class="flex items-center gap-3 pt-2 text-sm text-gray-700 ">
+                                    <li class="flex items-center ">
+                                    <svg class="w-4 h-4 mr-1 " viewBox="0 0 24 24 " fill="currentColor ">
+                                        <path
+                                        fill-rule="evenodd "
+                                        clip-rule="evenodd "
+                                        d="M15.5 7C15.5 8.93241 13.9324 10.5 12 10.5C10.0676 10.5 8.5 8.93241 8.5 7C8.5 5.06759 10.0676 3.5 12 3.5C13.9324 3.5 15.5 5.06759 15.5 7ZM17 7C17 9.76083 14.7608 12 12 12C9.23917 12 7 9.76083 7 7C7 4.23917 9.23917 2 12 2C14.7608 2 17 4.23917 17 7ZM4.5 20C4.5 16.9624 6.96243 14.5 10 14.5H14C17.0376 14.5 19.5 16.9624 19.5 20C19.5 20.2761 19.2761 20.5 19 20.5H5C4.72386 20.5 4.5 20.2761 4.5 20ZM3 20C3 16.134 6.13401 13 10 13H14C17.866 13 21 16.134 21 20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20Z "
+                                        />
+                                    </svg>
+                                    <span>22 élèves</span>
+                                    </li>
+                                </ul>
+
+                                <!-- Bas de carte -->
+                                <div class="mt-auto pt-3 border-t border-gray-100 ">
+                                    <div class="flex items-center justify-between mb-3 ">
+                                    <span class="text-xs text-gray-500 line-through ">$39.99</span>
+                                    <span class="text-sm font-semibold text-monalisa-primary "
+                                        >98% de réduction</span
+                                    >
+                                    </div>
+
+                            <!-- Bouton Acheter -->
+                                <a
+                                    href="# "
+                                    class="relative inline-flex items-center justify-center w-full h-10 px-4 rounded-lg font-semibold text-white bg-monalisa-primary hover:bg-monalisa-primary/90 transition-all duration-300 "
+                                    >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg "
+                                        class="w-5 h-5 mr-2 "
+                                        fill="none "
+                                        viewBox="0 0 24 24 "
+                                        stroke="currentColor "
+                                        stroke-width="2 "
+                                        >
+                                        <path
+                                        stroke-linecap="round "
+                                        stroke-linejoin="round "
+                                        d="M2.75 2.75h1.354l2.757 11.569c.187.785.883 1.339 1.682 1.339h9.889a1.75 1.75 0 001.682-1.34l1.604-6.733a1.25 1.25 0 00-1.682-1.158H6.857l-.721-3.027A1.25 1.25 0 004.454 2.75H2.75z "
+                                        />
+                                    </svg>
+                                    Acheter – <span class="ml-1 ">$0.99</span>
+                                </a>
+                                </div>
+                            </div>
+                    </div>
+                </li>
+                
+                <li class="group relative pb-8 ">
+                    <div
+                        class="flex h-full flex-col rounded-2xl bg-white shadow-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl "
+                    >
+                        <!-- Image -->
+                        <div class="relative overflow-hidden ">
+                            <!-- Badge -->
+                                <div class="absolute left-3 top-3 z-10 ">
+                                    <span
+                                    class="inline-flex items-center rounded-full bg-monalisa-primary text-white text-[10px] font-semibold px-2 py-0.5 uppercase shadow-sm "
+                                    >
+                                    New
+                                    </span>
+                                </div>
+
+                                <!-- Bouton Ajouter à la liste -->
+                                <button
+                                    class="absolute top-3 right-3 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/80 backdrop-blur-md hover:bg-white text-gray-800 p-2 rounded-full shadow-md "
+                                    aria-label="Ajouter à la liste "
+                                    >
+                                    <svg
+                                    xmlns="http://www.w3.org/2000/svg "
+                                    class="w-4 h-4 "
+                                    fill="none "
+                                    viewBox="0 0 24 24 "
+                                    stroke="currentColor "
+                                    stroke-width="2 "
+                                    >
+                                    <path
+                                        stroke-linecap="round "
+                                        stroke-linejoin="round "
+                                        d="M12 4v16m8-8H4 "
+                                    />
+                                    </svg>
+                                </button>
+
+                                <!-- Image -->
+                                <a href="# " class="block relative ">
+                                    <img
+                                    src="assets/images/cours_image/cours2.jpg "
+                                    alt="Cours Design 3D "
+                                    class="w-full aspect-video object-cover transform transition-transform duration-500 group-hover:scale-110 "
+                                    />
+                                    <div
+                                    class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 "
+                                    ></div>
+                                </a>
+                            </div>
+
+                            <!-- Contenu -->
+                            <div class="flex flex-col flex-grow p-4 space-y-2 ">
+                            <!-- Tags -->
+                                <div class="flex flex-wrap gap-1 ">
+                                    <span
+                                    class="inline-flex items-center font-semibold text-[10px] uppercase px-2 py-0.5 rounded-full border border-gray-300 text-gray-800 bg-white "
+                                    >
+                                    Deep Dive
+                                    </span>
+                                    <span
+                                    class="inline-flex items-center font-semibold text-[10px] uppercase px-2 py-0.5 rounded-full border border-monalisa-primary text-monalisa-primary bg-white "
+                                    >
+                                    Learn AI
+                                    </span>
+                                </div>
+
+                                <!-- Titre -->
+                                <a
+                                    href="# "
+                                    class="hover:text-monalisa-primary transition-colors duration-200 "
+                                >
+                                    <h2 class="font-semibold text-base leading-snug line-clamp-2 ">
+                                    Générer des images 3D avec l’IA et ComfyUI
+                                    </h2>
+                                </a>
+
+                                <!-- Auteur -->
+                                <p class="text-sm text-gray-600 ">
+                                    Un cours par <span class="font-medium ">Carlos Dordelly</span>
+                                </p>
+
+                                <!-- Description -->
+                                <p class="text-sm text-gray-700 line-clamp-2 ">
+                                    Apprenez à créer des rendus 3D détaillés avec ComfyUI, ControlNet et les
+                                    techniques IA.
+                                </p>
+
+                                <!-- Infos -->
+                                <ul class="flex items-center gap-3 pt-2 text-sm text-gray-700 ">
+                                    <li class="flex items-center ">
+                                    <svg class="w-4 h-4 mr-1 " viewBox="0 0 24 24 " fill="currentColor ">
+                                        <path
+                                        fill-rule="evenodd "
+                                        clip-rule="evenodd "
+                                        d="M15.5 7C15.5 8.93241 13.9324 10.5 12 10.5C10.0676 10.5 8.5 8.93241 8.5 7C8.5 5.06759 10.0676 3.5 12 3.5C13.9324 3.5 15.5 5.06759 15.5 7ZM17 7C17 9.76083 14.7608 12 12 12C9.23917 12 7 9.76083 7 7C7 4.23917 9.23917 2 12 2C14.7608 2 17 4.23917 17 7ZM4.5 20C4.5 16.9624 6.96243 14.5 10 14.5H14C17.0376 14.5 19.5 16.9624 19.5 20C19.5 20.2761 19.2761 20.5 19 20.5H5C4.72386 20.5 4.5 20.2761 4.5 20ZM3 20C3 16.134 6.13401 13 10 13H14C17.866 13 21 16.134 21 20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20Z "
+                                        />
+                                    </svg>
+                                    <span>22 élèves</span>
+                                    </li>
+                                </ul>
+
+                                <!-- Bas de carte -->
+                                <div class="mt-auto pt-3 border-t border-gray-100 ">
+                                    <div class="flex items-center justify-between mb-3 ">
+                                    <span class="text-xs text-gray-500 line-through ">$39.99</span>
+                                    <span class="text-sm font-semibold text-monalisa-primary "
+                                        >98% de réduction</span
+                                    >
+                                    </div>
+
+                            <!-- Bouton Acheter -->
+                                <a
+                                    href="# "
+                                    class="relative inline-flex items-center justify-center w-full h-10 px-4 rounded-lg font-semibold text-white bg-monalisa-primary hover:bg-monalisa-primary/90 transition-all duration-300 "
+                                    >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg "
+                                        class="w-5 h-5 mr-2 "
+                                        fill="none "
+                                        viewBox="0 0 24 24 "
+                                        stroke="currentColor "
+                                        stroke-width="2 "
+                                        >
+                                        <path
+                                        stroke-linecap="round "
+                                        stroke-linejoin="round "
+                                        d="M2.75 2.75h1.354l2.757 11.569c.187.785.883 1.339 1.682 1.339h9.889a1.75 1.75 0 001.682-1.34l1.604-6.733a1.25 1.25 0 00-1.682-1.158H6.857l-.721-3.027A1.25 1.25 0 004.454 2.75H2.75z "
+                                        />
+                                    </svg>
+                                    Acheter – <span class="ml-1 ">$0.99</span>
+                                </a>
+                                </div>
+                            </div>
+                    </div>
+                </li>
+            </ul>
+            <!--$-->
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-white text-s px-6 md:px-16 py-12 ">
+        <div></div>
+        <div class=" ">
+            <a href="index.html " aria-label="Domestika - Home ">
+                <img
+                    src="assets/images/Monalisa Logo white.png "
+                    class="h-30 w-auto "
+                >
+            </a>
+            <div class="mt-1 ">
+                <div data-testid="desktop-links " class="hidden md:block ">
+                    <div class="grid grid-cols-4 gap-x-6 ">
+                        <div>
+                            <h3 data-testid="section-heading " class="text-l font-semibold leading-l ">Categories</h3>
+                            <ul class="space-y-3 md:mt-3 md:space-y-1 ">
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/category/11-illustration.html " data-discover="true ">Illustration courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/category/12-craft.html " data-discover="true ">Craft courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/category/17-marketing-business.html " data-discover="true ">Marketing &amp;Business courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/category/8-photography-video.html " data-discover="true ">Photography &amp;Video courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/category/3-design.html " data-discover="true ">Design courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/category/13-3d-animation.html " data-discover="true ">3D &amp;Animation courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/category/15-architecture-spaces.html " data-discover="true ">Architecture &amp;Spaces courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/category/20-fashion.html " data-discover="true ">Fashion courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/category/18-writing.html " data-discover="true ">Writing courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/category/9-web-app-design.html " data-discover="true ">Web &amp;App Design courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/category/16-calligraphy-typography.html " data-discover="true ">Calligraphy &amp;Typography courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/category/19-music-audio.html " data-discover="true ">Music &amp;Audio courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/category/21-culinary.html " data-discover="true ">Culinary courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/category/23-artificial-intelligence.html " data-discover="true ">Artificial Intelligence courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/category/24-wellness.html " data-discover="true ">Wellness courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/category/22-how-to-become.html " data-discover="true ">How to become courses</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>
+                                <a data-testid="section-heading " class="text-l font-semibold leading-l transition-colors hover:text-primary " href="en/courses/area.html " data-discover="true ">Areas</a>
+                            </h3>
+                            <ul class="space-y-3 md:mt-3 md:space-y-1 ">
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/area/2-traditional-illustration.html " data-discover="true ">Traditional illustration courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/area/102-digital-illustration.html " data-discover="true ">Digital Illustration courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/area/92-drawing.html " data-discover="true ">Drawing courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/area/21-arts-crafts.html " data-discover="true ">Arts &amp;Crafts courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/area/34-graphic-design.html " data-discover="true ">Graphic Design courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/area/30-fine-arts.html " data-discover="true ">Fine Arts courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/area/164-diy.html " data-discover="true ">DIY courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/area/243-textile-design.html " data-discover="true ">Textile Design courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/area/1-design.html " data-discover="true ">Design courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/area/8-photography.html " data-discover="true ">Photography courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/area/47-painting.html " data-discover="true ">Painting courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/area/19-character-design.html " data-discover="true ">Character Design courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/area/44-marketing.html " data-discover="true ">Marketing courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/area/11-3d.html " data-discover="true ">3D courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/area/17-branding-identity.html " data-discover="true ">Branding &amp;Identity courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/area/191-narrative.html " data-discover="true ">Narrative courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/area/104-watercolor-painting.html " data-discover="true ">Watercolor Painting courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/area/105-storytelling.html " data-discover="true ">Storytelling courses</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>
+                                <a data-testid="section-heading " class="text-l font-semibold leading-l transition-colors hover:text-primary " href="en/courses/software.html " data-discover="true ">Software</a>
+                            </h3>
+                            <ul class="space-y-3 md:mt-3 md:space-y-1 ">
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/software/2-adobe-photoshop.html " data-discover="true ">Adobe Photoshop courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/software/1-adobe-illustrator.html " data-discover="true ">Adobe Illustrator courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/software/75-procreate.html " data-discover="true ">Procreate courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/software/3-adobe-after-effects.html " data-discover="true ">Adobe After Effects courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/software/4-adobe-lightroom.html " data-discover="true ">Adobe Lightroom courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/software/9-cinema-4d.html " data-discover="true ">Cinema 4D courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/software/5-adobe-indesign.html " data-discover="true ">Adobe InDesign courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/software/7-adobe-premiere.html " data-discover="true ">Adobe Premiere courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/software/45-octanerender.html " data-discover="true ">OctaneRender courses</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 data-testid="section-heading " class="text-l font-semibold leading-l ">Lists</h3>
+                            <ul class="space-y-3 md:mt-3 md:space-y-1 ">
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/recent.html " data-discover="true ">New courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/highest_rated.html " data-discover="true ">Top rated</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/popular.html " data-discover="true ">Popular courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/on_sale.html " data-discover="true ">Courses on sale</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div data-orientation="horizontal " role="none " class="shrink-0 bg-gray-200 h-[1px] w-full my-12 "></div>
+                    <div class="grid grid-cols-4 gap-x-6 ">
+                        <div>
+                        <h3 data-testid="section-heading " class="text-l font-semibold leading-l ">
+                            Sections
+                        </h3>
+                            <ul class="space-y-3 md:mt-3 md:space-y-1 ">
+                                <li>
+                                <a
+                                    class="hover:text-monalisa-primary text-s leading-l cursor-pointer transition-colors "
+                                    href="cours.html "
+                                >
+                                    Cours
+                                </a>
+                                </li>
+                                <li>
+                                <a
+                                    class="hover:text-monalisa-primary text-s leading-l cursor-pointer transition-colors "
+                                    href="projets.html "
+                                >
+                                    Projets
+                                </a>
+                                </li>
+                                <li>
+                                <a
+                                    class="hover:text-monalisa-primary text-s leading-l cursor-pointer transition-colors "
+                                    href="formateurs.html "
+                                >
+                                    Formateurs
+                                </a>
+                                </li>
+                                <li>
+                                <a
+                                    class="hover:text-monalisa-primary text-s leading-l cursor-pointer transition-colors "
+                                    href="ecoles.html "
+                                >
+                                    Écoles partenaires
+                                </a>
+                                </li>
+                                <li>
+                                <a
+                                    class="hover:text-monalisa-primary text-s leading-l cursor-pointer transition-colors "
+                                    href="podcasts.html "
+                                >
+                                    Podcasts Monalisa
+                                </a>
+                                </li>
+                                <li>
+                                <a
+                                    class="hover:text-monalisa-primary text-s leading-l cursor-pointer transition-colors "
+                                    href="blog.html "
+                                >
+                                    Blog
+                                </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                        <h3 data-testid="section-heading " class="text-l font-semibold leading-l ">
+                            Informations
+                        </h3>
+                            <ul class="space-y-3 md:mt-3 md:space-y-1 ">
+                                <li>
+                                <a
+                                    class="hover:text-monalisa-primary text-s leading-l cursor-pointer transition-colors "
+                                    href="a-propos.html "
+                                >
+                                    À propos de Monalisa
+                                </a>
+                                </li>
+                                <li>
+                                <a
+                                    class="hover:text-monalisa-primary text-s leading-l cursor-pointer transition-colors "
+                                    href="partenaires.html "
+                                >
+                                    Partenaires
+                                </a>
+                                </li>
+                                <li>
+                                <a
+                                    class="hover:text-monalisa-primary text-s leading-l cursor-pointer transition-colors "
+                                    href="entreprises.html "
+                                >
+                                    Solutions pour entreprises
+                                </a>
+                                </li>
+                                <li>
+                                <a
+                                    class="hover:text-monalisa-primary text-s leading-l cursor-pointer transition-colors "
+                                    href="formateurs-devenir.html "
+                                >
+                                    Devenir formateur
+                                </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                        <h3 data-testid="section-heading " class="text-l font-semibold leading-l ">
+                            Support
+                        </h3>
+                        <ul class="space-y-3 md:mt-3 md:space-y-1 ">
+                            <li>
+                            <a
+                                class="hover:text-monalisa-primary text-s leading-l cursor-pointer transition-colors "
+                                href="aide.html "
+                            >
+                                Centre d’aide
+                            </a>
+                            </li>
+                            <li>
+                            <a
+                                class="hover:text-monalisa-primary text-s leading-l cursor-pointer transition-colors "
+                                href="contact.html "
+                            >
+                                Contact
+                            </a>
+                            </li>
+                        </ul>
+
+                        <!-- LANGUE -->
+                        
+                        </div>
+                        <div class="lg:-ml-6 ">
+                            <h3 data-testid="section-heading " class="text-l font-semibold leading-l ">
+                            Langue
+                            </h3>
+                            <ul class="space-y-3 md:mt-3 md:space-y-1 mt-3 ">
+                                <li>
+                                    <div class="relative w-full md:w-40 ">
+                                        <div
+                                            class="absolute top-1/2 flex -translate-y-1/2 transform items-center left-3 "
+                                        >
+                                            <svg
+                                            viewBox="0 0 24 24 "
+                                            fill="none "
+                                            xmlns="http://www.w3.org/2000/svg "
+                                            aria-hidden="true "
+                                            class="w-4 h-4 inline self-center text-gray-600 "
+                                            >
+                                            <path
+                                                clip-rule="evenodd "
+                                                fill-rule="evenodd "
+                                                fill="currentColor "
+                                                d="m14.0792 18.4367c.3335-.6671.6208-1.4614.841-2.3534h-5.84037c.22013.892.50744 1.6863.841 2.3534.84577 1.6917 1.69377 2.0633 2.07917 2.0633s1.2334-.3716 2.0792-2.0633zm-5.119 1.5036c-1.88891-.7236-3.45378-2.1018-4.41697-3.857h2.89125c.34191 1.5268.86967 2.8509 1.52572 3.857zm-5.06052-5.357h3.26876c-.10987-.824-.16844-1.69-.16844-2.5833s.05857-1.7593.16844-2.58333h-3.26876c-.25959.81463-.39968 1.68263-.39968 2.58333s.14009 1.7687.39968 2.5833zm.64355-6.66663h2.89125c.3419-1.5268.86966-2.85083 1.52571-3.85698-1.8889.72358-3.45377 2.10178-4.41696 3.85698zm7.45027-5.91666c-5.51986.00351-9.9935 4.47931-9.9935 9.99999 0 5.5229 4.47715 10 10 10 5.5228 0 10-4.4771 10-10 0-5.52284-4.4772-9.99999-10-10-.0022 0-.0043 0-.0065.00001zm.0065 1.49999c-.0009 0-.0019 0-.0028.00001-.3867.00181-1.2326.37576-2.07637 2.06325-.33356.66713-.62087 1.46147-.841 2.35341h5.84037c-.2202-.89194-.5075-1.68628-.841-2.35341-.8458-1.69162-1.6938-2.06326-2.0792-2.06326zm3.0398.55969c1.8889.72358 3.4538 2.10179 4.417 3.85698h-2.8913c-.3419-1.5268-.8696-2.85083-1.5257-3.85698zm5.0605 5.35698h-3.2687c.1098.82403.1684 1.69003.1684 2.58333s-.0586 1.7593-.1684 2.5833h3.2687c.2596-.8146.3997-1.6826.3997-2.5833s-.1401-1.7687-.3997-2.58333zm-.6435 6.66663c-.9632 1.7552-2.5281 3.1334-4.417 3.857.6561-1.0061 1.1838-2.3302 1.5257-3.857zm-4.0639-4.0833c0 .9054-.0645 1.772-.1819 2.5833h-6.42201c-.11736-.8113-.18185-1.6779-.18185-2.5833s.06449-1.772.18185-2.58333h6.42201c.1174.81133.1819 1.67793.1819 2.58333z "
+                                            ></path>
+                                            </svg>
+                                    </div>
+
+                                    <label id="language-select " class="sr-only ">Langue</label>
+                                    <select
+                                        aria-labelledby="language-select "
+                                        class="h-8 w-full appearance-none rounded border pl-8 pr-6 text-sm focus:outline-none focus:ring-2 focus:ring-monalisa-primary "
+                                        data-testid="language-selector "
+                                        style="color: rgb(129, 129, 129);"
+                                    >
+                                        <option value="fr " selected>Français</option>
+                                        <option value="en ">Anglais</option>
+                                        <option value="es ">Espagnol</option>
+                                        <option value="pt ">Portugais</option>
+                                        <option value="de ">Allemand</option>
+                                        <option value="it ">Italien</option>
+                                        <option value="nl ">Néerlandais</option>
+                                        <option value="tr ">Turc</option>
+                                    </select>
+
+                                    <div class="absolute top-1/2 flex -translate-y-1/2 transform items-center right-2 text-gray-500 ">
+                                        <svg
+                                        viewBox="0 0 24 24 "
+                                        fill="none "
+                                        xmlns="http://www.w3.org/2000/svg "
+                                        aria-hidden="true "
+                                        class="w-4 h-4 inline self-center "
+                                        >
+                                        <path
+                                            clip-rule="evenodd "
+                                            fill-rule="evenodd "
+                                            fill="currentColor "
+                                            d="m4.24636 8.18404c.30693-.26351.78123-.24141 1.05938.04936l6.69426 6.998 6.6943-6.998c.2781-.29077.7524-.31287 1.0593-.04936.307.26351.3303.71285.0521 1.00362l-7.25 7.57894c-.1421.1486-.344.2334-.5557.2334s-.4136-.0848-.5557-.2334l-7.25004-7.57894c-.27815-.29077-.25483-.74011.0521-1.00362z "
+                                        ></path>
+                                        </svg>
+                                    </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!--
+
+                        <div class="-ml-16 lg:-ml-6 ">
+                            <h3 data-testid="section-heading " class="text-l font-semibold leading-l ">Download the Domestika app</h3>
+                            <ul class="md:mt-3 md:space-y-1 mt-3 flex w-full flex-wrap items-center gap-x-3 space-y-0 ">
+                                <li>
+                                    <a href="https://play.google.com/store/apps/details?id=org.domestika&amp;hl=us " target="_blank " class="inline-block h-[45px] w-[150px] overflow-hidden ">
+                                        <img src="https://static.domestika.org/domestika-web/5e7f4b9a/img/get-it-on-google-play-en.png " alt="Get it on Google Play " class="h-[45px] w-[150px] " loading="lazy "/>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://apps.apple.com/us/app/domestika-online-courses/id1444399346?itsct=apps_box_link&amp;itscg=30200 " target="_blank " class="inline-block h-[48px] w-[136px] overflow-hidden ">
+                                        <img src="https://static.domestika.org/domestika-web/5e7f4b9a/img/download-on-the-app-store-en.svg " alt="Download on the App Store " class="h-[48px] w-[136px] " loading="lazy "/>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                            -->
+                    </div>
+                </div>
+            <div id="mobile-links" class="md:hidden">
+                <div class="w-full">
+                    <!-- Categories -->
+                    <div class="border-b">
+                    <button type="button" class="flex flex-1 items-center justify-between p-4 text-left text-l font-medium w-full w-full"
+                            onclick="toggleAccordion(this)">
+                        <span class="text-l font-semibold leading-l">Categories</span>
+                        <svg class="inline self-center h-5 w-5 shrink-0 text-foreground transition-transform duration-200" viewBox="0 0 24 24" fill="none">
+                        <path d="M4.246 8.184l6.694 6.998 6.694-6.998" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="hidden px-4 pb-4">
+                            <ul class="space-y-3 md:mt-3 md:space-y-1 ">
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/category/11-illustration.html " data-discover="true ">Illustration courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/category/12-craft.html " data-discover="true ">Craft courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/category/17-marketing-business.html " data-discover="true ">Marketing &amp;Business courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/category/8-photography-video.html " data-discover="true ">Photography &amp;Video courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/category/3-design.html " data-discover="true ">Design courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/category/13-3d-animation.html " data-discover="true ">3D &amp;Animation courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/category/15-architecture-spaces.html " data-discover="true ">Architecture &amp;Spaces courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/category/20-fashion.html " data-discover="true ">Fashion courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/category/18-writing.html " data-discover="true ">Writing courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/category/9-web-app-design.html " data-discover="true ">Web &amp;App Design courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/category/16-calligraphy-typography.html " data-discover="true ">Calligraphy &amp;Typography courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/category/19-music-audio.html " data-discover="true ">Music &amp;Audio courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/category/21-culinary.html " data-discover="true ">Culinary courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/category/23-artificial-intelligence.html " data-discover="true ">Artificial Intelligence courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/category/24-wellness.html " data-discover="true ">Wellness courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/category/22-how-to-become.html " data-discover="true ">How to become courses</a>
+                                </li>
+                            </ul>
+                    </div>
+                    </div>
+
+                    <!-- Software -->
+                    <div class="border-b">
+                    <button type="button" class="flex flex-1 items-center justify-between p-4 text-left text-l font-medium w-full"
+                            onclick="toggleAccordion(this)">
+                        <span class="text-l font-semibold leading-l">Software</span>
+                        <svg class="inline self-center h-5 w-5 shrink-0 text-foreground transition-transform duration-200" viewBox="0 0 24 24" fill="none">
+                        <path d="M4.246 8.184l6.694 6.998 6.694-6.998" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="hidden px-4 pb-4">
+                        <ul class="space-y-3 md:mt-3 md:space-y-1 ">
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/software/2-adobe-photoshop.html " data-discover="true ">Adobe Photoshop courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/software/1-adobe-illustrator.html " data-discover="true ">Adobe Illustrator courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/software/75-procreate.html " data-discover="true ">Procreate courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/software/3-adobe-after-effects.html " data-discover="true ">Adobe After Effects courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/software/4-adobe-lightroom.html " data-discover="true ">Adobe Lightroom courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/software/9-cinema-4d.html " data-discover="true ">Cinema 4D courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/software/5-adobe-indesign.html " data-discover="true ">Adobe InDesign courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/software/7-adobe-premiere.html " data-discover="true ">Adobe Premiere courses</a>
+                                </li>
+                                <li>
+                                    <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/software/45-octanerender.html " data-discover="true ">OctaneRender courses</a>
+                                </li>
+                            </ul>
+                    </div>
+                    </div>
+
+                    <!-- Support -->
+                    <div class="border-b">
+                        <button type="button" class="flex flex-1 items-center justify-between p-4 text-left text-l font-medium w-full"
+                                onclick="toggleAccordion(this)">
+                            <span class="text-l font-semibold leading-l">Liste</span>
+                            <svg class="inline self-center h-5 w-5 shrink-0 text-foreground transition-transform duration-200" viewBox="0 0 24 24" fill="none">
+                            <path d="M4.246 8.184l6.694 6.998 6.694-6.998" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <div class="hidden px-4 pb-4">
+                                <ul class="space-y-3 md:mt-3 md:space-y-1 ">
+                                    <li>
+                                        <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/recent.html " data-discover="true ">New courses</a>
+                                    </li>
+                                    <li>
+                                        <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/highest_rated.html " data-discover="true ">Top rated</a>
+                                    </li>
+                                    <li>
+                                        <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/popular.html " data-discover="true ">Popular courses</a>
+                                    </li>
+                                    <li>
+                                        <a class="hover:text-primary text-s leading-l cursor-pointer transition-colors " href="en/courses/on_sale.html " data-discover="true ">Courses on sale</a>
+                                    </li>
+                                </ul>
+                        </div>
+                    </div>
+
+                    <div class="border-b">
+                        <button type="button" class="flex flex-1 items-center justify-between p-4 text-left text-l font-medium w-full"
+                                onclick="toggleAccordion(this)">
+                            <span class="text-l font-semibold leading-l">Section</span>
+                            <svg class="inline self-center h-5 w-5 shrink-0 text-foreground transition-transform duration-200" viewBox="0 0 24 24" fill="none">
+                            <path d="M4.246 8.184l6.694 6.998 6.694-6.998" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <div class="hidden px-4 pb-4">
+                                                                    <ul class="space-y-3 md:mt-3 md:space-y-1 ">
+                                <li>
+                                <a
+                                    class="hover:text-monalisa-primary text-s leading-l cursor-pointer transition-colors "
+                                    href="cours.html "
+                                >
+                                    Cours
+                                </a>
+                                </li>
+                                <li>
+                                <a
+                                    class="hover:text-monalisa-primary text-s leading-l cursor-pointer transition-colors "
+                                    href="projets.html "
+                                >
+                                    Projets
+                                </a>
+                                </li>
+                                <li>
+                                <a
+                                    class="hover:text-monalisa-primary text-s leading-l cursor-pointer transition-colors "
+                                    href="formateurs.html "
+                                >
+                                    Formateurs
+                                </a>
+                                </li>
+                                <li>
+                                <a
+                                    class="hover:text-monalisa-primary text-s leading-l cursor-pointer transition-colors "
+                                    href="ecoles.html "
+                                >
+                                    Écoles partenaires
+                                </a>
+                                </li>
+                                <li>
+                                <a
+                                    class="hover:text-monalisa-primary text-s leading-l cursor-pointer transition-colors "
+                                    href="podcasts.html "
+                                >
+                                    Podcasts Monalisa
+                                </a>
+                                </li>
+                                <li>
+                                <a
+                                    class="hover:text-monalisa-primary text-s leading-l cursor-pointer transition-colors "
+                                    href="blog.html "
+                                >
+                                    Blog
+                                </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                        <div class="border-b">
+                        <button type="button" class="flex flex-1 items-center justify-between p-4 text-left text-l font-medium w-full"
+                                onclick="toggleAccordion(this)">
+                            <span class="text-l font-semibold leading-l">Informations</span>
+                            <svg class="inline self-center h-5 w-5 shrink-0 text-foreground transition-transform duration-200" viewBox="0 0 24 24" fill="none">
+                            <path d="M4.246 8.184l6.694 6.998 6.694-6.998" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <div class="hidden px-4 pb-4">
+                            <ul class="space-y-3 md:mt-3 md:space-y-1 ">
+                                <li>
+                                <a
+                                    class="hover:text-monalisa-primary text-s leading-l cursor-pointer transition-colors "
+                                    href="a-propos.html "
+                                >
+                                    À propos de Monalisa
+                                </a>
+                                </li>
+                                <li>
+                                <a
+                                    class="hover:text-monalisa-primary text-s leading-l cursor-pointer transition-colors "
+                                    href="partenaires.html "
+                                >
+                                    Partenaires
+                                </a>
+                                </li>
+                                <li>
+                                <a
+                                    class="hover:text-monalisa-primary text-s leading-l cursor-pointer transition-colors "
+                                    href="entreprises.html "
+                                >
+                                    Solutions pour entreprises
+                                </a>
+                                </li>
+                                <li>
+                                <a
+                                    class="hover:text-monalisa-primary text-s leading-l cursor-pointer transition-colors "
+                                    href="formateurs-devenir.html "
+                                >
+                                    Devenir formateur
+                                </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="border-b">
+                        <button type="button" class="flex flex-1 items-center justify-between p-4 text-left text-l font-medium w-full"
+                                onclick="toggleAccordion(this)">
+                            <span class="text-l font-semibold leading-l">Support</span>
+                            <svg class="inline self-center h-5 w-5 shrink-0 text-foreground transition-transform duration-200" viewBox="0 0 24 24" fill="none">
+                            <path d="M4.246 8.184l6.694 6.998 6.694-6.998" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <div class="hidden px-4 pb-4">
+                            <ul class="space-y-3 md:mt-3 md:space-y-1 ">
+                                <li>
+                                <a
+                                    class="hover:text-monalisa-primary text-s leading-l cursor-pointer transition-colors "
+                                    href="aide.html "
+                                >
+                                    Centre d’aide
+                                </a>
+                                </li>
+                                <li>
+                                <a
+                                    class="hover:text-monalisa-primary text-s leading-l cursor-pointer transition-colors "
+                                    href="contact.html "
+                                >
+                                    Contact
+                                </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="lg:-ml-6 ">
+                            <h3 data-testid="section-heading " class="text-l font-semibold leading-l ">
+                            Langue
+                            </h3>
+                            <ul class="space-y-3 md:mt-3 md:space-y-1 mt-3 ">
+                                <li>
+                                    <div class="relative w-full md:w-40 ">
+                                        <div
+                                            class="absolute top-1/2 flex -translate-y-1/2 transform items-center left-3 "
+                                        >
+                                            <svg
+                                            viewBox="0 0 24 24 "
+                                            fill="none "
+                                            xmlns="http://www.w3.org/2000/svg "
+                                            aria-hidden="true "
+                                            class="w-4 h-4 inline self-center text-gray-600 "
+                                            >
+                                            <path
+                                                clip-rule="evenodd "
+                                                fill-rule="evenodd "
+                                                fill="currentColor "
+                                                d="m14.0792 18.4367c.3335-.6671.6208-1.4614.841-2.3534h-5.84037c.22013.892.50744 1.6863.841 2.3534.84577 1.6917 1.69377 2.0633 2.07917 2.0633s1.2334-.3716 2.0792-2.0633zm-5.119 1.5036c-1.88891-.7236-3.45378-2.1018-4.41697-3.857h2.89125c.34191 1.5268.86967 2.8509 1.52572 3.857zm-5.06052-5.357h3.26876c-.10987-.824-.16844-1.69-.16844-2.5833s.05857-1.7593.16844-2.58333h-3.26876c-.25959.81463-.39968 1.68263-.39968 2.58333s.14009 1.7687.39968 2.5833zm.64355-6.66663h2.89125c.3419-1.5268.86966-2.85083 1.52571-3.85698-1.8889.72358-3.45377 2.10178-4.41696 3.85698zm7.45027-5.91666c-5.51986.00351-9.9935 4.47931-9.9935 9.99999 0 5.5229 4.47715 10 10 10 5.5228 0 10-4.4771 10-10 0-5.52284-4.4772-9.99999-10-10-.0022 0-.0043 0-.0065.00001zm.0065 1.49999c-.0009 0-.0019 0-.0028.00001-.3867.00181-1.2326.37576-2.07637 2.06325-.33356.66713-.62087 1.46147-.841 2.35341h5.84037c-.2202-.89194-.5075-1.68628-.841-2.35341-.8458-1.69162-1.6938-2.06326-2.0792-2.06326zm3.0398.55969c1.8889.72358 3.4538 2.10179 4.417 3.85698h-2.8913c-.3419-1.5268-.8696-2.85083-1.5257-3.85698zm5.0605 5.35698h-3.2687c.1098.82403.1684 1.69003.1684 2.58333s-.0586 1.7593-.1684 2.5833h3.2687c.2596-.8146.3997-1.6826.3997-2.5833s-.1401-1.7687-.3997-2.58333zm-.6435 6.66663c-.9632 1.7552-2.5281 3.1334-4.417 3.857.6561-1.0061 1.1838-2.3302 1.5257-3.857zm-4.0639-4.0833c0 .9054-.0645 1.772-.1819 2.5833h-6.42201c-.11736-.8113-.18185-1.6779-.18185-2.5833s.06449-1.772.18185-2.58333h6.42201c.1174.81133.1819 1.67793.1819 2.58333z "
+                                            ></path>
+                                            </svg>
+                                    </div>
+
+                                    <label id="language-select " class="sr-only ">Langue</label>
+                                    <select
+                                        aria-labelledby="language-select "
+                                        class="h-8 w-full appearance-none rounded border pl-8 pr-6 text-sm focus:outline-none focus:ring-2 focus:ring-monalisa-primary "
+                                        data-testid="language-selector "
+                                        style="color: rgb(129, 129, 129);"
+                                    >
+                                        <option value="fr " selected>Français</option>
+                                        <option value="en ">Anglais</option>
+                                        <option value="es ">Espagnol</option>
+                                        <option value="pt ">Portugais</option>
+                                        <option value="de ">Allemand</option>
+                                        <option value="it ">Italien</option>
+                                        <option value="nl ">Néerlandais</option>
+                                        <option value="tr ">Turc</option>
+                                    </select>
+
+                                    <div class="absolute top-1/2 flex -translate-y-1/2 transform items-center right-2 text-gray-500 ">
+                                        <svg
+                                        viewBox="0 0 24 24 "
+                                        fill="none "
+                                        xmlns="http://www.w3.org/2000/svg "
+                                        aria-hidden="true "
+                                        class="w-4 h-4 inline self-center "
+                                        >
+                                        <path
+                                            clip-rule="evenodd "
+                                            fill-rule="evenodd "
+                                            fill="currentColor "
+                                            d="m4.24636 8.18404c.30693-.26351.78123-.24141 1.05938.04936l6.69426 6.998 6.6943-6.998c.2781-.29077.7524-.31287 1.0593-.04936.307.26351.3303.71285.0521 1.00362l-7.25 7.57894c-.1421.1486-.344.2334-.5557.2334s-.4136-.0848-.5557-.2334l-7.25004-7.57894c-.27815-.29077-.25483-.74011.0521-1.00362z "
+                                        ></path>
+                                        </svg>
+                                    </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div data-orientation="horizontal " role="none " class="shrink-0 bg-gray-200 h-[1px] w-full my-12 "></div>
+            <div class="flex flex-col items-center justify-between md:flex-row ">
+                <ul class="grid grid-cols-2 flex-wrap items-center gap-x-4 gap-y-2 text-nowrap text-center sm:flex ">
+                    <li>
+                        <span class="font-semibold ">© Monalisa 2025</span>
+                    </li>
+                    <li>
+                        <a class="transition-colors hover:text-primary " href="# " data-discover="true ">Conditions d'utilisation</a>
+                    </li>
+                </ul>
+
+                <ul class="mt-8 flex items-center space-x-3 md:mt-0 ">
+                    <li>
+                        <a href="# " target="_blank " class="grid h-8.5 w-8.5 place-items-center rounded-full border text-m transition-colors hover:bg-foreground/xs " title="Facebook Monalisa ">
+                            <svg viewBox="0 0 24 24 " fill="none " xmlns="http://www.w3.org/2000/svg " class="w-[1em] h-[1em] inline self-center ">
+                                <path clip-rule="evenodd " d="m22 12.0611c0-5.55659-4.4771-10.0611-10-10.0611-5.52285 0-10 4.50451-10 10.0611 0 5.0218 3.65686 9.1841 8.4375 9.9389v-7.0306h-2.53906v-2.9083h2.53906v-2.21658c0-2.52156 1.4929-3.9144 3.7771-3.9144 1.0941 0 2.2385.19651 2.2385.19651v2.47598h-1.261c-1.2422 0-1.6296.77555-1.6296 1.57119v1.8873h2.7734l-.4433 2.9083h-2.3301v7.0306c4.7806-.7548 8.4375-4.9171 8.4375-9.9389z " fill="currentColor " fill-rule="evenodd "></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="# " target="_blank " class="grid h-8.5 w-8.5 place-items-center rounded-full border text-m transition-colors hover:bg-foreground/xs " title="Instagram Monalisa ">
+                            <svg viewBox="0 0 24 24 " fill="none " xmlns="http://www.w3.org/2000/svg " class="w-[1em] h-[1em] inline self-center ">
+                                <path clip-rule="evenodd " d="m21.9966 7.62945c-.1058-3.12251-2.6783-5.62945-5.8262-5.62945h-8.34083l-.20012.00339c-3.12251.10582-5.62945 2.67834-5.62945 5.82618v8.34083l.00339.2002c.10582 3.1225 2.67834 5.6294 5.82618 5.6294h8.34083l.2002-.0034c3.1225-.1058 5.6294-2.6783 5.6294-5.8262v-8.34083zm-14.16691-4.23598h8.34081c2.4458 0 4.4361 1.99036 4.4361 4.43609v8.34084l-.0037.1826c-.0961 2.3614-2.0478 4.2535-4.4324 4.2535h-8.34081l-.18255-.0037c-2.36145-.0961-4.25354-2.0478-4.25354-4.4324v-8.34084l.00371-.18255c.09609-2.36145 2.0478-4.25354 4.43238-4.25354zm9.03711 8.60653c0-2.68423-2.1829-4.86718-4.8671-4.86718-2.68424 0-4.86719 2.18295-4.86719 4.86718 0 2.6218 2.0826 4.7654 4.68069 4.8636l.1865.0036.1864-.0036c2.5982-.0982 4.6807-2.2418 4.6807-4.8636zm-5.0401-3.46945.1731-.00426.1731.00426c1.8351.09053 3.3006 1.61235 3.3006 3.46945 0 1.9151-1.5586 3.4737-3.4737 3.4737s-3.47368-1.5586-3.47368-3.4737c0-1.8571 1.46554-3.37892 3.30058-3.46945zm5.0924-2.9466c-.5897 0-1.0693.4796-1.0693 1.06934s.4796 1.06934 1.0693 1.06934c.5898 0 1.0694-.4796 1.0694-1.06934s-.4796-1.06934-1.0694-1.06934z " fill="currentColor " fill-rule="evenodd "></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="# " target="_blank " class="grid h-8.5 w-8.5 place-items-center rounded-full border text-m transition-colors hover:bg-foreground/xs " title="Twitter Monalisa ">
+                            <svg viewBox="0 0 24 24 " fill="none " xmlns="http://www.w3.org/2000/svg " class="w-[1em] h-[1em] inline self-center ">
+                                <path clip-rule="evenodd " d="m22 6.01256c-.7358.34167-1.5267.57178-2.3567.6755.8475-.53081 1.4984-1.37192 1.8042-2.37428-.7925.49159-1.6708.84896-2.6058 1.04158-.7475-.83413-1.815-1.35536-2.995-1.35536-2.6492 0-4.5959 2.58521-3.9975 5.26892-3.4092-.17868-6.43253-1.88705-8.4567-4.48359-1.075 1.92888-.5575 4.45221 1.26917 5.72997-.67167-.0226-1.305-.2153-1.8575-.53689-.045 1.98819 1.3175 3.84819 3.29083 4.26219-.5775.1639-1.21.2022-1.85333.0732.52166 1.7049 2.03666 2.9452 3.83333 2.9801-1.725 1.4146-3.89833 2.0465-6.075 1.7781 1.81583 1.2176 3.97333 1.928 6.29 1.928 7.6183 0 11.9225-6.7297 11.6625-12.76569.8017-.60577 1.4975-1.36146 2.0475-2.22175z " fill="currentColor " fill-rule="evenodd "></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="# " target="_blank " class="grid h-8.5 w-8.5 place-items-center rounded-full border text-m transition-colors hover:bg-foreground/xs " title="Pinterest Monalisa ">
+                            <svg viewBox="0 0 24 24 " fill="none " xmlns="http://www.w3.org/2000/svg " class="w-[1em] h-[1em] inline self-center ">
+                                <path clip-rule="evenodd " d="m12.0082 2c-5.52716 0-10.0082 4.47368-10.0082 9.9918 0 4.2352 2.63591 7.8536 6.35913 9.3092-.09061-.7895-.16475-2.0066.03295-2.8701.18122-.7812 1.16968-4.9671 1.16968-4.9671s-.29654-.6003-.29654-1.4802c0-1.3899.80728-2.42603 1.81218-2.42603.8567 0 1.2685.64143 1.2685 1.40623 0 .8553-.5436 2.1382-.8319 3.3306-.2389.9951.5025 1.8092 1.4827 1.8092 1.7792 0 3.1466-1.875 3.1466-4.5724 0-2.39304-1.7216-4.06245-4.1845-4.06245-2.85009 0-4.52224 2.12993-4.52224 4.33385 0 .8553.32949 1.7763.74135 2.278.08237.0987.09061.1891.0659.2878-.07414.3125-.24712.9951-.28007 1.1349-.04118.1809-.14827.222-.33772.1316-1.25206-.5839-2.0346-2.4013-2.0346-3.8734 0-3.14966 2.28995-6.04439 6.61448-6.04439 3.4679 0 6.1697 2.4671 6.1697 5.77299 0 3.4458-2.1746 6.2171-5.1895 6.2171-1.0131 0-1.9687-.5263-2.2899-1.1513 0 0-.5025 1.9079-.626 2.3767-.2224.8717-.832 1.9572-1.24386 2.6233.93904.2879 1.92756.4441 2.96536.4441 5.5272 0 10.0083-4.4737 10.0083-9.9918.0164-5.53452-4.4646-10.0082-9.9918-10.0082z " fill="currentColor " fill-rule="evenodd "></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="# " target="_blank " class="grid h-8.5 w-8.5 place-items-center rounded-full border text-m transition-colors hover:bg-foreground/xs " title="Vimeo Monalisa ">
+                            <svg viewBox="0 0 24 24 " fill="none " xmlns="http://www.w3.org/2000/svg " class="w-[1em] h-[1em] inline self-center ">
+                                <path clip-rule="evenodd " d="m6.16667 2h11.66663c2.3017 0 4.1667 1.86583 4.1667 4.16667v11.66663c0 2.3009-1.865 4.1667-4.1667 4.1667h-11.66663c-2.30084 0-4.16667-1.8658-4.16667-4.1667v-11.66663c0-2.30084 1.86583-4.16667 4.16667-4.16667zm5.17163 15.7875c2.07 0 5.3459-3.9458 6.7017-6.8442 2.5883-5.52747-3.5892-6.42331-5.0733-1.55997.9375-.40167 2.0183-.3625 1.8841.92417-.075.8783-1.555 3.3367-2.1541 3.3367-.7274 0-1.161-2.7646-1.473-4.75382-.0183-.11664-.0362-.23062-.0537-.34122-.2392-1.51917-.8783-2.22833-1.91583-2.12833-.74988.06915-1.88315 1.0954-3.08653 2.18515-.27568.24964-.55504.50262-.8343.74818l.62666.80834c.04228-.0296.08342-.0585.12347-.0867.9335-.65639 1.28073-.90054 1.8057.465.32732.8508.58393 1.8271.83487 2.7817.60323 2.295 1.1736 4.465 2.61426 4.465z " fill="currentColor " fill-rule="evenodd "></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="# " target="_blank " class="grid h-8.5 w-8.5 place-items-center rounded-full border text-m transition-colors hover:bg-foreground/xs " title="YouTube Monalisa ">
+                            <svg viewBox="0 0 24 24 " fill="none " xmlns="http://www.w3.org/2000/svg " class="w-[1em] h-[1em] inline self-center ">
+                                <path clip-rule="evenodd " d="m5.65417 5.14321c2.99916-.19056 9.68833-.19133 12.69163 0 3.2509.20766 3.63 2.0463 3.6542 6.85679-.0242 4.819-.4067 6.6499-3.6542 6.8568-3.0033.1913-9.69163.1905-12.69163 0-3.25084-.2077-3.63-2.0463-3.65417-6.8568.02417-4.81904.40667-6.64991 3.65417-6.85679zm10.51253 6.85139-6.6667-3.10567v6.22217z " fill="currentColor " fill-rule="evenodd "></path>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="assets/js/style.js "></script>    
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js "></script>
+    
+
+    </body>
+</html>
+
+

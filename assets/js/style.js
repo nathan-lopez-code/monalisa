@@ -91,6 +91,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const sidebar = document.getElementById('mobile-menu-sidebar');
+
+  if (sidebar) {
+    // Déplace le menu mobile en dehors du header, dans le body
+    document.body.appendChild(sidebar);
+  }
+});
+
 
 // Slider 
 
@@ -119,3 +128,21 @@ function slide(direction) {
   }
 
 
+// modal
+
+
+function openModal(id) {
+const modal = document.getElementById(id);
+if (modal) {
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+}}
+
+function closeModal(id) {
+const modal = document.getElementById(id);
+if (modal) {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    document.body.style.overflow = ''; 
+}}

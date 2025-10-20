@@ -243,6 +243,6 @@ a .bg-monalisa-primary:hover{
     background-color: #624cf5;
 }
 
-text-monalisa-primary{
+.text-monalisa-primary{
     color: var(--monalisa-primary);
 }
