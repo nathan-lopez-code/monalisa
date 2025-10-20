@@ -102,3 +102,18 @@ function slide(direction) {
       behavior: "smooth",
     });
 }
+
+
+// logique pour le submenu du footer
+
+  function toggleAccordion(button) {
+    const content = button.nextElementSibling;
+    const svg = button.querySelector('svg');
+    if(content.classList.contains('hidden')) {
+      content.classList.remove('hidden');
+      svg.classList.add('rotate-180');
+    } else {
+      content.classList.add('hidden');
+      svg.classList.remove('rotate-180');
+    }
+  }
