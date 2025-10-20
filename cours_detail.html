@@ -138,7 +138,9 @@
               </div>
             </li>
             <!-- Autres items du nav -->
-
+            <li class="h-full list-none">
+              <a href="/projects.html" class="inline-flex h-full items-center font-semibold text-white">Projets</a>
+            </li>
             <li class="list-none shrink-0 relative">
               <button type="button" class="inline-flex h-10 w-max items-center justify-center font-semibold text-white js-dropdown-btn">Plus</button>
               <div class="absolute top-full right-0 w-48 bg-white text-gray-800 shadow-xl py-2 z-20 hidden js-dropdown-menu">
@@ -147,10 +149,6 @@
                 <a href="/faq.html" class="block text-sm text-gray-700 hover:text-blue-600 py-1 pl-2">FAQ & Aide</a>
                 <a href="/contact.html" class="block text-sm text-gray-700 hover:text-blue-600 py-1 pl-2">Contact</a>
               </div>
-            </li>
-
-            <li class="h-full list-none">
-              <a href="/contact.html" class="inline-flex h-full items-center font-semibold text-white">Contact</a>
             </li>
           </ul>
         </div>
@@ -259,522 +257,137 @@
         </div>
       </div>
   </header>
-    <main>
-        <!--$-->
-        <section class="relative group bg-[#202020]">
-            <div class="swiper mySwiper ">
-                <div class="swiper-wrapper h-full ">
+    <main class="js-main-content" id="main-content" role="main">
 
-                    <div class="swiper-slide relative flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-12 gap-8 bg-cover bg-center bg-no-repeat h-full "
-                        style="background-image: linear-gradient(90deg, rgba(0,0,0,0.55) 30%, rgba(0,0,0,0.05) 100%), url( 'assets/images/cours_image/cours2_bg.jpg'); ">
+    <!-- Hero du cours -->
+    <section class="relative w-full bg-gray-100">
+        <img src="/assets/images/cours_image/les-cours-particuliers.jpg" alt="Design Graphique pour Débutants" class="w-full h-80 object-cover md:h-96">
+        <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+        <div class="text-center text-white px-4">
+            <h1 class="text-3xl md:text-5xl font-bold mb-2">Design Graphique pour Débutants</h1>
+            <p class="text-lg md:text-2xl mb-4">Par Marie Kabila · Niveau Débutant · 8 heures</p>
+            <a href="#" class="bg-monalisa-primary hover:bg-blue-800 text-white font-semibold py-3 px-6 rounded-lg transition">
+                S'inscrire maintenant
+            </a>
+        </div>
+        </div>
+    </section>
 
-                        <div class="absolute inset-0 backdrop-blur-[120px] bg-black/20 "></div>
+    <div class="container mx-auto px-4 md:px-14 py-10 flex flex-col md:flex-row gap-8">
 
-                        <div class="relative z-10 container mx-auto flex flex-col-reverse md:flex-row items-center gap-8 h-full ">
+        <!-- Contenu principal -->
+        <div class="flex-1 space-y-8">
 
-                            <div class="flex flex-col justify-center text-white md:w-1/2 space-y-4 h-full ">
-                                <a href="/en/courses/5655-interior-design-specialization-materials-lighting-and-color " class="hover:text-monalisa-primary transition-colors ">
-                                    <h3 class="text-2xl md:text-[28px] font-semibold leading-snug ">
-                                    Interior Design Specialization: Materials, Lighting, and Color
-                                    </h3>
-                                </a>
+        <!-- Onglets interactifs -->
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <nav class="flex border-b border-gray-200 mb-6">
+            <button class="tab-btn text-gray-700 px-4 py-2 border-b-2 border-monalisa-primary font-semibold" data-tab="description">Description</button>
+            <button class="tab-btn text-gray-500 px-4 py-2 hover:text-gray-700" data-tab="programme">Programme</button>
+            <button class="tab-btn text-gray-500 px-4 py-2 hover:text-gray-700" data-tab="avis">Avis</button>
+            <button class="tab-btn text-gray-500 px-4 py-2 hover:text-gray-700" data-tab="faq">FAQ</button>
+            </nav>
 
-                                <p class="text-base opacity-90 ">
-                                    Learn Interior design: lighting, materials, color and creative concepts to transform unique and functional spaces.
-                                </p>
+            <div class="tab-content" id="description">
+            <h2 class="text-xl font-semibold mb-4">Description du cours</h2>
+            <p class="text-gray-700 mb-4">
+                Apprenez les bases du design graphique et développez vos compétences pour créer des visuels professionnels pour le web et l’impression. Vous suivrez des exercices pratiques pour construire votre portfolio.
+            </p>
+            <p class="text-gray-700">
+                Les modules sont conçus pour vous guider étape par étape, même si vous n'avez aucune expérience préalable.
+            </p>
+            </div>
 
-                                <div class="flex flex-wrap items-center gap-4 mt-3 ">
-                                    <div class="inline-flex items-center font-semibold border rounded-xl h-6 px-2 text-xs bg-white/90 text-gray-900 ">
-                                    FREE WITH
-                                    <svg class="ml-1 w-5 h-auto text-pink-600 " xmlns="http://www.w3.org/2000/svg " viewBox="0 0 30 16 " fill="currentColor ">
-                                        <path d="m27.15,7.17c-1.14-0.27-1.35-0.59-1.35-1.02c0-0.57,0.42-0.95,1.07-0.95c0.82,0,1.33,0.49,1.45,1.1l1.57-0.66c-0.35-1.31-1.53-2.14-3.02-2.14c-1.59,0-2.83,1.1-2.83,2.53c0,1.5,0.94,2.18,2.62,2.67c1.26,0.36,1.58,0.55,1.58,1.19c0,0.53-0.51,0.93-1.2,0.93c-0.9,0-1.38-0.51-1.51-1.02l-1.66,0.7c0.38,1.19,1.62,2,3.15,2c1.8,0,2.98-1.1,2.98-2.5c0-1.58-1.05-2.36-2.85-2.83 "/>
-                                    </svg>
-                                    </div>
-
-                                    <div class="flex items-center gap-3 text-sm text-neutral-100 ">
-                                        <span class="flex items-center gap-1 ">
-                                            <svg viewBox="0 0 24 24 " fill="currentColor " class="w-4 h-4 "><path d="M12 2C14.76 2 17 4.24 17 7C17 9.76 14.76 12 12 12C9.24 12 7 9.76 7 7C7 4.24 9.24 2 12 2ZM4.5 20C4.5 16.96 6.96 14.5 10 14.5H14C17.04 14.5 19.5 16.96 19.5 20C19.5 20.28 19.28 20.5 19 20.5H5C4.72 20.5 4.5 20.28 4.5 20Z "/></svg>
-                                            3 159
-                                        </span>
-                                        <span class="flex items-center gap-1 ">
-                                            <svg viewBox="0 0 24 24 " fill="currentColor " class="w-4 h-4 "><path d="M13.22 0C14.06 0 14.97.35 15.53.82l.06.05c.38.34.72 1.1.94 1.9.22.83.33 1.75.22 2.26l-.56 2.84h4.07c1.55 0 3.28.74 3.28 2.55v.43c0 .39-.05.74-.17 1.05.4.46.62 1.02.62 1.63v2.01c0 .6-.23 1.13-.63 1.56.14.38.19.81.19 1.29v.49c0 .63-.26 1.24-.74 1.61l-.29.21c.05.27.05.55.05.81 0 2.06-1.66 2.3-3.27 2.3h-7.53c-1.26 0-2.49-.36-3.43-1.2v.3c0 .43-.3.79-.7.84H2.47C.72 23.88 0 22.86 0 21.17v-9.52C0 9.94.75 8.99 2.51 8.99h4.59l3.71-4.7.61-3.12c.04-.22.15-.42.29-.6.37-.43.93-.58 1.51-.58z "/></svg>
-                                            100% (31)
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="mt-2 flex items-baseline gap-2 text-lg ">
-                                    <span class="font-semibold text-green-300 ">95% Disc.</span>
-                                    <s class="opacity-70 ">$129.99</s>
-                                </div>
-
-                                <a href="/en/courses/5655-interior-design-specialization-materials-lighting-and-color "
-                                    class="mt-5 inline-flex items-center justify-center w-full md:w-1/2 h-12 px-6 rounded font-semibold bg-white text-gray-900 hover:bg-gray-900 hover:text-white transition-all ">
-                                    <svg class="w-5 h-5 mr-2 " viewBox="0 0 24 24 " fill="currentColor "><path d="M2.74 2C2.33 2 2 2.34 2 2.75S2.33 3.5 2.74 3.5h1.35l3 12.5h9.89l1.6-6.73H8.85L8.13 3.5H2.74Z "/></svg>
-                                    Buy <span class="ml-2 ">$5.99</span>
-                                </a>
-                            </div>
-
-                            <div class="md:w-1/2 w-full h-full flex items-center justify-center ">
-                                <div class=" w-full h-[200px] sm:w-[300px] sm:h-[200px] md:w-[450px] md:h-[300px] lg:w-[550px] lg:h-[380px] ">
-                                    <img src="assets/images/cours_image/cours2.jpg "
-                                        alt="Interior Design Specialization "
-                                        class="rounded-2xl shadow-lg w-full h-full object-cover ">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="swiper-slide relative flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-12 gap-8 bg-cover bg-center bg-no-repeat h-full "
-                        style="background-image: linear-gradient(90deg, rgba(0,0,0,0.55) 30%, rgba(0,0,0,0.05) 100%), url( 'assets/images/cours_image/bg_cours1.webp'); background-size: cover; ">
-
-                        <div class="absolute inset-0 backdrop-blur-[120px] bg-black/20 "></div>
-
-                        <div class="relative z-10 container mx-auto flex flex-col-reverse md:flex-row items-center gap-8 h-full ">
-
-                            <div class="flex flex-col justify-center text-white md:w-1/2 space-y-4 h-full ">
-                                <a href="/en/courses/5655-interior-design-specialization-materials-lighting-and-color " class="hover:text-monalisa-primary transition-colors ">
-                                    <h3 class="text-2xl md:text-[28px] font-semibold leading-snug ">
-                                    Interior Design Specialization: Materials, Lighting, and Color
-                                    </h3>
-                                </a>
-
-                                <p class="text-base opacity-90 ">
-                                    Learn Interior design: lighting, materials, color and creative concepts to transform unique and functional spaces.
-                                </p>
-
-                                <div class="flex flex-wrap items-center gap-4 mt-3 ">
-                                    <div class="inline-flex items-center font-semibold border rounded-xl h-6 px-2 text-xs bg-white/90 text-gray-900 ">
-                                    FREE WITH
-                                    <svg class="ml-1 w-5 h-auto text-pink-600 " xmlns="http://www.w3.org/2000/svg " viewBox="0 0 30 16 " fill="currentColor ">
-                                        <path d="m27.15,7.17c-1.14-0.27-1.35-0.59-1.35-1.02c0-0.57,0.42-0.95,1.07-0.95c0.82,0,1.33,0.49,1.45,1.1l1.57-0.66c-0.35-1.31-1.53-2.14-3.02-2.14c-1.59,0-2.83,1.1-2.83,2.53c0,1.5,0.94,2.18,2.62,2.67c1.26,0.36,1.58,0.55,1.58,1.19c0,0.53-0.51,0.93-1.2,0.93c-0.9,0-1.38-0.51-1.51-1.02l-1.66,0.7c0.38,1.19,1.62,2,3.15,2c1.8,0,2.98-1.1,2.98-2.5c0-1.58-1.05-2.36-2.85-2.83 "/>
-                                    </svg>
-                                    </div>
-
-                                    <div class="flex items-center gap-3 text-sm text-neutral-100 ">
-                                        <span class="flex items-center gap-1 ">
-                                            <svg viewBox="0 0 24 24 " fill="currentColor " class="w-4 h-4 "><path d="M12 2C14.76 2 17 4.24 17 7C17 9.76 14.76 12 12 12C9.24 12 7 9.76 7 7C7 4.24 9.24 2 12 2ZM4.5 20C4.5 16.96 6.96 14.5 10 14.5H14C17.04 14.5 19.5 16.96 19.5 20C19.5 20.28 19.28 20.5 19 20.5H5C4.72 20.5 4.5 20.28 4.5 20Z "/></svg>
-                                            3 159
-                                        </span>
-                                        <span class="flex items-center gap-1 ">
-                                            <svg viewBox="0 0 24 24 " fill="currentColor " class="w-4 h-4 "><path d="M13.22 0C14.06 0 14.97.35 15.53.82l.06.05c.38.34.72 1.1.94 1.9.22.83.33 1.75.22 2.26l-.56 2.84h4.07c1.55 0 3.28.74 3.28 2.55v.43c0 .39-.05.74-.17 1.05.4.46.62 1.02.62 1.63v2.01c0 .6-.23 1.13-.63 1.56.14.38.19.81.19 1.29v.49c0 .63-.26 1.24-.74 1.61l-.29.21c.05.27.05.55.05.81 0 2.06-1.66 2.3-3.27 2.3h-7.53c-1.26 0-2.49-.36-3.43-1.2v.3c0 .43-.3.79-.7.84H2.47C.72 23.88 0 22.86 0 21.17v-9.52C0 9.94.75 8.99 2.51 8.99h4.59l3.71-4.7.61-3.12c.04-.22.15-.42.29-.6.37-.43.93-.58 1.51-.58z "/></svg>
-                                            100% (31)
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="mt-2 flex items-baseline gap-2 text-lg ">
-                                    <span class="font-semibold text-green-300 ">95% Disc.</span>
-                                    <s class="opacity-70 ">$129.99</s>
-                                </div>
-
-                                <a href="/en/courses/5655-interior-design-specialization-materials-lighting-and-color "
-                                    class="mt-5 inline-flex items-center justify-center w-full md:w-1/2 h-12 px-6 rounded font-semibold bg-white text-gray-900 hover:bg-gray-900 hover:text-white transition-all ">
-                                    <svg class="w-5 h-5 mr-2 " viewBox="0 0 24 24 " fill="currentColor "><path d="M2.74 2C2.33 2 2 2.34 2 2.75S2.33 3.5 2.74 3.5h1.35l3 12.5h9.89l1.6-6.73H8.85L8.13 3.5H2.74Z "/></svg>
-                                    Buy <span class="ml-2 ">$5.99</span>
-                                </a>
-                            </div>
-
-                            <div class="md:w-1/2 w-full h-full flex items-center justify-center ">
-                                <div class=" w-dull h-[200px] sm:w-[300px] sm:h-[200px] md:w-[450px] md:h-[300px] lg:w-[550px] lg:h-[380px] ">
-                                    <img src="assets/images/cours_image/les-cours-particuliers.jpg "
-                                        alt="Interior Design Specialization "
-                                        class="rounded-2xl shadow-lg w-full h-full object-cover ">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="tab-content hidden" id="programme">
+            <h2 class="text-xl font-semibold mb-4">Programme du cours</h2>
+            <div class="space-y-3">
+                <div class="flex items-start gap-3">
+                <span class="font-bold text-monalisa-primary">1</span>
+                <p>Introduction au design graphique</p>
                 </div>
-
-                <div class="custom-btn-next hidden lg:flex absolute top-1/2 right-4 transform -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-auto "></div>
-                <div class="custom-btn-prev hidden lg:flex absolute top-1/2 left-4 transform -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-auto "></div>
-                <div class="swiper-pagination absolute bottom-0 left-0 w-full !mb-0 "></div>
+                <div class="flex items-start gap-3">
+                <span class="font-bold text-monalisa-primary">2</span>
+                <p>Principes de la couleur et typographie</p>
+                </div>
+                <div class="flex items-start gap-3">
+                <span class="font-bold text-monalisa-primary">3</span>
+                <p>Outils et logiciels (Photoshop, Illustrator)</p>
+                </div>
+                <div class="flex items-start gap-3">
+                <span class="font-bold text-monalisa-primary">4</span>
+                <p>Création d’un projet complet</p>
+                </div>
+                <div class="flex items-start gap-3">
+                <span class="font-bold text-monalisa-primary">5</span>
+                <p>Exercices pratiques et évaluations</p>
+                </div>
             </div>
-        </section>
-        <!--/$-->
-        <section class="px-6 md:px-16 py-12 ">
-            <h2 class="mb-2 text-xl font-medium leading-xl ">Learn by doing</h2>
-            <h3 class="mb-10 text-l font-medium leading-l text-neutral-900 ">
-                Get access to the best <a class="transition-colors hover:text-primary border-b border-neutral-900 text-neutral-900 hover:border-primary " href="en/courses.html " data-discover="true ">Online courses for creative professionals</a>
-                . Interact with the top professionals and discover the creative world &#x27;s best-kept secrets.
-            </h3>
-            <!--$-->
-            <ul class="mb-8 gap-x-6 gap-y-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
-
-                <li class="group relative pb-8 ">
-                    <div
-                        class="flex h-full flex-col rounded-2xl bg-white shadow-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl "
-                    >
-                        <!-- Image -->
-                        <div class="relative overflow-hidden ">
-                            <!-- Badge -->
-                            <div class="absolute left-3 top-3 z-10 ">
-                                <span
-                                class="inline-flex items-center rounded-full bg-yellow-400 text-neutral text-[10px] font-semibold px-2 py-0.5 uppercase shadow-sm "
-                                >
-                                Best Seller
-                                </span>
-                            </div>
-
-                            <!-- Bouton Ajouter à la liste -->
-                            <button
-                                class="absolute top-3 right-3 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/80 backdrop-blur-md hover:bg-white text-gray-800 p-2 rounded-full shadow-md "
-                                aria-label="Ajouter à la liste "
-                            >
-                                <svg
-                                xmlns="http://www.w3.org/2000/svg "
-                                class="w-4 h-4 "
-                                fill="none "
-                                viewBox="0 0 24 24 "
-                                stroke="currentColor "
-                                stroke-width="2 "
-                                >
-                                <path
-                                    stroke-linecap="round "
-                                    stroke-linejoin="round "
-                                    d="M12 4v16m8-8H4 "
-                                />
-                                </svg>
-                            </button>
-
-                            <!-- Image -->
-                            <a href="/cours_detail.html" class="block relative ">
-                                <img
-                                src="assets/images/cours_image/les-cours-particuliers.jpg "
-                                alt="Google Ads and Facebook Ads from Scratch "
-                                class="w-full aspect-video object-cover transform transition-transform duration-500 group-hover:scale-110 "
-                                />
-                                <div
-                                class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 "
-                                ></div>
-                            </a>
-                        </div>
-
-                        <!-- Contenu -->
-                        <div class="flex flex-col flex-grow p-4 space-y-2 ">
-                        <!-- Titre -->
-                        <a
-                            href="/cours_detail.html"
-                            class="hover:text-monalisa-primary transition-colors duration-200 "
-                        >
-                            <h2 class="font-semibold text-base leading-snug line-clamp-2 ">
-                            Google Ads and Facebook Ads from Scratch
-                            </h2>
-                        </a>
-
-                        <!-- Auteur -->
-                        <p class="text-sm text-gray-600 ">
-                            Un cours par <span class="font-medium ">Arantxa &amp; Guille</span>
-                        </p>
-
-                        <!-- Description -->
-                        <p class="text-sm text-gray-700 line-clamp-2 ">
-                            Apprenez à créer des campagnes sur Google et Facebook pour booster votre
-                            marque ou entreprise.
-                        </p>
-
-                        <!-- Infos -->
-                        <ul class="flex items-center gap-3 pt-2 text-sm text-gray-700 ">
-                            <li class="flex items-center ">
-                                <svg
-                                    class="w-4 h-4 mr-1 "
-                                    viewBox="0 0 24 24 "
-                                    fill="currentColor "
-                                    aria-hidden="true "
-                                    >
-                                    <path
-                                    fill-rule="evenodd "
-                                    clip-rule="evenodd "
-                                    d="M15.5 7C15.5 8.93241 13.9324 10.5 12 10.5C10.0676 10.5 8.5 8.93241 8.5 7C8.5 5.06759 10.0676 3.5 12 3.5C13.9324 3.5 15.5 5.06759 15.5 7ZM17 7C17 9.76083 14.7608 12 12 12C9.23917 12 7 9.76083 7 7C7 4.23917 9.23917 2 12 2C14.7608 2 17 4.23917 17 7ZM4.5 20C4.5 16.9624 6.96243 14.5 10 14.5H14C17.0376 14.5 19.5 16.9624 19.5 20C19.5 20.2761 19.2761 20.5 19 20.5H5C4.72386 20.5 4.5 20.2761 4.5 20ZM3 20C3 16.134 6.13401 13 10 13H14C17.866 13 21 16.134 21 20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20Z "
-                                    />
-                                </svg>
-                                <span>214 837 élèves</span>
-                            </li>
-                            <li class="flex items-center ">
-                                <svg
-                                    class="w-4 h-4 mr-1 text-yellow-400 "
-                                    viewBox="0 0 24 24 "
-                                    fill="currentColor "
-                                    >
-                                    <path
-                                    d="M12 .587l3.668 7.431L24 9.748l-6 5.847L19.335 24 12 20.202 4.665 24 6 15.595 0 9.748l8.332-1.73z "
-                                    />
-                                </svg>
-                            <span>92% (4.8K avis)</span>
-                            </li>
-                        </ul>
-
-                        <!-- Bas de carte -->
-                        <div class="mt-auto pt-3 border-t border-gray-100 ">
-                            <div class="flex items-center justify-between mb-3 ">
-                                <span class="text-xs text-gray-500 line-through ">$49.99</span>
-                                <span class="text-sm font-semibold text-red-600 ">98% de réduction</span>
-                            </div>
-
-                            <!-- Bouton Acheter -->
-                            <a
-                                href="# "
-                                class="relative inline-flex items-center justify-center w-full h-10 px-4 rounded-lg font-semibold text-white bg-monalisa-primary hover:bg-monalisa-primary/90 transition-all duration-300 "
-                                >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg "
-                                    class="w-5 h-5 mr-2 "
-                                    fill="none "
-                                    viewBox="0 0 24 24 "
-                                    stroke="currentColor "
-                                    stroke-width="2 "
-                                    >
-                                    <path
-                                    stroke-linecap="round "
-                                    stroke-linejoin="round "
-                                    d="M2.75 2.75h1.354l2.757 11.569c.187.785.883 1.339 1.682 1.339h9.889a1.75 1.75 0 001.682-1.34l1.604-6.733a1.25 1.25 0 00-1.682-1.158H6.857l-.721-3.027A1.25 1.25 0 004.454 2.75H2.75z "
-                                    />
-                                </svg>
-                                Acheter – <span class="ml-1 ">$0.99</span>
-                            </a>
-                        </div>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="group relative pb-8 ">
-                    <div
-                        class="flex h-full flex-col rounded-2xl bg-white shadow-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl "
-                    >
-                        <!-- Image -->
-                        <div class="relative overflow-hidden ">
-                            <!-- Badge -->
-                                <div class="absolute left-3 top-3 z-10 ">
-                                    <span
-                                    class="inline-flex items-center rounded-full bg-monalisa-primary text-white text-[10px] font-semibold px-2 py-0.5 uppercase shadow-sm "
-                                    >
-                                    New
-                                    </span>
-                                </div>
-
-                                <!-- Bouton Ajouter à la liste -->
-                                <button
-                                    class="absolute top-3 right-3 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/80 backdrop-blur-md hover:bg-white text-gray-800 p-2 rounded-full shadow-md "
-                                    aria-label="Ajouter à la liste "
-                                    >
-                                    <svg
-                                    xmlns="http://www.w3.org/2000/svg "
-                                    class="w-4 h-4 "
-                                    fill="none "
-                                    viewBox="0 0 24 24 "
-                                    stroke="currentColor "
-                                    stroke-width="2 "
-                                    >
-                                    <path
-                                        stroke-linecap="round "
-                                        stroke-linejoin="round "
-                                        d="M12 4v16m8-8H4 "
-                                    />
-                                    </svg>
-                                </button>
-
-                                <!-- Image -->
-                                <a href="# " class="block relative ">
-                                    <img
-                                    src="assets/images/cours_image/cours2.jpg "
-                                    alt="Cours Design 3D "
-                                    class="w-full aspect-video object-cover transform transition-transform duration-500 group-hover:scale-110 "
-                                    />
-                                    <div
-                                    class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 "
-                                    ></div>
-                                </a>
-                            </div>
-
-                            <!-- Contenu -->
-                            <div class="flex flex-col flex-grow p-4 space-y-2 ">
-                            <!-- Tags -->
-                                <div class="flex flex-wrap gap-1 ">
-                                    <span
-                                    class="inline-flex items-center font-semibold text-[10px] uppercase px-2 py-0.5 rounded-full border border-gray-300 text-gray-800 bg-white "
-                                    >
-                                    Deep Dive
-                                    </span>
-                                    <span
-                                    class="inline-flex items-center font-semibold text-[10px] uppercase px-2 py-0.5 rounded-full border border-monalisa-primary text-monalisa-primary bg-white "
-                                    >
-                                    Learn AI
-                                    </span>
-                                </div>
-
-                                <!-- Titre -->
-                                <a
-                                    href="# "
-                                    class="hover:text-monalisa-primary transition-colors duration-200 "
-                                >
-                                    <h2 class="font-semibold text-base leading-snug line-clamp-2 ">
-                                    Générer des images 3D avec l’IA et ComfyUI
-                                    </h2>
-                                </a>
-
-                                <!-- Auteur -->
-                                <p class="text-sm text-gray-600 ">
-                                    Un cours par <span class="font-medium ">Carlos Dordelly</span>
-                                </p>
-
-                                <!-- Description -->
-                                <p class="text-sm text-gray-700 line-clamp-2 ">
-                                    Apprenez à créer des rendus 3D détaillés avec ComfyUI, ControlNet et les
-                                    techniques IA.
-                                </p>
-
-                                <!-- Infos -->
-                                <ul class="flex items-center gap-3 pt-2 text-sm text-gray-700 ">
-                                    <li class="flex items-center ">
-                                    <svg class="w-4 h-4 mr-1 " viewBox="0 0 24 24 " fill="currentColor ">
-                                        <path
-                                        fill-rule="evenodd "
-                                        clip-rule="evenodd "
-                                        d="M15.5 7C15.5 8.93241 13.9324 10.5 12 10.5C10.0676 10.5 8.5 8.93241 8.5 7C8.5 5.06759 10.0676 3.5 12 3.5C13.9324 3.5 15.5 5.06759 15.5 7ZM17 7C17 9.76083 14.7608 12 12 12C9.23917 12 7 9.76083 7 7C7 4.23917 9.23917 2 12 2C14.7608 2 17 4.23917 17 7ZM4.5 20C4.5 16.9624 6.96243 14.5 10 14.5H14C17.0376 14.5 19.5 16.9624 19.5 20C19.5 20.2761 19.2761 20.5 19 20.5H5C4.72386 20.5 4.5 20.2761 4.5 20ZM3 20C3 16.134 6.13401 13 10 13H14C17.866 13 21 16.134 21 20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20Z "
-                                        />
-                                    </svg>
-                                    <span>22 élèves</span>
-                                    </li>
-                                </ul>
-
-                                <!-- Bas de carte -->
-                                <div class="mt-auto pt-3 border-t border-gray-100 ">
-                                    <div class="flex items-center justify-between mb-3 ">
-                                    <span class="text-xs text-gray-500 line-through ">$39.99</span>
-                                    <span class="text-sm font-semibold text-monalisa-primary "
-                                        >98% de réduction</span
-                                    >
-                                    </div>
-
-                            <!-- Bouton Acheter -->
-                                <a
-                                    href="# "
-                                    class="relative inline-flex items-center justify-center w-full h-10 px-4 rounded-lg font-semibold text-white bg-monalisa-primary hover:bg-monalisa-primary/90 transition-all duration-300 "
-                                    >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg "
-                                        class="w-5 h-5 mr-2 "
-                                        fill="none "
-                                        viewBox="0 0 24 24 "
-                                        stroke="currentColor "
-                                        stroke-width="2 "
-                                        >
-                                        <path
-                                        stroke-linecap="round "
-                                        stroke-linejoin="round "
-                                        d="M2.75 2.75h1.354l2.757 11.569c.187.785.883 1.339 1.682 1.339h9.889a1.75 1.75 0 001.682-1.34l1.604-6.733a1.25 1.25 0 00-1.682-1.158H6.857l-.721-3.027A1.25 1.25 0 004.454 2.75H2.75z "
-                                        />
-                                    </svg>
-                                    Acheter – <span class="ml-1 ">$0.99</span>
-                                </a>
-                                </div>
-                            </div>
-                    </div>
-                </li>
-            </ul>
-            <!--/$-->
-            <div class="mb-8 mt-16 flex justify-center sm:mb-6 sm:mt-10 ">
-                <a class="relative inline-flex items-center justify-center whitespace-nowrap transition-colors inline-flex items-center justify-center w-full h-10 px-4 text-white bg-monalisa-primary hover:bg-monalisa-primary/90 font-semibold rounded-lg transition-all duration-300 " href="en/courses/recent.html " data-discover="true ">
-                    Plus de de cours
-                    <svg viewBox="0 0 24 24 " fill="none " xmlns="http://www.w3.org/2000/svg " aria-label="See more Domestika courses " class="w-7 h-7 inline self-center ml-2 ">
-                        <path clip-rule="evenodd " d="m12.7803 4.22676c-.2929-.30235-.7677-.30235-1.0606 0-.2929.30234-.2929.79253 0 1.09487l5.7196 5.90417h-12.6893c-.41421 0-.75.3358-.75.75s.33579.75.75.75h12.7362l-5.7665 5.9526c-.2929.3023-.2929.7925 0 1.0948.2929.3024.7677.3024 1.0606 0l7-7.2258c.2929-.3023.2929-.7925 0-1.0948z " fill="currentColor " fill-rule="evenodd "></path>
-                    </svg>
-                </a>
             </div>
-        </section>
-        <hr/>
-        <section class="px-6 md:px-16 py-12 ">
-            <h2 class="text-xl font-medium leading-xl mb-12 text-center ">Pourquoi choisir les formations Monalisa ?</h2>
-            
-            <ul class="grid grid-cols-1 gap-10 md:grid-cols-2 ">
-                
-                <li class="flex gap-4 ">
-                    <svg fill="currentColor " viewBox="0 0 24 24 " xmlns="http://www.w3.org/2000/svg " class="w-12 h-12 inline mr-3 mt-1 shrink-0 self-start text-neutral-600 ">
-                        <path d="M12,0 C18.6283032,0 24,5.37169679 24,12 C24,18.6283032 18.6283032,24 12,24 C5.37305539,24 0,18.6276194 0,12 C0,5.37238064 5.37305539,0 12,0 Z M12,1.53191489 C6.21906556,1.53191489 1.53191489,6.21847695 1.53191489,12 C1.53191489,17.7815231 6.21906556,22.4680851 12,22.4680851 C17.78225,22.4680851 22.4680851,17.78225 22.4680851,12 C22.4680851,6.21775002 17.78225,1.53191489 12,1.53191489 Z M18.4540996,14.3709173 C18.8367846,14.5512052 19.0008599,15.0075849 18.820572,15.3902699 C17.5290861,18.1316206 14.921452,19.9148936 12,19.9148936 C9.0932672,19.9148936 6.4848086,18.1272654 5.18098971,15.3935645 C4.99888224,15.0117421 5.16078323,14.5545865 5.54260569,14.3724791 C5.92442815,14.1903716 6.38158368,14.3522726 6.56369114,14.7340951 C7.62238933,16.9538544 9.7077288,18.3829787 12,18.3829787 C14.3065617,18.3829787 16.387789,16.9596975 17.4347471,14.7373897 C17.615035,14.3547047 18.0714147,14.1906294 18.4540996,14.3709173 Z M16.0851064,7.91489362 C17.2139078,7.91489362 18.1276596,8.82864536 18.1276596,9.95744681 C18.1276596,11.0862483 17.2139078,12 16.0851064,12 C14.9563049,12 14.0425532,11.0862483 14.0425532,9.95744681 C14.0425532,8.82864536 14.9563049,7.91489362 16.0851064,7.91489362 Z M7.91489362,7.91489362 C9.04369506,7.91489362 9.95744681,8.82864536 9.95744681,9.95744681 C9.95744681,11.0862483 9.04369506,12 7.91489362,12 C6.78609217,12 5.87234043,11.0862483 5.87234043,9.95744681 C5.87234043,8.82864536 6.78609217,7.91489362 7.91489362,7.91489362 Z "></path>
-                    </svg>
-                    <div>
-                        <h3 class="mb-2 flex items-center text-l font-medium leading-l text-neutral-900 ">Apprenez à votre rythme, sans stress</h3>
-                        <p class="text-s leading-l text-neutral-900 ">Pas d'horaire fixe ! Suivez nos cours depuis chez vous, à Kinshasa, Lubumbashi ou d'ailleurs, avec une méthode flexible et efficace. C'est vous qui décidez.</p>
-                    </div>
-                </li>
-                
-                <li class="flex gap-4 ">
-                    <svg fill="currentColor " viewBox="0 0 24 24 " xmlns="http://www.w3.org/2000/svg " class="w-12 h-12 inline mr-3 mt-1 shrink-0 self-start text-neutral-600 ">
-                        <path d="M22.212766,2 C23.1974947,2 24,2.8025053 24,3.78723404 L24,3.78723404 L24,16.0425532 C24,17.0272819 23.1974947,17.8297872 22.212766,17.8297872 L22.212766,17.8297872 L12.765,17.829 L12.765,20.382 L16.1210553,20.3829787 C16.5440819,20.3829787 16.8870128,20.7259096 16.8870128,21.1489362 C16.8870128,21.5367106 16.5988556,21.8571823 16.2249912,21.9079013 L16.1210553,21.9148936 L7.95084255,21.9148936 C7.52781594,21.9148936 7.18488511,21.5719628 7.18488511,21.1489362 C7.18488511,20.7611618 7.47304226,20.4406901 7.84690666,20.389971 L7.95084255,20.3829787 L11.234,20.382 L11.234,17.829 L1.78723404,17.8297872 C0.851741735,17.8297872 0.0807060884,17.1055262 0.0059412545,16.1888183 L0,16.0425532 L0,3.78723404 C0,2.8025053 0.802505298,2 1.78723404,2 L1.78723404,2 Z M22.212766,3.53191489 L1.78723404,3.53191489 C1.64855853,3.53191489 1.53191489,3.64855853 1.53191489,3.78723404 L1.53191489,3.78723404 L1.53191489,16.0425532 C1.53191489,16.1812287 1.64855853,16.2978723 1.78723404,16.2978723 L1.78723404,16.2978723 L22.212766,16.2978723 C22.3514415,16.2978723 22.4680851,16.1812287 22.4680851,16.0425532 L22.4680851,16.0425532 L22.4680851,3.78723404 C22.4680851,3.64855853 22.3514415,3.53191489 22.212766,3.53191489 L22.212766,3.53191489 Z "></path>
-                    </svg>
-                    <div>
-                        <h3 class="mb-2 flex items-center text-l font-medium leading-l text-neutral-900 ">Vidéos immersives et illimitées</h3>
-                        <p class="text-s leading-l text-neutral-900 ">Accédez à des cours vidéo de **haute qualité** pour ne manquer aucun détail. L'accès est **illimité** : revisionnez les leçons autant de fois que nécessaire pour maîtriser votre technique.</p>
-                    </div>
-                </li>
-                
-                <li class="flex gap-4 ">
-                    <svg fill="currentColor " viewBox="0 0 24 24 " xmlns="http://www.w3.org/2000/svg " class="w-12 h-12 inline mr-3 mt-1 shrink-0 self-start text-neutral-600 ">
-                        <path d="M13.2229539,-4.4408921e-14 C14.0632173,-4.4408921e-14 14.9742239,0.354743239 15.5296331,0.824166405 L15.5296331,0.824166405 L15.5860771,0.870038376 C15.9698965,1.21407816 16.3160865,1.99007899 16.5343368,2.79283848 C16.75635,3.61471128 16.8654751,4.53597336 16.7638758,5.05203303 L16.7638758,5.05203303 L16.1994356,7.89227254 L20.2746943,7.89227254 C21.8212606,7.89227254 23.5559737,8.62622407 23.5559737,10.4419896 L23.5559737,10.4419896 L23.5559737,10.8663053 C23.5559737,11.2600397 23.5032926,11.6117248 23.3828786,11.9137153 C23.7779868,12.3647897 24,12.930544 24,13.5383476 L24,13.5383476 L24,15.5414236 C24,16.1377593 23.7742239,16.6652869 23.364064,17.0896027 C23.5032926,17.4527558 23.5522107,17.8847168 23.5522107,18.3472592 L23.5522107,18.3472592 L23.5522107,18.8365602 C23.5522107,19.4672998 23.303857,20.0751034 22.7657573,20.5070645 L22.7657573,20.5070645 L22.4760113,20.7062253 C22.5249294,20.9963655 22.5136406,21.2907106 22.5136406,21.5816154 C22.5136406,23.6378265 20.8504233,23.882477 19.2398871,23.882477 L19.2398871,23.882477 L11.7140169,23.882477 C10.4684854,23.882477 9.24176858,23.5155012 8.30856068,22.6515791 L8.401,22.732 L8.40116072,22.7349896 L8.308,22.734 L8.30856068,23.0491362 C8.30856068,23.4725697 7.99434446,23.8243453 7.59084547,23.8759591 L7.48824083,23.882477 L2.47224835,23.882477 C0.718720602,23.882477 5.32907052e-15,22.858003 5.32907052e-15,21.172208 L5.32907052e-15,21.172208 L5.32907052e-15,11.6575968 C5.32907052e-15,9.9362511 0.747318909,8.98937717 2.51175917,8.98937717 L2.51175917,8.98937717 L2.54374412,8.98937717 L7.09689558,9.01613582 L10.8071496,4.31425884 L11.420508,1.1987875 C11.4619003,0.977072974 11.5634995,0.774471771 11.7064911,0.606274545 C12.0786453,0.174695755 12.6336783,-4.4408921e-14 13.2229539,-4.4408921e-14 Z M2.53508937,10.5184429 L2.51175917,10.5184429 C1.58306679,10.5184429 1.50517404,10.7967328 1.50517404,11.6575968 L1.50517404,11.6575968 L1.50517404,21.172208 C1.50517404,21.6351327 1.58381938,22.0032552 1.71514581,22.1569263 C1.8611477,22.3281817 2.25211665,22.3534113 2.47224835,22.3534113 L2.47224835,22.3534113 L6.733,22.353 L6.733,10.543 L2.53508937,10.5184429 Z M13.2229539,1.52906569 C13.0532455,1.52906569 12.9380997,1.55811794 12.8790216,1.58640565 L12.8790216,1.58640565 L12.2829727,4.61395571 L12.2111007,4.97978468 L11.9815616,5.27068942 L8.401,9.807 L8.401,20.668 L9.32229539,21.5212173 C10.0079601,22.1560148 10.8853607,22.3279668 11.551985,22.3506648 L11.7140169,22.3534113 L19.2398871,22.3534113 C21.0084666,22.3534113 21.0084666,22.0460691 21.0084666,21.5816154 L21.0088429,21.4340605 C21.0099718,21.2498081 21.0111007,21.0754946 20.992286,20.9634906 L20.992286,20.9634906 L20.8285983,19.9910048 L21.6338664,19.4386298 L21.8645343,19.2803715 C21.9503293,19.2027714 22.0470367,19.0743299 22.0470367,18.8365602 L22.0470367,18.8365602 L22.0470367,18.3472592 C22.0470367,17.9298242 21.993603,17.7276053 21.9616181,17.6446535 L21.9616181,17.6446535 L21.6082785,16.7237737 L22.2901223,16.0181099 C22.4714958,15.8307993 22.494826,15.6648957 22.494826,15.5414236 L22.494826,15.5414236 L22.494826,13.5383476 C22.494826,13.3139572 22.415428,13.1090624 22.2585136,12.9301617 L22.2585136,12.9301617 L21.6365005,12.220293 L21.9879586,11.3399334 C22.0112888,11.2806821 22.0507996,11.1407726 22.0507996,10.8663053 L22.0507996,10.8663053 L22.0507996,10.4419896 C22.0507996,9.43280622 20.3473189,9.42133823 20.2746943,9.42133823 L14.3597366,9.42133823 L14.7239887,7.58951754 L15.288429,4.74927802 C15.3177799,4.58719706 15.2888053,3.96028013 15.0825964,3.19765862 C14.9031044,2.53671997 14.6814675,2.13151757 14.5892756,2.01798444 L14.5892756,2.01798444 L14.5779868,2.00881005 L14.5663217,1.99925339 C14.2968956,1.7714226 13.7343368,1.52906569 13.2229539,1.52906569 Z "></path>
-                    </svg>
-                    <div>
-                        <h3 class="mb-2 flex items-center text-l font-medium leading-l text-neutral-900 ">Formez-vous auprès de professionnels certifiés</h3>
-                        <p class="text-s leading-l text-neutral-900 ">Acquérez des méthodes et techniques de valeur, expliquées par des **experts reconnus** dans leur domaine. Profitez de leur expertise pour faire passer votre carrière au niveau supérieur.</p>
-                    </div>
-                </li>
-                
-                <li class="flex gap-4 ">
-                    <svg fill="currentColor " viewBox="0 0 24 24 " xmlns="http://www.w3.org/2000/svg " class="w-12 h-12 inline mr-3 mt-1 shrink-0 self-start text-neutral-600 ">
-                        <path d="M14.7980831,17.5371429 C17.0740653,17.5371429 17.4857617,20.2325893 17.4857617,21.988125 C17.4857617,23.2465179 16.654601,24 15.4117439,24 L8.62263671,24 C7.37977957,24 6.54861886,23.2465179 6.54861886,21.988125 C6.54861886,20.2325893 6.96031528,17.5371429 9.23629743,17.5371429 C9.50040457,17.5371429 10.4636189,18.616875 12.0171903,18.616875 C13.5707617,18.616875 14.533976,17.5371429 14.7980831,17.5371429 Z M5.52326171,14.0571429 C5.68638671,14.0571429 6.49424386,14.7174107 7.54290457,14.7174107 C7.900226,14.7174107 8.24201171,14.6552679 8.57602957,14.53875 C8.552726,14.7096429 8.53719028,14.8805357 8.53719028,15.0514286 C8.53719028,15.7583036 8.76245814,16.4574107 9.16638671,17.04 C8.35852957,17.0633036 7.628351,17.4128571 7.10790457,18.0342857 L6.06701171,18.0342857 C5.290226,18.0342857 4.56004743,17.6614286 4.56004743,16.7991964 L4.56097289,16.5007256 C4.56999999,15.6747991 4.66005859,14.0571429 5.52326171,14.0571429 Z M12.0171903,12.0685714 C13.663976,12.0685714 15.0000474,13.4046429 15.0000474,15.0514286 C15.0000474,16.6982143 13.663976,18.0342857 12.0171903,18.0342857 C10.3704046,18.0342857 9.03433314,16.6982143 9.03433314,15.0514286 C9.03433314,13.4046429 10.3704046,12.0685714 12.0171903,12.0685714 Z M18.5111189,14.0571429 C19.4976367,14.0571429 19.4743331,16.17 19.4743331,16.7991964 C19.4743331,17.6614286 18.7441546,18.0342857 17.9673689,18.0342857 L16.926476,18.0342857 C16.4060296,17.4128571 15.675851,17.0633036 14.8679939,17.04 C15.2719224,16.4574107 15.4971903,15.7583036 15.4971903,15.0514286 C15.4971903,14.8805357 15.4816546,14.7096429 15.458351,14.53875 C15.7923689,14.6552679 16.1341546,14.7174107 16.491476,14.7174107 C17.5401367,14.7174107 18.3479939,14.0571429 18.5111189,14.0571429 Z M7.54290457,10.08 C8.63817243,10.08 9.531476,10.9733036 9.531476,12.0685714 C9.531476,13.1638393 8.63817243,14.0571429 7.54290457,14.0571429 C6.44763671,14.0571429 5.55433314,13.1638393 5.55433314,12.0685714 C5.55433314,10.9733036 6.44763671,10.08 7.54290457,10.08 Z M16.491476,10.08 C17.5867439,10.08 18.4800474,10.9733036 18.4800474,12.0685714 C18.4800474,13.1638393 17.5867439,14.0571429 16.491476,14.0571429 C15.3962081,14.0571429 14.5029046,13.1638393 14.5029046,12.0685714 C14.5029046,10.9733036 15.3962081,10.08 16.491476,10.08 Z M12.08,1.15463195e-14 C13.66125,1.15463195e-14 15.28,1.1 15.28,2.8 C15.28,3.44375 15.0675,4 14.63625,4.475 C14.205,4.95 13.63625,5.61875 13.58625,6.2875 C13.7675,6.39375 13.88,6.59375 13.88,6.8 C13.88,6.95 13.82375,7.09375 13.72375,7.2 C13.82375,7.30625 13.88,7.45 13.88,7.6 C13.88,7.80625 13.77375,7.99375 13.59875,8.10625 C13.64875,8.19375 13.68,8.3 13.68,8.4 C13.68,8.80625 13.36125,9 12.99875,9 C12.83625,9.3625 12.47375,9.6 12.08,9.6 C11.68625,9.6 11.32375,9.3625 11.16125,9 C10.79875,9 10.48,8.80625 10.48,8.4 C10.48,8.3 10.51125,8.19375 10.56125,8.10625 C10.38625,7.99375 10.28,7.80625 10.28,7.6 C10.28,7.45 10.33625,7.30625 10.43625,7.2 C10.33625,7.09375 10.28,6.95 10.28,6.8 C10.28,6.59375 10.3925,6.39375 10.57375,6.2875 C10.52375,5.61875 9.955,4.95 9.52375,4.475 C9.0925,4 8.88,3.44375 8.88,2.8 C8.88,1.1 10.49875,1.15463195e-14 12.08,1.15463195e-14 Z M12.08,0.8 C10.94875,0.8 9.68,1.55 9.68,2.8 C9.68,3.2 9.8425,3.61875 10.105,3.925 C10.22375,4.0625 10.36125,4.19375 10.48625,4.3375 C10.93,4.86875 11.305,5.49375 11.3675,6.2 L12.7925,6.2 C12.855,5.49375 13.23,4.86875 13.67375,4.3375 C13.79875,4.19375 13.93625,4.0625 14.055,3.925 C14.3175,3.61875 14.48,3.2 14.48,2.8 C14.48,1.55 13.21125,0.8 12.08,0.8 Z M12.08,1.8 C12.66125,1.8 13.48,2.10625 13.48,2.8 C13.48,2.90625 13.38625,3 13.28,3 C13.17375,3 13.08,2.90625 13.08,2.8 C13.08,2.36875 12.41125,2.2 12.08,2.2 C11.97375,2.2 11.88,2.10625 11.88,2 C11.88,1.89375 11.97375,1.8 12.08,1.8 Z "></path>
-                    </svg>
-                    <div>
-                        <h3 class="mb-2 flex items-center text-l font-medium leading-l text-neutral-900 ">Partagez votre expertise et vos idées</h3>
-                        <p class="text-s leading-l text-neutral-900 ">Posez vos questions, demandez des avis ou partagez vos solutions. Échangez avec les autres étudiants de la communauté Monalisa, tous passionnés par l'apprentissage et l'entreprenariat en RDC.</p>
-                    </div>
-                </li>
-                
-                <li class="flex gap-4 ">
-                    <svg fill="currentColor " viewBox="0 0 24 24 " xmlns="http://www.w3.org/2000/svg " class="w-12 h-12 inline mr-3 mt-1 shrink-0 self-start text-neutral-600 ">
-                        <path d="M19.062901,0 C19.4859016,0 19.8288113,0.342909687 19.8288113,0.765910222 L19.8288113,0.765910222 L19.8288113,23.2326101 C19.8288113,23.8869679 19.0612788,24.2399829 18.5644533,23.8141325 L18.5644533,23.8141325 L11.9144056,18.1142874 L5.26435799,23.8141325 C4.79513388,24.2163246 4.08444587,23.9237879 4.00692876,23.3387976 L4.00692876,23.3387976 L4,23.2326101 L4,0.765910222 C4,0.342909687 4.34290969,0 4.76591022,0 L4.76591022,0 Z M18.2969908,1.53182044 L5.53182044,1.53182044 L5.53182044,21.5659894 L11.4159579,16.5238059 C11.6709139,16.3052722 12.0336577,16.2809907 12.3125666,16.4509613 L12.3125666,16.4509613 L12.4128534,16.5238059 L18.2969908,21.5670106 L18.2969908,1.53182044 Z M11.9489362,4 C13.5349845,4 14.8212766,5.2862921 14.8212766,6.87234043 C14.8212766,8.1633186 13.9690706,9.25569955 12.7966693,9.61747261 C14.5996254,9.97759013 15.9950654,11.461712 16.09244,13.2029606 L16.0978723,13.3974468 L16.0978723,13.6808511 C16.0978723,13.831932 15.9928935,13.9584938 15.8519013,13.991571 L15.7787234,14 L8.11914894,14 C7.968068,14 7.84150619,13.8950212 7.80842895,13.754029 L7.8,13.6808511 L7.8,13.3974468 C7.8,11.5731888 9.23147077,9.99092782 11.1010253,9.61594979 C9.92880172,9.25569955 9.07659574,8.1633186 9.07659574,6.87234043 C9.07659574,5.2862921 10.3628878,4 11.9489362,4 Z "></path>
-                    </svg>
-                    <div>
-                        <h3 class="mb-2 flex items-center text-l font-medium leading-l text-neutral-900 ">Accompagnement par des enseignants passionnés</h3>
-                        <p class="text-s leading-l text-neutral-900 ">Chaque expert Monalisa vous transmet son savoir-faire avec des **lignes directrices claires**, une réelle passion, et un **regard professionnel** dans chaque module. Apprenez des meilleurs.</p>
-                    </div>
-                </li>
-                
-                <li class="flex gap-4 ">
-                    <svg fill="currentColor " viewBox="0 0 24 24 " xmlns="http://www.w3.org/2000/svg " class="w-12 h-12 inline mr-3 mt-1 shrink-0 self-start text-neutral-600 ">
-                        <path d="M23.2340426,2 C23.6570692,2 24,2.34293083 24,2.76595745 L24,2.76595745 L24,21.1489362 C24,21.5719628 23.6570692,21.9148936 23.2340426,21.9148936 L23.2340426,21.9148936 L0.765957447,21.9148936 C0.34293083,21.9148936 0,21.5719628 0,21.1489362 L0,21.1489362 L0,2.76595745 C0,2.34293083 0.34293083,2 0.765957447,2 L0.765957447,2 Z M22.4680851,3.53191489 L1.53191489,3.53191489 L1.53191489,20.3829787 L22.4680851,20.3829787 L22.4680851,3.53191489 Z M16.0851064,14.2553191 C16.508133,14.2553191 16.8510638,14.59825 16.8510638,15.0212766 C16.8510638,15.409051 16.5629067,15.7295227 16.1890423,15.7802418 L16.0851064,15.787234 L7.91489362,15.787234 C7.491867,15.787234 7.14893617,15.4443032 7.14893617,15.0212766 C7.14893617,14.6335022 7.43709333,14.3130305 7.81095773,14.2623114 L7.91489362,14.2553191 L16.0851064,14.2553191 Z M18.1276596,11.1914894 C18.5506862,11.1914894 18.893617,11.5344202 18.893617,11.9574468 C18.893617,12.3452212 18.6054599,12.6656929 18.2315955,12.716412 L18.1276596,12.7234043 L5.87234043,12.7234043 C5.44931381,12.7234043 5.10638298,12.3804734 5.10638298,11.9574468 C5.10638298,11.5696724 5.39454013,11.2492007 5.76840454,11.1984817 L5.87234043,11.1914894 L18.1276596,11.1914894 Z M14.0425532,8.12765957 C14.4655798,8.12765957 14.8085106,8.4705904 14.8085106,8.89361702 C14.8085106,9.28139142 14.5203535,9.60186311 14.1464891,9.65258218 L14.0425532,9.65957447 L9.95744681,9.65957447 C9.53442019,9.65957447 9.19148936,9.31664364 9.19148936,8.89361702 C9.19148936,8.50584262 9.47964652,8.18537093 9.85351092,8.13465186 L9.95744681,8.12765957 L14.0425532,8.12765957 Z "></path>
-                    </svg>
-                    <div>
-                        <h3 class="mb-2 flex items-center text-l font-medium leading-l text-neutral-900 ">
-                            Obtenez un **Certificat** après chaque cours
-                            <div class="inline-flex items-center font-semibold !leading-none transition-colors focus:outline-none whitespace-pre border rounded-xl h-5 px-1.5 text-2xs bg-plus-gradient border-none text-neutral-100 ml-2 ">PRO</div>
-                        </h3>
-                        <p class="text-s leading-l text-neutral-900 ">
-                            Validez vos compétences ! Une fois le cours terminé, recevez un **certificat Monalisa** signé. Partagez-le sur votre CV, votre profil LinkedIn ou votre portfolio.
-                        </p>
-                    </div>
-                </li>
-                
-                <li class="flex gap-4 ">
-                    <svg fill="currentColor " viewBox="0 0 24 24 " xmlns="http://www.w3.org/2000/svg " class="w-12 h-12 inline mr-3 mt-1 shrink-0 self-start text-neutral-600 ">
-                        <path d="M12,0 C5.37373934,0 0,5.37373934 0,12 C0,18.6276194 5.37305539,24 12,24 C18.6283032,24 24,18.6283032 24,12 C24,5.37305539 18.6276194,0 12,0 Z M12,1.53191489 C17.7815231,1.53191489 22.4680851,6.21906556 22.4680851,12 C22.4680851,17.78225 17.78225,22.4680851 12,22.4680851 C6.21906556,22.4680851 1.53191489,17.7815231 1.53191489,12 C1.53191489,6.21979257 6.21979257,1.53191489 12,1.53191489 Z M15.3229823,8 L11.9981553,12.4854727 L8.66933128,8 L6,11.9907763 L9.18462721,16.2908532 L14.8227517,16.2908532 L18,12.003382 L15.3229823,8 Z "></path>
-                    </svg>
-                    <div>
-                        <h3 class="mb-2 flex items-center text-l font-medium leading-l text-neutral-900 ">Rejoignez la communauté Monalisa et africaine</h3>
-                        <p class="text-s leading-l text-neutral-900 ">Notre communauté regroupe des milliers d'apprenants de RDC et d'Afrique, curieux et passionnés par le développement de leurs compétences et leur réussite professionnelle.</p>
-                    </div>
-                </li>
 
-                <li class="flex gap-4 ">
-                    <svg fill="currentColor " viewBox="0 0 24 24 " xmlns="http://www.w3.org/2000/svg " class="w-12 h-12 inline mr-3 mt-1 shrink-0 self-start text-neutral-600 ">
-                        <path d="M9.95743438,0 C13.7639456,0 16.8510428,3.08709719 16.8510428,6.89360842 C16.8510428,9.99003651 14.8082794,12.6104211 11.9972097,13.4803049 C16.482057,14.3812091 19.9148688,18.17736 19.9148688,22.5538442 L19.9148688,22.5538442 L19.9148688,23.2340136 C19.9148688,23.6570396 19.5719384,23.99997 19.1489123,23.99997 L19.1489123,23.99997 L0.765956491,23.99997 C0.342930402,23.99997 0,23.6570396 0,23.2340136 L0,23.2340136 L0,22.5538442 C0,18.17736 3.4328118,14.3812091 7.91713391,13.4793306 C5.10658937,12.6104211 3.06382596,9.99003651 3.06382596,6.89360842 C3.06382596,3.08709719 6.15092315,0 9.95743438,0 Z M9.95743438,14.8084922 C5.3437769,14.8084922 1.53191298,18.4004409 1.53191298,22.5538442 L1.532,22.468 L18.3819345,22.4680571 L18.3789049,22.3193659 C18.2415202,18.3441203 14.6271197,14.9417002 10.2177083,14.812308 L10.2177083,14.812308 Z M23.7103785,9.3576296 C24.0115267,9.59680151 24.0845781,10.0167408 23.8977086,10.3399996 L23.8338183,10.4337993 L19.778334,15.5401759 C19.5187124,15.867073 19.0517674,15.9213783 18.7259323,15.6819157 L18.6408286,15.6093083 L16.568661,13.5667577 C16.2673911,13.2697938 16.2639004,12.7848295 16.5608643,12.4835597 C16.8308315,12.209678 17.2561708,12.1818948 17.5576226,12.4022201 L17.6440623,12.475763 L19.1080613,13.9189614 L22.6342088,9.48106942 C22.8972979,9.14980639 23.3791155,9.0945405 23.7103785,9.3576296 Z M9.95743438,1.53191298 C6.99697533,1.53191298 4.59573894,3.93314937 4.59573894,6.89360842 C4.59573894,9.85406747 6.99697533,12.2553039 9.95743438,12.2553039 C12.9178934,12.2553039 15.3191298,9.85406747 15.3191298,6.89360842 C15.3191298,3.93314937 12.9178934,1.53191298 9.95743438,1.53191298 Z "></path>
-                    </svg>
-                    <div>
-                        <h3 class="mb-2 flex items-center text-l font-medium leading-l text-neutral-900 ">Cours produits localement avec soin</h3>
-                        <p class="text-s leading-l text-neutral-900 ">Monalisa sélectionne ses enseignants avec rigueur et **produit chaque cours en interne** (ou avec des partenaires locaux) pour garantir une expérience d'apprentissage en ligne de la plus haute qualité.</p>
-                    </div>
-                </li>
+            <div class="tab-content hidden" id="avis">
+            <h2 class="text-xl font-semibold mb-4">Avis des étudiants</h2>
+            <div class="space-y-4">
+                <div class="border-b border-gray-200 pb-3">
+                <p class="text-gray-800 font-semibold">Jean Mbemba</p>
+                <p class="text-gray-700 text-sm">“Cours très complet et facile à suivre.”</p>
+                </div>
+                <div class="border-b border-gray-200 pb-3">
+                <p class="text-gray-800 font-semibold">Fatou Kanza</p>
+                <p class="text-gray-700 text-sm">“Formateur clair et pédagogique, parfait pour débutants.”</p>
+                </div>
+            </div>
+            </div>
+
+            <div class="tab-content hidden" id="faq">
+            <h2 class="text-xl font-semibold mb-4">FAQ</h2>
+            <ul class="space-y-2 text-gray-700">
+                <li><strong>Faut-il des connaissances préalables ?</strong> Non, ce cours est adapté aux débutants.</li>
+                <li><strong>Quels logiciels sont nécessaires ?</strong> Photoshop et Illustrator (version d’essai suffit).</li>
+                <li><strong>Durée du cours ?</strong> Environ 8 heures avec exercices pratiques.</li>
             </ul>
-        </section>
+            </div>
+        </div>
+
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="md:w-1/3 flex-shrink-0 space-y-6">
+
+        <div class="sticky top-24 space-y-6">
+
+            <!-- Résumé du cours -->
+            <div class="bg-white p-6 rounded-lg shadow-md text-center">
+            <h3 class="text-lg font-semibold mb-2">Résumé du cours</h3>
+            <p class="text-gray-700 mb-3">8 heures · 12 leçons · Niveau Débutant</p>
+            <button class="bg-monalisa-primary text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-800 transition">
+                S'inscrire
+            </button>
+            </div>
+
+            <!-- Formateur -->
+            <div class="bg-white p-4 rounded-lg shadow-md text-center">
+            <img src="/assets/images/team3.jpg" alt="Marie Kabila" class="w-24 h-24 mx-auto rounded-full mb-2">
+            <h3 class="font-semibold">Marie Kabila</h3>
+            <p class="text-gray-600 text-sm">Formatrice Design Graphique</p>
+            </div>
+
+            <!-- Autres cours -->
+            <div class="bg-white p-4 rounded-lg shadow-md">
+            <h3 class="font-semibold mb-3">Cours similaires</h3>
+            <ul class="space-y-2 text-gray-700">
+                <li><a href="#" class="hover:text-monalisa-primary">Illustration numérique</a></li>
+                <li><a href="#" class="hover:text-monalisa-primary">Photo & Vidéo</a></li>
+                <li><a href="#" class="hover:text-monalisa-primary">Marketing Digital</a></li>
+            </ul>
+            </div>
+
+        </div>
+
+        </aside>
+
+    </div>
+
     </main>
+
     <footer class="text-white text-s px-6 md:px-16 py-12 ">
         <div></div>
         <div class=" ">
@@ -1582,6 +1195,22 @@
             nextEl: '.custom-btn-next',
             prevEl: '.custom-btn-prev',
         },
+        });
+    </script>
+
+    <script>
+        const tabs = document.querySelectorAll(".tab-btn");
+        const contents = document.querySelectorAll(".tab-content");
+
+        tabs.forEach(tab => {
+            tab.addEventListener("click", () => {
+            tabs.forEach(t => t.classList.remove("border-b-2", "border-monalisa-primary", "text-gray-700"));
+            tabs.forEach(t => t.classList.add("text-gray-500"));
+            tab.classList.add("border-b-2", "border-monalisa-primary", "text-gray-700");
+
+            contents.forEach(c => c.classList.add("hidden"));
+            document.getElementById(tab.dataset.tab).classList.remove("hidden");
+            });
         });
     </script>
 

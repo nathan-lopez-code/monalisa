@@ -285,10 +285,10 @@
             <nav class="hidden md:block mb-6 bg-gray-50 p-4 rounded-lg shadow-sm" role="navigation">
             <ul class="space-y-2">
                 <li>
-                <a href="/about.html" class="block py-2 px-3 rounded hover:bg-gray-200">À propos de Monalisa</a>
+                <a href="/about.html" class="block py-2 px-3 rounded bg-monalisa-primary text-white">À propos de Monalisa</a>
                 </li>
                 <li>
-                <a href="/contact.html" class="block py-2 px-3 rounded bg-monalisa-primary text-white">Contact</a>
+                <a href="/contact.html" class="block py-2 px-3 rounded hover:bg-gray-200">Contact</a>
                 </li>
                 <li>
                 <a href="/courses.html" class="block py-2 px-3 rounded hover:bg-gray-200">Cours</a>
@@ -297,54 +297,81 @@
             </nav>
 
             <!-- Mobile Navigation -->
-            <nav class="md:hidden mb-4 px-2">
-            <select 
-                class="w-full border border-gray-300 rounded-lg px-3 py-2 text-gray-800 text-base shadow-sm focus:outline-none focus:ring-2 focus:ring-monalisa-primary focus:border-monalisa-primary" 
-                id="js-pages-select-navigation" 
-                onchange="location = this.value;">
-                <option value="/about.html">À propos de Monalisa</option>
-                <option selected value="/contact.html">Contact</option>
+            <nav class="md:hidden mb-4">
+            <select class="form-control w-full border border-gray-300 rounded-lg p-2" id="js-pages-select-navigation" onchange="location = this.value;">
+                <option selected value="/about.html">À propos de Monalisa</option>
+                <option value="/contact.html">Contact</option>
                 <option value="/courses.html">Cours</option>
             </select>
             </nav>
         </aside>
 
         <!-- Main Content -->
-        <div class="w-full md:w-3/4">
-            <div class="bg-white shadow-md rounded-lg p-6">
-            <article>
-                <h1 class="text-2xl font-bold mb-4">Contact</h1>
-                <p class="mb-4 text-gray-700">
-                Vous avez des questions ou souhaitez nous dire bonjour ? Le meilleur moyen de nous contacter est via notre formulaire. Nous faisons de notre mieux pour répondre en moins de 48 heures. Chaque message est lu et distribué en interne pour que vous parliez à la bonne personne. Vous pouvez aussi consulter notre 
-                <a href="/support.html" class="text-monalisa-primary underline">section d'aide</a> pour les questions fréquentes.
-                </p>
-                <p class="mb-6 text-gray-700">
-                Suivez-nous sur <a href="https://instagram.com/monalisa" class="text-monalisa-primary underline">Instagram</a>, <a href="https://facebook.com/monalisa" class="text-monalisa-primary underline">Facebook</a> et <a href="https://twitter.com/monalisa" class="text-monalisa-primary underline">Twitter</a>.
-                </p>
-                <hr class="my-6 border-gray-300">
-                <h2 class="text-xl font-semibold mb-2">Siège social</h2>
-                <address class="not-italic text-gray-700">
-                <strong>Monalisa RDC</strong><br>
-                Avenue des Martyrs, N° 123<br>
-                Kinshasa, RDC<br>
-                <a href="tel:+243812345678" class="text-monalisa-primary underline">+243 812 345 678</a><br>
-                <a href="mailto:contact@monalisa-rdc.com" class="text-monalisa-primary underline">contact@monalisa-rdc.com</a>
-                </address>
-            </article>
+        <div class="w-full md:w-3/4 space-y-6">
+
+            <!-- Section Présentation -->
+            <section class="bg-white shadow-md rounded-lg p-6">
+            <h1 class="text-2xl font-bold mb-4">À propos de Monalisa</h1>
+            <p class="text-gray-700 mb-4">
+                Monalisa est la première plateforme e-learning en RDC dédiée à l’apprentissage des compétences numériques, artistiques et professionnelles. Notre mission est de permettre à chaque étudiant, professionnel ou passionné de développer ses compétences depuis n’importe où dans le pays.
+            </p>
+            <p class="text-gray-700">
+                Grâce à nos cours interactifs, nos projets pratiques et nos formateurs expérimentés, nous créons un environnement d’apprentissage accessible, moderne et inspirant.
+            </p>
+            </section>
+
+            <!-- Section Mission -->
+            <section class="bg-white shadow-md rounded-lg p-6">
+            <h2 class="text-xl font-semibold mb-4">Notre Mission</h2>
+            <p class="text-gray-700 mb-4">
+                Fournir un accès facile et efficace à des cours de qualité en ligne pour tous les habitants de la RDC, en combinant technologie, expertise locale et pédagogie moderne.
+            </p>
+            <ul class="list-disc list-inside text-gray-700 space-y-2">
+                <li>Offrir des cours diversifiés : design, développement web, marketing, photographie, etc.</li>
+                <li>Encourager la pratique et les projets concrets pour un apprentissage efficace.</li>
+                <li>Créer une communauté d’apprenants connectés et motivés.</li>
+            </ul>
+            </section>
+
+            <!-- Section Équipe -->
+            <section class="bg-white shadow-md rounded-lg p-6">
+            <h2 class="text-xl font-semibold mb-4">Notre Équipe</h2>
+            <p class="text-gray-700 mb-4">
+                Notre équipe est composée de formateurs expérimentés, de designers, développeurs et mentors passionnés par l’éducation et le partage de connaissances.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="bg-gray-100 rounded-lg p-4 text-center">
+                <img src="/assets/images/team1.jpg" alt="Jane Doe" class="w-24 h-24 mx-auto rounded-full mb-2">
+                <h3 class="font-semibold">Jane Doe</h3>
+                <p class="text-gray-600 text-sm">Directrice pédagogique</p>
+                </div>
+                <div class="bg-gray-100 rounded-lg p-4 text-center">
+                <img src="/assets/images/team2.jpg" alt="John Smith" class="w-24 h-24 mx-auto rounded-full mb-2">
+                <h3 class="font-semibold">John Smith</h3>
+                <p class="text-gray-600 text-sm">Formateur développement web</p>
+                </div>
+                <div class="bg-gray-100 rounded-lg p-4 text-center">
+                <img src="/assets/images/team3.jpg" alt="Marie Kabila" class="w-24 h-24 mx-auto rounded-full mb-2">
+                <h3 class="font-semibold">Marie Kabila</h3>
+                <p class="text-gray-600 text-sm">Formatrice design graphique</p>
+                </div>
             </div>
-        </div>
+            </section>
+
+            <!-- Section Valeurs -->
+            <section class="bg-white shadow-md rounded-lg p-6">
+            <h2 class="text-xl font-semibold mb-4">Nos Valeurs</h2>
+            <p class="text-gray-700">
+                Engagement, accessibilité, innovation et qualité sont au cœur de toutes nos actions. Nous croyons que chaque étudiant a le droit de se former et d’évoluer grâce à l’apprentissage en ligne.
+            </p>
+            </section>
 
         </div>
-    </div>
-
-    <!-- Modal (exemple) -->
-    <div aria-hidden="true" aria-labelledby="course-modal-label" class="modal modal--fullscreen modal--course" id="course-modal" role="dialog" tabindex="-1">
-        <div class="modal-dialog">
-        <div class="modal-content"></div>
         </div>
     </div>
 
     </main>
+
 
 
     <footer class="text-white text-s px-6 md:px-16 py-12 ">
